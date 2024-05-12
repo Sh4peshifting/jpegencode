@@ -2,5 +2,5 @@
 
 mkdir -p logs
 
-fm_shell -f ws2812.fms 	| tee -i logs/ws2812.log
+fm_shell -f jpeg_encode_core.fms 	| tee -i logs/jpeg_encode_core.log
 

@@ -5,8 +5,8 @@ Report : timing
         -delay max
         -max_paths 1
 Design : jpeg_top
-Version: P-2019.03-SP3
-Date   : Sun May 12 18:04:32 2024
+Version: Z-2007.03-SP5
+Date   : Sun May 12 21:39:42 2024
 ****************************************
 
  # A fanout number of 60 was used for high fanout net computations.
@@ -35,47 +35,45 @@ Wire Load Model Mode: segmented
   clock network delay (ideal)                             0.00       0.00
   input external delay                                   10.00      10.00 f
   data_in[1] (in)                                         0.02      10.02 f
-  U2/Z (BUFCLKHD2X)                                       0.54      10.56 f
-  u19/data_in[1] (fifo_out)                               0.00      10.56 f
-  u19/u14/data_in[1] (pre_fifo)                           0.00      10.56 f
-  u19/u14/u4/data_in[1] (RGB2YCBCR)                       0.00      10.56 f
-  u19/u14/u4/mult_88/b[1] (RGB2YCBCR_DW_mult_uns_6)       0.00      10.56 f
-  u19/u14/u4/mult_88/U20/CO (HAHDLX)                      0.36      10.91 f
-  u19/u14/u4/mult_88/U19/CO (FAHHD1X)                     0.28      11.19 f
-  u19/u14/u4/mult_88/U18/CO (FAHHD1X)                     0.27      11.46 f
-  u19/u14/u4/mult_88/U17/CO (FAHHD1X)                     0.27      11.73 f
-  u19/u14/u4/mult_88/U16/CO (FAHHD1X)                     0.27      12.00 f
-  u19/u14/u4/mult_88/U15/CO (FAHHD1X)                     0.27      12.27 f
-  u19/u14/u4/mult_88/U14/CO (FAHHD1X)                     0.27      12.54 f
-  u19/u14/u4/mult_88/U13/CO (FAHHD1X)                     0.27      12.81 f
-  u19/u14/u4/mult_88/U12/CO (FAHHD1X)                     0.27      13.08 f
-  u19/u14/u4/mult_88/U11/CO (FAHHD1X)                     0.27      13.35 f
-  u19/u14/u4/mult_88/U10/CO (FAHHD1X)                     0.27      13.62 f
-  u19/u14/u4/mult_88/U9/CO (FAHHD1X)                      0.27      13.89 f
-  u19/u14/u4/mult_88/U8/CO (FAHHD1X)                      0.27      14.17 f
-  u19/u14/u4/mult_88/U7/CO (FAHHD1X)                      0.27      14.44 f
-  u19/u14/u4/mult_88/U6/CO (FAHHD1X)                      0.27      14.71 f
-  u19/u14/u4/mult_88/U5/CO (FAHHD1X)                      0.27      14.98 f
-  u19/u14/u4/mult_88/U4/CO (FAHHD1X)                      0.28      15.26 f
-  u19/u14/u4/mult_88/U3/CO (HAHDLX)                       0.23      15.48 f
-  u19/u14/u4/mult_88/U2/S (HAHDLX)                        0.38      15.86 r
-  u19/u14/u4/mult_88/product[19] (RGB2YCBCR_DW_mult_uns_6)     0.00    15.86 r
-  u19/u14/u4/U105/Z (AOI22HD1X)                           0.20      16.06 f
-  u19/u14/u4/U104/Z (INVHDPX)                             0.10      16.16 r
-  u19/u14/u4/Y1_product_reg[19]/RN (FFDCRHD1X)            0.00      16.16 r
-  data arrival time                                                 16.16
+  U17/Z (BUFCLKHD2X)                                      0.55      10.57 f
+  u19/data_in[1] (fifo_out)                               0.00      10.57 f
+  u19/u14/data_in[1] (pre_fifo)                           0.00      10.57 f
+  u19/u14/u4/data_in[1] (RGB2YCBCR)                       0.00      10.57 f
+  u19/u14/u4/mult_88/b[1] (RGB2YCBCR_DW_mult_uns_6)       0.00      10.57 f
+  u19/u14/u4/mult_88/U20/CO (HAHDLX)                      0.36      10.93 f
+  u19/u14/u4/mult_88/U19/CO (FAHHD1X)                     0.28      11.21 f
+  u19/u14/u4/mult_88/U18/CO (FAHHD1X)                     0.27      11.48 f
+  u19/u14/u4/mult_88/U17/CO (FAHHD1X)                     0.27      11.75 f
+  u19/u14/u4/mult_88/U16/CO (FAHHD1X)                     0.27      12.02 f
+  u19/u14/u4/mult_88/U15/CO (FAHHD1X)                     0.27      12.29 f
+  u19/u14/u4/mult_88/U14/CO (FAHHD1X)                     0.27      12.56 f
+  u19/u14/u4/mult_88/U13/CO (FAHHD1X)                     0.27      12.83 f
+  u19/u14/u4/mult_88/U12/CO (FAHHD1X)                     0.27      13.10 f
+  u19/u14/u4/mult_88/U11/CO (FAHHD1X)                     0.27      13.37 f
+  u19/u14/u4/mult_88/U10/CO (FAHHD1X)                     0.27      13.64 f
+  u19/u14/u4/mult_88/U9/CO (FAHHD1X)                      0.27      13.91 f
+  u19/u14/u4/mult_88/U8/CO (FAHHD1X)                      0.27      14.18 f
+  u19/u14/u4/mult_88/U7/CO (FAHHD1X)                      0.27      14.45 f
+  u19/u14/u4/mult_88/U6/CO (FAHHD1X)                      0.27      14.72 f
+  u19/u14/u4/mult_88/U5/CO (FAHHD1X)                      0.27      14.99 f
+  u19/u14/u4/mult_88/U4/CO (FAHHD1X)                      0.28      15.28 f
+  u19/u14/u4/mult_88/U3/CO (HAHDLX)                       0.23      15.50 f
+  u19/u14/u4/mult_88/U2/S (HAHDLX)                        0.41      15.92 r
+  u19/u14/u4/mult_88/product[19] (RGB2YCBCR_DW_mult_uns_6)     0.00    15.92 r
+  u19/u14/u4/Y1_product_reg[19]/D (FFEDCRHD1X)            0.00      15.92 r
+  data arrival time                                                 15.92
 
   clock wb_clk (rise edge)                               20.00      20.00
   clock network delay (ideal)                             0.00      20.00
   clock uncertainty                                      -0.10      19.90
-  u19/u14/u4/Y1_product_reg[19]/CK (FFDCRHD1X)            0.00      19.90 r
-  library setup time                                     -0.23      19.67
-  data required time                                                19.67
+  u19/u14/u4/Y1_product_reg[19]/CK (FFEDCRHD1X)           0.00      19.90 r
+  library setup time                                     -0.37      19.53
+  data required time                                                19.53
   --------------------------------------------------------------------------
-  data required time                                                19.67
-  data arrival time                                                -16.16
+  data required time                                                19.53
+  data arrival time                                                -15.92
   --------------------------------------------------------------------------
-  slack (MET)                                                        3.51
+  slack (MET)                                                        3.61
 
 
 1

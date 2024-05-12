@@ -1,4 +1,7 @@
+Loading db file '/home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ff.db'
+Loading db file '/home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ff.db'
 Loading db file '/home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db'
+Loading db file '/home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ss.db'
 Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
 Warning: Design has unannotated primary inputs. (PWR-414)
 Warning: Design has unannotated sequential cell outputs. (PWR-415)
@@ -7,8 +10,8 @@ Warning: Design has unannotated sequential cell outputs. (PWR-415)
 Report : power
         -analysis_effort low
 Design : jpeg_top
-Version: P-2019.03-SP3
-Date   : Sun May 12 18:04:54 2024
+Version: Z-2007.03-SP5
+Date   : Sun May 12 21:40:02 2024
 ****************************************
 
 
@@ -27,6 +30,10 @@ fifo_out               reference_area_10000000 smic18_ss
 ff_checker             reference_area_1000000 smic18_ss
 pre_fifo               reference_area_10000000 smic18_ss
 sync_fifo_32_4         reference_area_100000 smic18_ss
+sync_fifo_32_3         reference_area_100000 smic18_ss
+sync_fifo_32_2         reference_area_100000 smic18_ss
+sync_fifo_32_1         reference_area_100000 smic18_ss
+sync_fifo_32_0         reference_area_100000 smic18_ss
 sync_fifo_ff           reference_area_1000000 smic18_ss
 RGB2YCBCR              reference_area_100000 smic18_ss
 crd_q_h                reference_area_5000000 smic18_ss
@@ -41,77 +48,91 @@ cb_huff                reference_area_1000000 smic18_ss
 y_dct                  reference_area_2500000 smic18_ss
 y_quantizer            reference_area_1000000 smic18_ss
 y_huff                 reference_area_1000000 smic18_ss
-sync_fifo_32_0         reference_area_100000 smic18_ss
-sync_fifo_32_1         reference_area_100000 smic18_ss
-sync_fifo_32_2         reference_area_100000 smic18_ss
-sync_fifo_32_3         reference_area_100000 smic18_ss
 ff_checker_DW01_inc_0  reference_area_20000 smic18_ss
+sync_fifo_ff_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_ff_DW01_inc_1 reference_area_20000 smic18_ss
+fifo_out_DW01_add_0    reference_area_20000 smic18_ss
+fifo_out_DW01_add_1    reference_area_20000 smic18_ss
+fifo_out_DW01_add_2    reference_area_20000 smic18_ss
+sync_fifo_32_0_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_0_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_1_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_1_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_2_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_2_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_3_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_3_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_4_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_4_DW01_inc_1 reference_area_20000 smic18_ss
 y_huff_DW01_sub_0      reference_area_20000 smic18_ss
+y_huff_DW01_dec_0      reference_area_20000 smic18_ss
+y_huff_DW01_dec_1      reference_area_20000 smic18_ss
+y_huff_DW01_dec_2      reference_area_20000 smic18_ss
+y_huff_DW01_dec_3      reference_area_20000 smic18_ss
+y_huff_DW01_dec_4      reference_area_20000 smic18_ss
+y_huff_DW01_dec_5      reference_area_20000 smic18_ss
+y_huff_DW01_dec_6      reference_area_20000 smic18_ss
+y_huff_DW01_dec_7      reference_area_20000 smic18_ss
+y_huff_DW01_dec_8      reference_area_20000 smic18_ss
+y_huff_DW01_dec_9      reference_area_20000 smic18_ss
+y_huff_DW01_dec_10     reference_area_20000 smic18_ss
+y_huff_DW01_dec_11     reference_area_20000 smic18_ss
+y_huff_DW01_dec_12     reference_area_20000 smic18_ss
+y_huff_DW01_dec_13     reference_area_20000 smic18_ss
+y_huff_DW01_dec_14     reference_area_20000 smic18_ss
+y_huff_DW01_dec_15     reference_area_20000 smic18_ss
+y_huff_DW01_dec_16     reference_area_20000 smic18_ss
+y_huff_DW01_dec_17     reference_area_20000 smic18_ss
+y_huff_DW01_dec_18     reference_area_20000 smic18_ss
+y_huff_DW01_dec_19     reference_area_20000 smic18_ss
+y_huff_DW01_dec_20     reference_area_20000 smic18_ss
+y_huff_DW01_dec_21     reference_area_20000 smic18_ss
+y_huff_DW01_dec_22     reference_area_20000 smic18_ss
+y_huff_DW01_dec_23     reference_area_20000 smic18_ss
+y_huff_DW01_dec_24     reference_area_20000 smic18_ss
+y_huff_DW01_dec_25     reference_area_20000 smic18_ss
+y_huff_DW01_dec_26     reference_area_20000 smic18_ss
+y_huff_DW01_dec_27     reference_area_20000 smic18_ss
+y_huff_DW01_dec_28     reference_area_20000 smic18_ss
+y_huff_DW01_dec_29     reference_area_20000 smic18_ss
+y_huff_DW01_dec_30     reference_area_20000 smic18_ss
+y_huff_DW01_dec_31     reference_area_20000 smic18_ss
+y_huff_DW01_dec_32     reference_area_20000 smic18_ss
+y_huff_DW01_dec_33     reference_area_20000 smic18_ss
+y_huff_DW01_dec_34     reference_area_20000 smic18_ss
+y_huff_DW01_dec_35     reference_area_20000 smic18_ss
+y_huff_DW01_dec_36     reference_area_20000 smic18_ss
+y_huff_DW01_dec_37     reference_area_20000 smic18_ss
+y_huff_DW01_dec_38     reference_area_20000 smic18_ss
+y_huff_DW01_dec_39     reference_area_20000 smic18_ss
+y_huff_DW01_dec_40     reference_area_20000 smic18_ss
+y_huff_DW01_dec_41     reference_area_20000 smic18_ss
+y_huff_DW01_dec_42     reference_area_20000 smic18_ss
+y_huff_DW01_dec_43     reference_area_20000 smic18_ss
+y_huff_DW01_dec_44     reference_area_20000 smic18_ss
+y_huff_DW01_dec_45     reference_area_20000 smic18_ss
+y_huff_DW01_dec_46     reference_area_20000 smic18_ss
+y_huff_DW01_dec_47     reference_area_20000 smic18_ss
+y_huff_DW01_dec_48     reference_area_20000 smic18_ss
+y_huff_DW01_dec_49     reference_area_20000 smic18_ss
+y_huff_DW01_dec_50     reference_area_20000 smic18_ss
+y_huff_DW01_dec_51     reference_area_20000 smic18_ss
+y_huff_DW01_dec_52     reference_area_20000 smic18_ss
+y_huff_DW01_dec_53     reference_area_20000 smic18_ss
+y_huff_DW01_dec_54     reference_area_20000 smic18_ss
+y_huff_DW01_dec_55     reference_area_20000 smic18_ss
+y_huff_DW01_dec_56     reference_area_20000 smic18_ss
+y_huff_DW01_dec_57     reference_area_20000 smic18_ss
+y_huff_DW01_dec_58     reference_area_20000 smic18_ss
+y_huff_DW01_dec_59     reference_area_20000 smic18_ss
+y_huff_DW01_dec_60     reference_area_20000 smic18_ss
+y_huff_DW01_dec_61     reference_area_20000 smic18_ss
+y_huff_DW01_dec_62     reference_area_20000 smic18_ss
+y_huff_DW01_dec_63     reference_area_20000 smic18_ss
+y_huff_DW01_add_1      reference_area_20000 smic18_ss
+y_huff_DW01_add_3      reference_area_20000 smic18_ss
+y_huff_DW01_add_4      reference_area_20000 smic18_ss
 y_huff_DW01_inc_0      reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 y_dct_DW01_inc_0       reference_area_20000 smic18_ss
 y_dct_DW01_inc_1       reference_area_20000 smic18_ss
 y_dct_DW01_inc_2       reference_area_20000 smic18_ss
@@ -264,71 +285,74 @@ y_dct_DW01_add_69      reference_area_20000 smic18_ss
 y_dct_DW01_add_70      reference_area_20000 smic18_ss
 y_dct_DW01_add_71      reference_area_20000 smic18_ss
 cb_huff_DW01_sub_0     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_0     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_1     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_2     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_3     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_4     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_5     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_6     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_7     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_8     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_9     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_10    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_11    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_12    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_13    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_14    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_15    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_16    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_17    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_18    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_19    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_20    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_21    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_22    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_23    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_24    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_25    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_26    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_27    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_28    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_29    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_30    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_31    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_32    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_33    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_34    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_35    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_36    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_37    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_38    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_39    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_40    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_41    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_42    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_43    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_44    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_45    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_46    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_47    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_48    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_49    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_50    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_51    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_52    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_53    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_54    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_55    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_56    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_57    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_58    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_59    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_60    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_61    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_62    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_63    reference_area_20000 smic18_ss
+cb_huff_DW01_add_1     reference_area_20000 smic18_ss
+cb_huff_DW01_add_3     reference_area_20000 smic18_ss
+cb_huff_DW01_add_4     reference_area_20000 smic18_ss
 cb_huff_DW01_inc_0     reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 cb_dct_DW01_inc_0      reference_area_20000 smic18_ss
 cb_dct_DW01_inc_1      reference_area_20000 smic18_ss
 cb_dct_DW01_inc_2      reference_area_20000 smic18_ss
@@ -481,71 +505,74 @@ cb_dct_DW01_add_69     reference_area_20000 smic18_ss
 cb_dct_DW01_add_70     reference_area_20000 smic18_ss
 cb_dct_DW01_add_71     reference_area_20000 smic18_ss
 cr_huff_DW01_sub_0     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_0     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_1     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_2     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_3     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_4     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_5     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_6     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_7     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_8     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_9     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_10    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_11    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_12    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_13    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_14    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_15    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_16    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_17    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_18    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_19    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_20    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_21    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_22    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_23    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_24    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_25    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_26    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_27    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_28    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_29    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_30    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_31    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_32    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_33    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_34    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_35    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_36    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_37    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_38    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_39    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_40    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_41    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_42    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_43    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_44    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_45    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_46    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_47    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_48    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_49    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_50    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_51    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_52    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_53    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_54    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_55    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_56    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_57    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_58    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_59    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_60    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_61    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_62    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_63    reference_area_20000 smic18_ss
+cr_huff_DW01_add_1     reference_area_20000 smic18_ss
+cr_huff_DW01_add_3     reference_area_20000 smic18_ss
+cr_huff_DW01_add_4     reference_area_20000 smic18_ss
 cr_huff_DW01_inc_0     reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 cr_dct_DW01_inc_0      reference_area_20000 smic18_ss
 cr_dct_DW01_inc_1      reference_area_20000 smic18_ss
 cr_dct_DW01_inc_2      reference_area_20000 smic18_ss
@@ -914,7 +941,11 @@ cr_dct_DW_mult_uns_68  reference_area_20000 smic18_ss
 cr_dct_DW_mult_uns_69  reference_area_20000 smic18_ss
 cr_dct_DW_mult_uns_70  reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_0   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_0   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_1   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_1   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_2   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_3   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_2   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_3   reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_0 reference_area_20000 smic18_ss
@@ -938,24 +969,11 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  = 139.5529 mW   (96%)
-  Net Switching Power  =   5.0619 mW    (4%)
+  Cell Internal Power  = 169.3225 mW   (98%)
+  Net Switching Power  =   2.9211 mW    (2%)
                          ---------
-Total Dynamic Power    = 144.6148 mW  (100%)
+Total Dynamic Power    = 172.2436 mW  (100%)
 
-Cell Leakage Power     = 419.7097 uW
+Cell Leakage Power     = 400.9005 uW
 
-
-                 Internal         Switching           Leakage            Total
-Power Group      Power            Power               Power              Power   (   %    )  Attrs
---------------------------------------------------------------------------------------------------
-io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register         135.4637            1.1251        7.2244e+04          136.6550  (  94.22%)
-sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      4.0988            3.9369        3.4747e+05            8.3831  (   5.78%)
---------------------------------------------------------------------------------------------------
-Total            139.5625 mW         5.0620 mW     4.1971e+05 nW       145.0380 mW
 1

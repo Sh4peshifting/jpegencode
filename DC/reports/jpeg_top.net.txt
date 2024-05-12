@@ -2,8 +2,8 @@
 ****************************************
 Report : net
 Design : jpeg_top
-Version: P-2019.03-SP3
-Date   : Sun May 12 18:04:28 2024
+Version: Z-2007.03-SP5
+Date   : Sun May 12 21:39:21 2024
 ****************************************
 
 
@@ -17,6 +17,10 @@ fifo_out               reference_area_10000000 smic18_ss
 ff_checker             reference_area_1000000 smic18_ss
 pre_fifo               reference_area_10000000 smic18_ss
 sync_fifo_32_4         reference_area_100000 smic18_ss
+sync_fifo_32_3         reference_area_100000 smic18_ss
+sync_fifo_32_2         reference_area_100000 smic18_ss
+sync_fifo_32_1         reference_area_100000 smic18_ss
+sync_fifo_32_0         reference_area_100000 smic18_ss
 sync_fifo_ff           reference_area_1000000 smic18_ss
 RGB2YCBCR              reference_area_100000 smic18_ss
 crd_q_h                reference_area_5000000 smic18_ss
@@ -31,77 +35,91 @@ cb_huff                reference_area_1000000 smic18_ss
 y_dct                  reference_area_2500000 smic18_ss
 y_quantizer            reference_area_1000000 smic18_ss
 y_huff                 reference_area_1000000 smic18_ss
-sync_fifo_32_0         reference_area_100000 smic18_ss
-sync_fifo_32_1         reference_area_100000 smic18_ss
-sync_fifo_32_2         reference_area_100000 smic18_ss
-sync_fifo_32_3         reference_area_100000 smic18_ss
 ff_checker_DW01_inc_0  reference_area_20000 smic18_ss
+sync_fifo_ff_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_ff_DW01_inc_1 reference_area_20000 smic18_ss
+fifo_out_DW01_add_0    reference_area_20000 smic18_ss
+fifo_out_DW01_add_1    reference_area_20000 smic18_ss
+fifo_out_DW01_add_2    reference_area_20000 smic18_ss
+sync_fifo_32_0_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_0_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_1_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_1_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_2_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_2_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_3_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_3_DW01_inc_1 reference_area_20000 smic18_ss
+sync_fifo_32_4_DW01_inc_0 reference_area_20000 smic18_ss
+sync_fifo_32_4_DW01_inc_1 reference_area_20000 smic18_ss
 y_huff_DW01_sub_0      reference_area_20000 smic18_ss
+y_huff_DW01_dec_0      reference_area_20000 smic18_ss
+y_huff_DW01_dec_1      reference_area_20000 smic18_ss
+y_huff_DW01_dec_2      reference_area_20000 smic18_ss
+y_huff_DW01_dec_3      reference_area_20000 smic18_ss
+y_huff_DW01_dec_4      reference_area_20000 smic18_ss
+y_huff_DW01_dec_5      reference_area_20000 smic18_ss
+y_huff_DW01_dec_6      reference_area_20000 smic18_ss
+y_huff_DW01_dec_7      reference_area_20000 smic18_ss
+y_huff_DW01_dec_8      reference_area_20000 smic18_ss
+y_huff_DW01_dec_9      reference_area_20000 smic18_ss
+y_huff_DW01_dec_10     reference_area_20000 smic18_ss
+y_huff_DW01_dec_11     reference_area_20000 smic18_ss
+y_huff_DW01_dec_12     reference_area_20000 smic18_ss
+y_huff_DW01_dec_13     reference_area_20000 smic18_ss
+y_huff_DW01_dec_14     reference_area_20000 smic18_ss
+y_huff_DW01_dec_15     reference_area_20000 smic18_ss
+y_huff_DW01_dec_16     reference_area_20000 smic18_ss
+y_huff_DW01_dec_17     reference_area_20000 smic18_ss
+y_huff_DW01_dec_18     reference_area_20000 smic18_ss
+y_huff_DW01_dec_19     reference_area_20000 smic18_ss
+y_huff_DW01_dec_20     reference_area_20000 smic18_ss
+y_huff_DW01_dec_21     reference_area_20000 smic18_ss
+y_huff_DW01_dec_22     reference_area_20000 smic18_ss
+y_huff_DW01_dec_23     reference_area_20000 smic18_ss
+y_huff_DW01_dec_24     reference_area_20000 smic18_ss
+y_huff_DW01_dec_25     reference_area_20000 smic18_ss
+y_huff_DW01_dec_26     reference_area_20000 smic18_ss
+y_huff_DW01_dec_27     reference_area_20000 smic18_ss
+y_huff_DW01_dec_28     reference_area_20000 smic18_ss
+y_huff_DW01_dec_29     reference_area_20000 smic18_ss
+y_huff_DW01_dec_30     reference_area_20000 smic18_ss
+y_huff_DW01_dec_31     reference_area_20000 smic18_ss
+y_huff_DW01_dec_32     reference_area_20000 smic18_ss
+y_huff_DW01_dec_33     reference_area_20000 smic18_ss
+y_huff_DW01_dec_34     reference_area_20000 smic18_ss
+y_huff_DW01_dec_35     reference_area_20000 smic18_ss
+y_huff_DW01_dec_36     reference_area_20000 smic18_ss
+y_huff_DW01_dec_37     reference_area_20000 smic18_ss
+y_huff_DW01_dec_38     reference_area_20000 smic18_ss
+y_huff_DW01_dec_39     reference_area_20000 smic18_ss
+y_huff_DW01_dec_40     reference_area_20000 smic18_ss
+y_huff_DW01_dec_41     reference_area_20000 smic18_ss
+y_huff_DW01_dec_42     reference_area_20000 smic18_ss
+y_huff_DW01_dec_43     reference_area_20000 smic18_ss
+y_huff_DW01_dec_44     reference_area_20000 smic18_ss
+y_huff_DW01_dec_45     reference_area_20000 smic18_ss
+y_huff_DW01_dec_46     reference_area_20000 smic18_ss
+y_huff_DW01_dec_47     reference_area_20000 smic18_ss
+y_huff_DW01_dec_48     reference_area_20000 smic18_ss
+y_huff_DW01_dec_49     reference_area_20000 smic18_ss
+y_huff_DW01_dec_50     reference_area_20000 smic18_ss
+y_huff_DW01_dec_51     reference_area_20000 smic18_ss
+y_huff_DW01_dec_52     reference_area_20000 smic18_ss
+y_huff_DW01_dec_53     reference_area_20000 smic18_ss
+y_huff_DW01_dec_54     reference_area_20000 smic18_ss
+y_huff_DW01_dec_55     reference_area_20000 smic18_ss
+y_huff_DW01_dec_56     reference_area_20000 smic18_ss
+y_huff_DW01_dec_57     reference_area_20000 smic18_ss
+y_huff_DW01_dec_58     reference_area_20000 smic18_ss
+y_huff_DW01_dec_59     reference_area_20000 smic18_ss
+y_huff_DW01_dec_60     reference_area_20000 smic18_ss
+y_huff_DW01_dec_61     reference_area_20000 smic18_ss
+y_huff_DW01_dec_62     reference_area_20000 smic18_ss
+y_huff_DW01_dec_63     reference_area_20000 smic18_ss
+y_huff_DW01_add_1      reference_area_20000 smic18_ss
+y_huff_DW01_add_3      reference_area_20000 smic18_ss
+y_huff_DW01_add_4      reference_area_20000 smic18_ss
 y_huff_DW01_inc_0      reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-y_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 y_dct_DW01_inc_0       reference_area_20000 smic18_ss
 y_dct_DW01_inc_1       reference_area_20000 smic18_ss
 y_dct_DW01_inc_2       reference_area_20000 smic18_ss
@@ -254,71 +272,74 @@ y_dct_DW01_add_69      reference_area_20000 smic18_ss
 y_dct_DW01_add_70      reference_area_20000 smic18_ss
 y_dct_DW01_add_71      reference_area_20000 smic18_ss
 cb_huff_DW01_sub_0     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_0     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_1     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_2     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_3     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_4     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_5     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_6     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_7     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_8     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_9     reference_area_20000 smic18_ss
+cb_huff_DW01_dec_10    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_11    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_12    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_13    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_14    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_15    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_16    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_17    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_18    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_19    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_20    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_21    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_22    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_23    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_24    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_25    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_26    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_27    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_28    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_29    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_30    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_31    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_32    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_33    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_34    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_35    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_36    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_37    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_38    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_39    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_40    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_41    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_42    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_43    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_44    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_45    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_46    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_47    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_48    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_49    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_50    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_51    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_52    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_53    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_54    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_55    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_56    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_57    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_58    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_59    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_60    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_61    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_62    reference_area_20000 smic18_ss
+cb_huff_DW01_dec_63    reference_area_20000 smic18_ss
+cb_huff_DW01_add_1     reference_area_20000 smic18_ss
+cb_huff_DW01_add_3     reference_area_20000 smic18_ss
+cb_huff_DW01_add_4     reference_area_20000 smic18_ss
 cb_huff_DW01_inc_0     reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-cb_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 cb_dct_DW01_inc_0      reference_area_20000 smic18_ss
 cb_dct_DW01_inc_1      reference_area_20000 smic18_ss
 cb_dct_DW01_inc_2      reference_area_20000 smic18_ss
@@ -471,71 +492,74 @@ cb_dct_DW01_add_69     reference_area_20000 smic18_ss
 cb_dct_DW01_add_70     reference_area_20000 smic18_ss
 cb_dct_DW01_add_71     reference_area_20000 smic18_ss
 cr_huff_DW01_sub_0     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_0     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_1     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_2     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_3     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_4     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_5     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_6     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_7     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_8     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_9     reference_area_20000 smic18_ss
+cr_huff_DW01_dec_10    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_11    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_12    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_13    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_14    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_15    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_16    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_17    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_18    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_19    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_20    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_21    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_22    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_23    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_24    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_25    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_26    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_27    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_28    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_29    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_30    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_31    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_32    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_33    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_34    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_35    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_36    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_37    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_38    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_39    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_40    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_41    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_42    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_43    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_44    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_45    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_46    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_47    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_48    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_49    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_50    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_51    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_52    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_53    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_54    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_55    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_56    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_57    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_58    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_59    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_60    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_61    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_62    reference_area_20000 smic18_ss
+cr_huff_DW01_dec_63    reference_area_20000 smic18_ss
+cr_huff_DW01_add_1     reference_area_20000 smic18_ss
+cr_huff_DW01_add_3     reference_area_20000 smic18_ss
+cr_huff_DW01_add_4     reference_area_20000 smic18_ss
 cr_huff_DW01_inc_0     reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_0 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_1 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_2 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_3 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_4 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_5 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_6 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_7 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_8 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_9 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_10 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_11 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_12 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_13 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_14 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_15 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_16 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_17 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_18 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_19 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_20 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_21 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_22 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_23 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_24 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_25 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_26 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_27 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_28 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_29 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_30 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_31 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_32 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_33 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_34 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_35 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_36 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_37 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_38 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_39 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_40 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_41 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_42 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_43 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_44 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_45 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_46 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_47 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_48 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_49 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_50 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_51 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_52 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_53 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_54 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_55 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_56 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_57 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_58 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_59 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_60 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_61 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_62 reference_area_20000 smic18_ss
-cr_quantizer_DW01_inc_63 reference_area_20000 smic18_ss
 cr_dct_DW01_inc_0      reference_area_20000 smic18_ss
 cr_dct_DW01_inc_1      reference_area_20000 smic18_ss
 cr_dct_DW01_inc_2      reference_area_20000 smic18_ss
@@ -904,7 +928,11 @@ cr_dct_DW_mult_uns_68  reference_area_20000 smic18_ss
 cr_dct_DW_mult_uns_69  reference_area_20000 smic18_ss
 cr_dct_DW_mult_uns_70  reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_0   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_0   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_1   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_1   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_2   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_sub_3   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_2   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_3   reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_0 reference_area_20000 smic18_ss
@@ -925,139 +953,139 @@ Attributes:
     I - ideal_network
     h - high fanout
 
-Net Fanout Fanin     Load      LoadUR    LoadUF    LoadLR    LoadLF    Resist    Pins      Attr
------------------------------------------------------------------------------------------------
-JPEG_FF[0]      3      1     0.06     0.06     0.06     0.06     0.06      0.07       4    
-JPEG_FF[1]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[2]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[3]      2      1     0.05     0.05     0.05     0.05     0.05      0.06       3    
-JPEG_FF[4]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[5]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[6]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[7]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[8]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[9]      4      1     0.07     0.07     0.07     0.07     0.07      0.08       5    
-JPEG_FF[10]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[11]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[12]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[13]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[14]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[15]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[16]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[17]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[18]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[19]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[20]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[21]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[22]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[23]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[24]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[25]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[26]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[27]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[28]      2      1     0.05     0.05     0.05     0.05     0.05     0.06       3    
-JPEG_FF[29]      2      1     0.05     0.05     0.05     0.05     0.05     0.06       3    
-JPEG_FF[30]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_FF[31]      4      1     0.07     0.07     0.07     0.07     0.07     0.08       5    
-JPEG_bitstream[0]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[1]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[2]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[3]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[4]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[5]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[6]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[7]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[8]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[9]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[10]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[11]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[12]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[13]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[14]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[15]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[16]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[17]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[18]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[19]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[20]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[21]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[22]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[23]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[24]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[25]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[26]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[27]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[28]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[29]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[30]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-JPEG_bitstream[31]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-clk  39583      1        2.14      2.14      2.14      2.14      2.14      2.32   39584    dr, d, h
-data_in[0]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[1]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[2]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[3]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[4]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[5]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[6]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[7]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[8]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[9]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
-data_in[10]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[11]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[12]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[13]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[14]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[15]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[16]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[17]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[18]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[19]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[20]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[21]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[22]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_in[23]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
-data_ready      1      1     0.07     0.07     0.07     0.07     0.07      0.02       2    
-data_ready_FF     11      1     0.18     0.18     0.18     0.18     0.18     0.18     12   
-enable      1      1     0.04      0.04      0.04      0.04      0.04      0.05       2    
-end_of_file_bitstream_count[0]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-end_of_file_bitstream_count[1]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-end_of_file_bitstream_count[2]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-end_of_file_bitstream_count[3]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-end_of_file_bitstream_count[4]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-end_of_file_signal      1      1     0.02     0.02     0.02     0.02     0.02     0.02      2
-eof_data_partial_ready      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
-n1     11       1        0.19      0.19      0.19      0.19      0.19      0.16      12    
-n2     11       1        0.20      0.20      0.20      0.20      0.20      0.16      12    
-n3     12       1        0.22      0.22      0.22      0.22      0.22      0.16      13    
-n4     12       1        0.22      0.22      0.22      0.22      0.22      0.16      13    
-n5     13       1        0.26      0.26      0.25      0.26      0.25      0.18      14    
-n6     13       1        0.21      0.21      0.21      0.21      0.21      0.18      14    
-n7     13       1        0.22      0.22      0.21      0.22      0.21      0.18      14    
-n8     13       1        0.22      0.22      0.22      0.22      0.22      0.18      14    
-n9     20       1        0.32      0.32      0.32      0.32      0.32      0.25      21    
-n10     16      1        0.28      0.27      0.27      0.27      0.27      0.21      17    
-n11     18      1        0.28      0.28      0.28      0.28      0.28      0.23      19    
-n12     16      1        0.27      0.27      0.27      0.27      0.27      0.21      17    
-n13     18      1        0.28      0.28      0.28      0.28      0.28      0.23      19    
-n14     18      1        0.29      0.29      0.29      0.29      0.29      0.23      19    
-n15     19      1        0.29      0.29      0.29      0.29      0.29      0.24      20    
-n16     18      1        0.30      0.30      0.30      0.30      0.30      0.23      19    
-n17     12      1        0.20      0.20      0.20      0.20      0.20      0.16      13    
-n18     11      1        0.20      0.20      0.19      0.20      0.19      0.15      12    
-n19     11      1        0.19      0.19      0.19      0.19      0.19      0.15      12    
-n20     11      1        0.20      0.20      0.20      0.20      0.20      0.15      12    
-n21     11      1        0.18      0.18      0.18      0.18      0.18      0.15      12    
-n22     11      1        0.17      0.17      0.17      0.17      0.17      0.15      12    
-n23     10      1        0.16      0.16      0.16      0.16      0.16      0.14      11    
-n24     11      1        0.19      0.19      0.19      0.19      0.19      0.15      12    
-orc_reg_in[0]     19      1     0.29     0.29     0.29     0.29     0.29     0.30     20   
-orc_reg_in[1]     13      1     0.22     0.22     0.22     0.22     0.22     0.22     14   
-orc_reg_in[2]     14      1     0.22     0.22     0.22     0.22     0.22     0.23     15   
-orc_reg_in[3]     15      1     0.23     0.23     0.23     0.23     0.23     0.23     16   
-orc_reg_in[4]     14      1     0.22     0.22     0.22     0.22     0.22     0.24     15   
-rst    205      1        0.00      0.00      0.00      0.00      0.00      2.32     206    d, I, h
------------------------------------------------------------------------------------------------
-Total 129 nets  40389    129    14.21    14.21    14.19    14.21    14.19    14.30  40518
-Maximum  39583      1     2.14     2.14      2.14      2.14      2.14      2.32   39584
-Average 313.09   1.00     0.11     0.11      0.11      0.11      0.11      0.11  314.09
+Net                 Fanout     Fanin      Load   Resistance    Pins   Attributes
+--------------------------------------------------------------------------------
+JPEG_FF[0]               2         1      0.05         0.05       3   
+JPEG_FF[1]               3         1      0.06         0.06       4   
+JPEG_FF[2]               3         1      0.06         0.06       4   
+JPEG_FF[3]               3         1      0.06         0.06       4   
+JPEG_FF[4]               3         1      0.06         0.06       4   
+JPEG_FF[5]               3         1      0.06         0.06       4   
+JPEG_FF[6]               3         1      0.06         0.06       4   
+JPEG_FF[7]               3         1      0.06         0.06       4   
+JPEG_FF[8]               3         1      0.06         0.06       4   
+JPEG_FF[9]               3         1      0.06         0.06       4   
+JPEG_FF[10]              3         1      0.06         0.06       4   
+JPEG_FF[11]              3         1      0.06         0.06       4   
+JPEG_FF[12]              3         1      0.06         0.06       4   
+JPEG_FF[13]              3         1      0.06         0.06       4   
+JPEG_FF[14]              3         1      0.06         0.06       4   
+JPEG_FF[15]              3         1      0.06         0.06       4   
+JPEG_FF[16]              3         1      0.06         0.06       4   
+JPEG_FF[17]              3         1      0.06         0.06       4   
+JPEG_FF[18]              3         1      0.06         0.06       4   
+JPEG_FF[19]              3         1      0.06         0.06       4   
+JPEG_FF[20]              3         1      0.06         0.06       4   
+JPEG_FF[21]              3         1      0.06         0.06       4   
+JPEG_FF[22]              3         1      0.06         0.06       4   
+JPEG_FF[23]              3         1      0.06         0.06       4   
+JPEG_FF[24]              3         1      0.06         0.06       4   
+JPEG_FF[25]              3         1      0.06         0.06       4   
+JPEG_FF[26]              3         1      0.06         0.06       4   
+JPEG_FF[27]              3         1      0.06         0.06       4   
+JPEG_FF[28]              3         1      0.06         0.06       4   
+JPEG_FF[29]              3         1      0.06         0.06       4   
+JPEG_FF[30]              3         1      0.06         0.06       4   
+JPEG_FF[31]              3         1      0.06         0.06       4   
+JPEG_bitstream[0]        1         1      0.07         0.02       2   
+JPEG_bitstream[1]        1         1      0.07         0.02       2   
+JPEG_bitstream[2]        1         1      0.07         0.02       2   
+JPEG_bitstream[3]        1         1      0.07         0.02       2   
+JPEG_bitstream[4]        1         1      0.07         0.02       2   
+JPEG_bitstream[5]        1         1      0.07         0.02       2   
+JPEG_bitstream[6]        1         1      0.07         0.02       2   
+JPEG_bitstream[7]        1         1      0.07         0.02       2   
+JPEG_bitstream[8]        1         1      0.07         0.02       2   
+JPEG_bitstream[9]        1         1      0.07         0.02       2   
+JPEG_bitstream[10]       1         1      0.07         0.02       2   
+JPEG_bitstream[11]       1         1      0.07         0.02       2   
+JPEG_bitstream[12]       1         1      0.07         0.02       2   
+JPEG_bitstream[13]       1         1      0.07         0.02       2   
+JPEG_bitstream[14]       1         1      0.07         0.02       2   
+JPEG_bitstream[15]       1         1      0.07         0.02       2   
+JPEG_bitstream[16]       1         1      0.07         0.02       2   
+JPEG_bitstream[17]       1         1      0.07         0.02       2   
+JPEG_bitstream[18]       1         1      0.07         0.02       2   
+JPEG_bitstream[19]       1         1      0.07         0.02       2   
+JPEG_bitstream[20]       1         1      0.07         0.02       2   
+JPEG_bitstream[21]       1         1      0.07         0.02       2   
+JPEG_bitstream[22]       1         1      0.07         0.02       2   
+JPEG_bitstream[23]       1         1      0.07         0.02       2   
+JPEG_bitstream[24]       1         1      0.07         0.02       2   
+JPEG_bitstream[25]       1         1      0.07         0.02       2   
+JPEG_bitstream[26]       1         1      0.07         0.02       2   
+JPEG_bitstream[27]       1         1      0.07         0.02       2   
+JPEG_bitstream[28]       1         1      0.07         0.02       2   
+JPEG_bitstream[29]       1         1      0.07         0.02       2   
+JPEG_bitstream[30]       1         1      0.07         0.02       2   
+JPEG_bitstream[31]       1         1      0.07         0.02       2   
+clk                  39391         1      2.14         2.32   39392   dr, d, h
+data_in[0]               1         1      0.01         0.01       2   
+data_in[1]               1         1      0.01         0.01       2   
+data_in[2]               1         1      0.01         0.01       2   
+data_in[3]               1         1      0.01         0.01       2   
+data_in[4]               1         1      0.01         0.01       2   
+data_in[5]               1         1      0.01         0.01       2   
+data_in[6]               1         1      0.01         0.01       2   
+data_in[7]               1         1      0.01         0.01       2   
+data_in[8]               1         1      0.01         0.01       2   
+data_in[9]               1         1      0.01         0.01       2   
+data_in[10]              1         1      0.01         0.01       2   
+data_in[11]              1         1      0.01         0.01       2   
+data_in[12]              1         1      0.01         0.01       2   
+data_in[13]              1         1      0.01         0.01       2   
+data_in[14]              1         1      0.01         0.01       2   
+data_in[15]              1         1      0.01         0.01       2   
+data_in[16]              1         1      0.01         0.01       2   
+data_in[17]              1         1      0.01         0.01       2   
+data_in[18]              1         1      0.01         0.01       2   
+data_in[19]              1         1      0.01         0.01       2   
+data_in[20]              1         1      0.01         0.01       2   
+data_in[21]              1         1      0.01         0.01       2   
+data_in[22]              1         1      0.01         0.01       2   
+data_in[23]              1         1      0.01         0.01       2   
+data_ready               1         1      0.07         0.02       2   
+data_ready_FF           10         1      0.15         0.15      11   
+enable                  10         1      0.14         0.14      11   
+end_of_file_bitstream_count[0]      1      1     0.07     0.02      2 
+end_of_file_bitstream_count[1]      1      1     0.07     0.02      2 
+end_of_file_bitstream_count[2]      1      1     0.07     0.02      2 
+end_of_file_bitstream_count[3]      1      1     0.07     0.02      2 
+end_of_file_bitstream_count[4]      1      1     0.07     0.02      2 
+end_of_file_signal       1         1      0.02         0.02       2   
+eof_data_partial_ready      1      1      0.07         0.02       2   
+n1                      11         1      0.19         0.16      12   
+n2                      11         1      0.20         0.16      12   
+n3                      12         1      0.22         0.16      13   
+n4                      12         1      0.22         0.16      13   
+n5                      13         1      0.26         0.18      14   
+n6                      13         1      0.22         0.18      14   
+n7                      13         1      0.22         0.18      14   
+n8                      13         1      0.23         0.18      14   
+n9                      20         1      0.32         0.25      21   
+n10                     16         1      0.27         0.21      17   
+n11                     18         1      0.28         0.23      19   
+n12                     16         1      0.27         0.21      17   
+n13                     18         1      0.27         0.23      19   
+n14                     18         1      0.29         0.23      19   
+n15                     19         1      0.29         0.24      20   
+n16                     18         1      0.30         0.23      19   
+n17                     12         1      0.20         0.16      13   
+n18                     11         1      0.20         0.15      12   
+n19                     11         1      0.19         0.15      12   
+n20                     11         1      0.20         0.15      12   
+n21                     11         1      0.18         0.15      12   
+n22                     11         1      0.17         0.15      12   
+n23                     10         1      0.16         0.14      11   
+n24                     11         1      0.20         0.15      12   
+orc_reg_in[0]           13         1      0.21         0.21      14   
+orc_reg_in[1]           13         1      0.21         0.21      14   
+orc_reg_in[2]           11         1      0.18         0.19      12   
+orc_reg_in[3]           11         1      0.18         0.19      12   
+orc_reg_in[4]           29         1      0.62         0.71      30   
+rst                  10057         1      0.00         2.32   10058   d, I, h
+--------------------------------------------------------------------------------
+Total 129 nets       50033       129     14.28        14.10   50162
+Maximum              39391         1      2.14         2.32   39392
+Average             387.85      1.00      0.11         0.11  388.85
 1
