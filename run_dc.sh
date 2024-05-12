@@ -1,7 +1,5 @@
 #!/bin/bash
 
-./env_prep.sh
-
 cd DC
 
 ./clean.sh

@@ -5,8 +5,7 @@
 #****************************************************
 #MAX freq : 125M
 #set SYS_CLK_PERIOD 9.0
-#freq : 12MHz
-set SYS_CLK_PERIOD 3.44
+set SYS_CLK_PERIOD 20
 #****************************************************
 
 #****************************************************
@@ -146,7 +145,7 @@ set_driving_cell -lib_cell INVHD2X [remove_from_collection [all_inputs] \
 #set_load [expr $MAX_LOAD*15] [all_outputs]
 
 set_load [expr $MAX_LOAD*3] [all_outputs]
-#set_max_fanout 10 [all_inputs]
+set_max_fanout 10 [all_inputs]
 
 #set_max_transition 1.0 $TOP_MODULE
 
@@ -164,19 +163,14 @@ set_load [expr $MAX_LOAD*3] [all_outputs]
 #output delay : max : setup
 #output delay : min : -hold
 
-#set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk reset]]]
-#set wb_out_ports [get_ports [list data]]
+set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk rst]]]
+set wb_out_ports [get_ports [list JPEG_bitstream data_ready end_of_file_bitstream_count eof_data_partial_ready]]
 
-set_input_delay -max 1.7 -clock wb_clk $wb_in_ports
+set_input_delay -max 10 -clock wb_clk $wb_in_ports
 set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
 
-
-#set_input_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_in_ports
-
-#set_output_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_out_ports
-
-set_output_delay -max 1.7 -clock wb_clk $wb_out_ports
-set_output_delay -min -0.1 -clock wb_clk $wb_out_ports
+set_output_delay -max 10 -clock wb_clk $wb_out_ports
+set_output_delay -min -1 -clock wb_clk $wb_out_ports
 
 #exit
 
