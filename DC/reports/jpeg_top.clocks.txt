@@ -1,0 +1,72 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed wire load model for 'sync_fifo_ff' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'ff_checker' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'sync_fifo_32_0' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'sync_fifo_32_1' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'sync_fifo_32_2' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'sync_fifo_32_3' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'sync_fifo_32_4' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'y_huff' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'y_quantizer' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'y_dct' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'yd_q_h' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cb_huff' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cb_quantizer' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cb_dct' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cbd_q_h' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cr_huff' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cr_quantizer' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'cr_dct' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'crd_q_h' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'RGB2YCBCR' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'pre_fifo' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed wire load model for 'fifo_out' from '(none)' to 'area_zero'. (OPT-170)
+Information: Changed minimum wire load model for 'jpeg_top' from 'reference_area_10000000' to 'area_zero'. (OPT-171)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'apparch' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'alt1' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Changed wire load model for 'astr' from '(none)' to 'reference_area_10000000'. (OPT-170)
+Information: Updating graph... (UID-83)
+Warning: Design 'jpeg_top' contains 193 high-fanout nets. A fanout number of 60 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clocks
+Design : jpeg_top
+Version: P-2019.03-SP3
+Date   : Sun May 12 16:41:49 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+wb_clk           3.44   {0 1.72}            d         {clk}
+--------------------------------------------------------------------------------
+1

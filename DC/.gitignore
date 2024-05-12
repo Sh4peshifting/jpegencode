@@ -6,4 +6,4 @@ command.log
 logs/
 netlist/
 WORK/
-
+svf/

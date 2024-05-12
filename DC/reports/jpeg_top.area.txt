@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : jpeg_top
+Version: P-2019.03-SP3
+Date   : Sun May 12 17:14:41 2024
+****************************************
+
+Library(s) Used:
+
+    smic18_ss (File: /home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db)
+
+Number of ports:                        60379
+Number of nets:                        362111
+Number of cells:                       286172
+Number of combinational cells:         246069
+Number of sequential cells:             39391
+Number of macros/black boxes:               0
+Number of buf/inv:                      44117
+Number of references:                       3
+
+Combinational area:            6122923.199169
+Buf/Inv area:                   555331.245831
+Noncombinational area:         2999347.257416
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:               9122270.456585
+Total area:                 undefined
+1

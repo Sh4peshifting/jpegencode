@@ -1,0 +1,100 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : jpeg_top
+Version: P-2019.03-SP3
+Date   : Sun May 12 17:14:41 2024
+****************************************
+
+ # A fanout number of 60 was used for high fanout net computations.
+
+Operating Conditions: worst   Library: smic18_ss
+Wire Load Model Mode: segmented
+
+  Startpoint: u19/u14/u11/u8/Cb41_final_2_reg[1]
+              (rising edge-triggered flip-flop clocked by wb_clk)
+  Endpoint: u19/u14/u11/u8/Z_temp_42_reg[24]
+            (rising edge-triggered flip-flop clocked by wb_clk)
+  Path Group: wb_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sync_fifo_32_3     reference_area_100000 smic18_ss
+  sync_fifo_32_2     reference_area_100000 smic18_ss
+  sync_fifo_32_1     reference_area_100000 smic18_ss
+  sync_fifo_32_0     reference_area_100000 smic18_ss
+  y_huff             reference_area_1000000 smic18_ss
+  y_quantizer        reference_area_1000000 smic18_ss
+  y_dct              reference_area_2500000 smic18_ss
+  cb_huff            reference_area_1000000 smic18_ss
+  cb_quantizer       reference_area_1000000 smic18_ss
+  cb_dct             reference_area_2500000 smic18_ss
+  cr_huff            reference_area_1000000 smic18_ss
+  cr_quantizer       reference_area_1000000 smic18_ss
+  cr_dct             reference_area_2500000 smic18_ss
+  yd_q_h             reference_area_5000000 smic18_ss
+  cbd_q_h            reference_area_5000000 smic18_ss
+  crd_q_h            reference_area_5000000 smic18_ss
+  RGB2YCBCR          reference_area_100000 smic18_ss
+  sync_fifo_ff       reference_area_1000000 smic18_ss
+  sync_fifo_32_4     reference_area_100000 smic18_ss
+  pre_fifo           reference_area_10000000 smic18_ss
+  ff_checker         reference_area_1000000 smic18_ss
+  jpeg_top           reference_area_10000000 smic18_ss
+  fifo_out           reference_area_10000000 smic18_ss
+  cr_dct_DW_mult_uns_139 reference_area_20000 smic18_ss
+  cr_dct_DW_mult_uns_147 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_155 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_175 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_176 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_177 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_178 reference_area_100000 smic18_ss
+  cr_dct_DW_mult_uns_179 reference_area_100000 smic18_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u19/u14/u11/u8/Cb41_final_2_reg[1]/CK (FFEDCRHD4X)      0.00 #     0.00 r
+  u19/u14/u11/u8/Cb41_final_2_reg[1]/QN (FFEDCRHD4X)      0.40       0.40 r
+  u19/u14/u11/u8/U1886/Z (INVCLKHD12X)                    0.63 #     1.04 f
+  u19/u14/u11/u8/mult_220_S2/a[1] (cr_dct_DW_mult_uns_175)     0.00 #     1.04 f
+  u19/u14/u11/u8/mult_220_S2/U903/Z (INVHDPX)             0.38 #     1.42 r
+  u19/u14/u11/u8/mult_220_S2/U902/Z (INVHD8X)             0.14       1.56 f
+  u19/u14/u11/u8/mult_220_S2/U1181/Z (XNOR2HDLX)          0.38       1.94 f
+  u19/u14/u11/u8/mult_220_S2/U1133/Z (OAI22HD1X)          0.27       2.21 r
+  u19/u14/u11/u8/mult_220_S2/U1450/S (HAHDLX)             0.44       2.66 r
+  u19/u14/u11/u8/mult_220_S2/U921/S (FAHHD2X)             0.37       3.03 r
+  u19/u14/u11/u8/mult_220_S2/U998/S (FAHHD2X)             0.44       3.47 f
+  u19/u14/u11/u8/mult_220_S2/U1030/Z (OR2HD4X)            0.28       3.74 f
+  u19/u14/u11/u8/mult_220_S2/U905/Z (AOI21HD2X)           0.19       3.93 r
+  u19/u14/u11/u8/mult_220_S2/U1060/Z (OAI21HD2X)          0.14       4.08 f
+  u19/u14/u11/u8/mult_220_S2/U1072/Z (AOI21HD4X)          0.20       4.27 r
+  u19/u14/u11/u8/mult_220_S2/U1071/Z (OAI21HD4X)          0.13       4.41 f
+  u19/u14/u11/u8/mult_220_S2/U1095/Z (AOI21HD4X)          0.21       4.62 r
+  u19/u14/u11/u8/mult_220_S2/U1092/Z (OAI21HD2X)          0.18       4.79 f
+  u19/u14/u11/u8/mult_220_S2/U1034/Z (AOI21HD2X)          0.18       4.97 r
+  u19/u14/u11/u8/mult_220_S2/U1033/Z (XOR2HD4X)           0.26       5.22 r
+  u19/u14/u11/u8/mult_220_S2/product[24] (cr_dct_DW_mult_uns_175)     0.00     5.22 r
+  u19/u14/u11/u8/U434/Z (MUX2HD2X)                        0.17       5.39 r
+  u19/u14/u11/u8/Z_temp_42_reg[24]/RN (FFDCRHD1X)         0.00       5.39 r
+  data arrival time                                                  5.39
+
+  clock wb_clk (rise edge)                                3.44       3.44
+  clock network delay (ideal)                             0.00       3.44
+  clock uncertainty                                      -0.10       3.34
+  u19/u14/u11/u8/Z_temp_42_reg[24]/CK (FFDCRHD1X)         0.00       3.34 r
+  library setup time                                     -0.22       3.12
+  data required time                                                 3.12
+  --------------------------------------------------------------------------
+  data required time                                                 3.12
+  data arrival time                                                 -5.39
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.28
+
+
+1

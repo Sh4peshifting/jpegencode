@@ -4,7 +4,7 @@ date
 
 set exit_switch 	[getenv exit_switch]
 
-set TOP_MODULE  ws2812
+set TOP_MODULE  jpeg_top
 set_svf ${svfDir}/${TOP_MODULE}.svf
 
 define_design_lib WORK -path WORK

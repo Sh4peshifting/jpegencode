@@ -10,7 +10,7 @@ set TOPDIR	[sh pwd]
 
 # Define RTL source files directory
 
-set topDir 		"../rtl"
+set topDir 		"../jpeg_encode_core/rtl"
 
 # Output files directory
 set reportsDir 		"$TOPDIR/reports"

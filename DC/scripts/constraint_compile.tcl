@@ -6,7 +6,7 @@
 #MAX freq : 125M
 #set SYS_CLK_PERIOD 9.0
 #freq : 12MHz
-set SYS_CLK_PERIOD 83.3
+set SYS_CLK_PERIOD 3.44
 #****************************************************
 
 #****************************************************
@@ -24,8 +24,8 @@ set remove_tie_dont_use_switch [getenv remove_tie_dont_use_switch]
 
 # Define some variables for design 
 #****************************************************
-set TOP_MODULE		ws2812
-set Rst_list		[list reset]
+set TOP_MODULE		jpeg_top
+set Rst_list		[list rst]
 set Clk_list		[list clk]
 
 set_svf 	${svfDir}/${TOP_MODULE}.svf
@@ -140,7 +140,7 @@ set_drive 0 	[get_ports "$Clk_list"]
 
 
 set_driving_cell -lib_cell INVHD2X [remove_from_collection [all_inputs] \
-         [get_ports [list clk reset]]]
+         [get_ports [list clk rst]]]
 #set_max_capacitance [expr $MAX_LOAD*12] [get_designs *]
 
 #set_load [expr $MAX_LOAD*15] [all_outputs]
@@ -164,19 +164,19 @@ set_load [expr $MAX_LOAD*3] [all_outputs]
 #output delay : max : setup
 #output delay : min : -hold
 
-set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk reset]]]
-set wb_out_ports [get_ports [list data]]
+#set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk reset]]]
+#set wb_out_ports [get_ports [list data]]
 
-#set_input_delay -max 5 -clock wb_clk $wb_in_ports
-#set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
+set_input_delay -max 1.7 -clock wb_clk $wb_in_ports
+set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
 
 
-set_input_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_in_ports
+#set_input_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_in_ports
 
-set_output_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_out_ports
+#set_output_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_out_ports
 
-#set_output_delay -max 5 -clock wb_clk $wb_out_ports
-#set_output_delay -min -1 -clock wb_clk $wb_out_ports
+set_output_delay -max 1.7 -clock wb_clk $wb_out_ports
+set_output_delay -min -0.1 -clock wb_clk $wb_out_ports
 
 #exit
 

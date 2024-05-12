@@ -1,0 +1,871 @@
+ 
+****************************************
+Report : net
+Design : jpeg_top
+Version: P-2019.03-SP3
+Date   : Sun May 12 17:14:36 2024
+****************************************
+
+
+Operating Conditions: worst   Library: smic18_ss
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+jpeg_top               reference_area_10000000 smic18_ss
+fifo_out               reference_area_10000000 smic18_ss
+ff_checker             reference_area_1000000 smic18_ss
+pre_fifo               reference_area_10000000 smic18_ss
+sync_fifo_32_4         reference_area_100000 smic18_ss
+sync_fifo_ff           reference_area_1000000 smic18_ss
+RGB2YCBCR              reference_area_100000 smic18_ss
+crd_q_h                reference_area_5000000 smic18_ss
+cbd_q_h                reference_area_5000000 smic18_ss
+yd_q_h                 reference_area_5000000 smic18_ss
+cr_dct                 reference_area_2500000 smic18_ss
+cr_quantizer           reference_area_1000000 smic18_ss
+cr_huff                reference_area_1000000 smic18_ss
+cb_dct                 reference_area_2500000 smic18_ss
+cb_quantizer           reference_area_1000000 smic18_ss
+cb_huff                reference_area_1000000 smic18_ss
+y_dct                  reference_area_2500000 smic18_ss
+y_quantizer            reference_area_1000000 smic18_ss
+y_huff                 reference_area_1000000 smic18_ss
+sync_fifo_32_0         reference_area_100000 smic18_ss
+sync_fifo_32_1         reference_area_100000 smic18_ss
+sync_fifo_32_2         reference_area_100000 smic18_ss
+sync_fifo_32_3         reference_area_100000 smic18_ss
+ff_checker_DW01_inc_0  reference_area_20000 smic18_ss
+y_huff_DW01_inc_0      reference_area_20000 smic18_ss
+y_dct_DW01_inc_8       reference_area_20000 smic18_ss
+y_dct_DW01_inc_9       reference_area_20000 smic18_ss
+y_dct_DW01_inc_10      reference_area_20000 smic18_ss
+y_dct_DW01_inc_11      reference_area_20000 smic18_ss
+y_dct_DW01_inc_12      reference_area_20000 smic18_ss
+y_dct_DW01_inc_13      reference_area_20000 smic18_ss
+y_dct_DW01_inc_14      reference_area_20000 smic18_ss
+y_dct_DW01_inc_15      reference_area_20000 smic18_ss
+y_dct_DW01_inc_16      reference_area_20000 smic18_ss
+y_dct_DW01_inc_17      reference_area_20000 smic18_ss
+y_dct_DW01_inc_18      reference_area_20000 smic18_ss
+y_dct_DW01_inc_19      reference_area_20000 smic18_ss
+y_dct_DW01_inc_20      reference_area_20000 smic18_ss
+y_dct_DW01_inc_21      reference_area_20000 smic18_ss
+y_dct_DW01_inc_22      reference_area_20000 smic18_ss
+y_dct_DW01_inc_23      reference_area_20000 smic18_ss
+y_dct_DW01_inc_24      reference_area_20000 smic18_ss
+y_dct_DW01_inc_25      reference_area_20000 smic18_ss
+y_dct_DW01_inc_26      reference_area_20000 smic18_ss
+y_dct_DW01_inc_27      reference_area_20000 smic18_ss
+y_dct_DW01_inc_28      reference_area_20000 smic18_ss
+y_dct_DW01_inc_29      reference_area_20000 smic18_ss
+y_dct_DW01_inc_30      reference_area_20000 smic18_ss
+y_dct_DW01_inc_31      reference_area_20000 smic18_ss
+y_dct_DW01_inc_32      reference_area_20000 smic18_ss
+y_dct_DW01_inc_33      reference_area_20000 smic18_ss
+y_dct_DW01_inc_34      reference_area_20000 smic18_ss
+y_dct_DW01_inc_35      reference_area_20000 smic18_ss
+y_dct_DW01_inc_36      reference_area_20000 smic18_ss
+y_dct_DW01_inc_37      reference_area_20000 smic18_ss
+y_dct_DW01_inc_38      reference_area_20000 smic18_ss
+y_dct_DW01_inc_39      reference_area_20000 smic18_ss
+y_dct_DW01_inc_40      reference_area_20000 smic18_ss
+y_dct_DW01_inc_41      reference_area_20000 smic18_ss
+y_dct_DW01_inc_42      reference_area_20000 smic18_ss
+y_dct_DW01_inc_43      reference_area_20000 smic18_ss
+y_dct_DW01_inc_44      reference_area_20000 smic18_ss
+y_dct_DW01_inc_45      reference_area_20000 smic18_ss
+y_dct_DW01_inc_46      reference_area_20000 smic18_ss
+y_dct_DW01_inc_47      reference_area_20000 smic18_ss
+y_dct_DW01_inc_48      reference_area_20000 smic18_ss
+y_dct_DW01_inc_49      reference_area_20000 smic18_ss
+y_dct_DW01_inc_50      reference_area_20000 smic18_ss
+y_dct_DW01_inc_51      reference_area_20000 smic18_ss
+y_dct_DW01_inc_52      reference_area_20000 smic18_ss
+y_dct_DW01_inc_53      reference_area_20000 smic18_ss
+y_dct_DW01_inc_54      reference_area_20000 smic18_ss
+y_dct_DW01_inc_55      reference_area_20000 smic18_ss
+y_dct_DW01_inc_56      reference_area_20000 smic18_ss
+y_dct_DW01_inc_57      reference_area_20000 smic18_ss
+y_dct_DW01_inc_58      reference_area_20000 smic18_ss
+y_dct_DW01_inc_59      reference_area_20000 smic18_ss
+y_dct_DW01_inc_60      reference_area_20000 smic18_ss
+y_dct_DW01_inc_61      reference_area_20000 smic18_ss
+y_dct_DW01_inc_62      reference_area_20000 smic18_ss
+y_dct_DW01_inc_63      reference_area_20000 smic18_ss
+y_dct_DW01_inc_64      reference_area_20000 smic18_ss
+y_dct_DW01_inc_65      reference_area_20000 smic18_ss
+y_dct_DW01_inc_66      reference_area_20000 smic18_ss
+y_dct_DW01_inc_67      reference_area_20000 smic18_ss
+y_dct_DW01_inc_68      reference_area_20000 smic18_ss
+y_dct_DW01_inc_69      reference_area_20000 smic18_ss
+y_dct_DW01_inc_70      reference_area_20000 smic18_ss
+y_dct_DW01_inc_71      reference_area_20000 smic18_ss
+cb_huff_DW01_inc_0     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_0      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_1      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_2      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_3      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_4      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_5      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_6      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_7      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_8      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_9      reference_area_20000 smic18_ss
+cb_dct_DW01_inc_10     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_11     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_12     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_13     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_14     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_15     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_16     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_17     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_18     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_19     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_20     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_21     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_22     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_23     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_24     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_25     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_26     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_27     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_28     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_29     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_30     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_31     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_32     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_33     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_34     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_35     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_36     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_37     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_38     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_39     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_40     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_41     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_42     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_43     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_44     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_45     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_46     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_47     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_48     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_49     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_50     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_51     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_52     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_53     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_54     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_55     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_56     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_57     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_58     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_59     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_60     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_61     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_62     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_63     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_64     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_65     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_66     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_67     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_68     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_69     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_70     reference_area_20000 smic18_ss
+cb_dct_DW01_inc_71     reference_area_20000 smic18_ss
+cr_huff_DW01_inc_0     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_0      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_1      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_2      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_3      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_4      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_5      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_6      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_7      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_8      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_9      reference_area_20000 smic18_ss
+cr_dct_DW01_inc_10     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_11     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_12     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_13     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_14     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_15     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_16     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_17     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_18     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_19     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_20     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_21     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_22     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_23     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_24     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_25     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_26     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_27     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_28     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_29     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_30     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_31     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_32     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_33     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_34     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_35     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_36     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_37     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_38     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_39     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_40     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_41     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_42     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_43     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_44     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_45     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_46     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_47     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_48     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_49     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_50     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_51     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_52     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_53     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_54     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_55     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_56     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_57     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_58     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_59     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_60     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_61     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_62     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_63     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_64     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_65     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_66     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_67     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_68     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_69     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_70     reference_area_20000 smic18_ss
+cr_dct_DW01_inc_71     reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_inc_0   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_inc_1   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_inc_2   reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_0 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_1 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_2 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_3 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_4 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_5 reference_area_20000 smic18_ss
+RGB2YCBCR_DW_mult_uns_6 reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_72   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_73   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_74   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_75   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_76   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_77   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_78   reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_135  reference_area_20000 smic18_ss
+y_dct_DW01_sub_8       reference_area_20000 smic18_ss
+y_dct_DW01_sub_9       reference_area_20000 smic18_ss
+y_dct_DW01_sub_10      reference_area_20000 smic18_ss
+y_dct_DW01_sub_11      reference_area_20000 smic18_ss
+y_dct_DW01_sub_12      reference_area_20000 smic18_ss
+y_dct_DW01_sub_13      reference_area_20000 smic18_ss
+y_dct_DW01_sub_14      reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_72  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_73  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_74  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_75  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_76  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_77  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_78  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_135 reference_area_20000 smic18_ss
+cr_dct_DW01_sub_8      reference_area_20000 smic18_ss
+cr_dct_DW01_sub_9      reference_area_20000 smic18_ss
+cr_dct_DW01_sub_10     reference_area_20000 smic18_ss
+cr_dct_DW01_sub_11     reference_area_20000 smic18_ss
+cr_dct_DW01_sub_12     reference_area_20000 smic18_ss
+cr_dct_DW01_sub_13     reference_area_20000 smic18_ss
+cr_dct_DW01_sub_14     reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_72  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_73  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_74  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_75  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_76  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_77  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_78  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_135 reference_area_20000 smic18_ss
+cb_dct_DW01_sub_8      reference_area_20000 smic18_ss
+cb_dct_DW01_sub_9      reference_area_20000 smic18_ss
+cb_dct_DW01_sub_10     reference_area_20000 smic18_ss
+cb_dct_DW01_sub_11     reference_area_20000 smic18_ss
+cb_dct_DW01_sub_12     reference_area_20000 smic18_ss
+cb_dct_DW01_sub_13     reference_area_20000 smic18_ss
+cb_dct_DW01_sub_14     reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_136 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_137 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_138 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_139 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_140 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_141 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_142 reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_143 reference_area_20000 smic18_ss
+cr_dct_DW01_add_72     reference_area_20000 smic18_ss
+cr_dct_DW01_add_73     reference_area_20000 smic18_ss
+cr_dct_DW01_add_74     reference_area_20000 smic18_ss
+cr_dct_DW01_add_75     reference_area_20000 smic18_ss
+cr_dct_DW01_add_76     reference_area_20000 smic18_ss
+cr_dct_DW01_add_77     reference_area_20000 smic18_ss
+cr_dct_DW01_add_78     reference_area_20000 smic18_ss
+cr_dct_DW01_add_79     reference_area_20000 smic18_ss
+cr_dct_DW01_add_80     reference_area_20000 smic18_ss
+cr_dct_DW01_add_81     reference_area_20000 smic18_ss
+cr_dct_DW01_add_82     reference_area_20000 smic18_ss
+cr_dct_DW01_add_83     reference_area_20000 smic18_ss
+cr_dct_DW01_add_84     reference_area_20000 smic18_ss
+cr_dct_DW01_add_85     reference_area_20000 smic18_ss
+cr_dct_DW01_add_86     reference_area_20000 smic18_ss
+cr_dct_DW01_add_87     reference_area_20000 smic18_ss
+cr_dct_DW01_add_88     reference_area_20000 smic18_ss
+cr_dct_DW01_add_89     reference_area_20000 smic18_ss
+cr_dct_DW01_add_90     reference_area_20000 smic18_ss
+cr_dct_DW01_add_91     reference_area_20000 smic18_ss
+cr_dct_DW01_add_92     reference_area_20000 smic18_ss
+cr_dct_DW01_add_93     reference_area_20000 smic18_ss
+cr_dct_DW01_add_94     reference_area_20000 smic18_ss
+cr_dct_DW01_add_95     reference_area_20000 smic18_ss
+cr_dct_DW01_add_96     reference_area_20000 smic18_ss
+cr_dct_DW01_add_97     reference_area_20000 smic18_ss
+cr_dct_DW01_add_98     reference_area_20000 smic18_ss
+cr_dct_DW01_add_99     reference_area_20000 smic18_ss
+cr_dct_DW01_add_100    reference_area_20000 smic18_ss
+cr_dct_DW01_add_101    reference_area_20000 smic18_ss
+cr_dct_DW01_add_102    reference_area_20000 smic18_ss
+cr_dct_DW01_add_103    reference_area_20000 smic18_ss
+cr_dct_DW01_add_104    reference_area_20000 smic18_ss
+cr_dct_DW01_add_105    reference_area_20000 smic18_ss
+cr_dct_DW01_add_106    reference_area_20000 smic18_ss
+cr_dct_DW01_add_107    reference_area_20000 smic18_ss
+cr_dct_DW01_add_108    reference_area_20000 smic18_ss
+cr_dct_DW01_add_109    reference_area_20000 smic18_ss
+cr_dct_DW01_add_110    reference_area_20000 smic18_ss
+cr_dct_DW01_add_111    reference_area_20000 smic18_ss
+cr_dct_DW01_add_112    reference_area_20000 smic18_ss
+cr_dct_DW01_add_113    reference_area_20000 smic18_ss
+cr_dct_DW01_add_114    reference_area_20000 smic18_ss
+cr_dct_DW01_add_115    reference_area_20000 smic18_ss
+cr_dct_DW01_add_116    reference_area_20000 smic18_ss
+cr_dct_DW01_add_117    reference_area_20000 smic18_ss
+cr_dct_DW01_add_118    reference_area_20000 smic18_ss
+cr_dct_DW01_add_119    reference_area_20000 smic18_ss
+cr_dct_DW01_add_120    reference_area_20000 smic18_ss
+cr_dct_DW01_add_121    reference_area_20000 smic18_ss
+cr_dct_DW01_add_122    reference_area_20000 smic18_ss
+cr_dct_DW01_add_123    reference_area_20000 smic18_ss
+cr_dct_DW01_add_124    reference_area_20000 smic18_ss
+cr_dct_DW01_add_125    reference_area_20000 smic18_ss
+cr_dct_DW01_add_126    reference_area_20000 smic18_ss
+cr_dct_DW01_add_127    reference_area_20000 smic18_ss
+cr_dct_DW01_add_128    reference_area_20000 smic18_ss
+cr_dct_DW01_add_129    reference_area_20000 smic18_ss
+cr_dct_DW01_add_130    reference_area_20000 smic18_ss
+cr_dct_DW01_add_131    reference_area_20000 smic18_ss
+cr_dct_DW01_add_132    reference_area_20000 smic18_ss
+cr_dct_DW01_add_133    reference_area_20000 smic18_ss
+cr_dct_DW01_add_134    reference_area_20000 smic18_ss
+cr_dct_DW01_add_135    reference_area_20000 smic18_ss
+cr_dct_DW01_add_136    reference_area_20000 smic18_ss
+cr_dct_DW01_add_137    reference_area_20000 smic18_ss
+cr_dct_DW01_add_138    reference_area_20000 smic18_ss
+cr_dct_DW01_add_139    reference_area_20000 smic18_ss
+cr_dct_DW01_add_140    reference_area_20000 smic18_ss
+cr_dct_DW01_add_141    reference_area_20000 smic18_ss
+cr_dct_DW01_add_142    reference_area_20000 smic18_ss
+cr_dct_DW01_add_143    reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_136 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_137 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_138 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_139 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_140 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_141 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_142 reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_143 reference_area_20000 smic18_ss
+cb_dct_DW01_add_72     reference_area_20000 smic18_ss
+cb_dct_DW01_add_73     reference_area_20000 smic18_ss
+cb_dct_DW01_add_74     reference_area_20000 smic18_ss
+cb_dct_DW01_add_75     reference_area_20000 smic18_ss
+cb_dct_DW01_add_76     reference_area_20000 smic18_ss
+cb_dct_DW01_add_77     reference_area_20000 smic18_ss
+cb_dct_DW01_add_78     reference_area_20000 smic18_ss
+cb_dct_DW01_add_79     reference_area_20000 smic18_ss
+cb_dct_DW01_add_80     reference_area_20000 smic18_ss
+cb_dct_DW01_add_81     reference_area_20000 smic18_ss
+cb_dct_DW01_add_82     reference_area_20000 smic18_ss
+cb_dct_DW01_add_83     reference_area_20000 smic18_ss
+cb_dct_DW01_add_84     reference_area_20000 smic18_ss
+cb_dct_DW01_add_85     reference_area_20000 smic18_ss
+cb_dct_DW01_add_86     reference_area_20000 smic18_ss
+cb_dct_DW01_add_87     reference_area_20000 smic18_ss
+cb_dct_DW01_add_88     reference_area_20000 smic18_ss
+cb_dct_DW01_add_89     reference_area_20000 smic18_ss
+cb_dct_DW01_add_90     reference_area_20000 smic18_ss
+cb_dct_DW01_add_91     reference_area_20000 smic18_ss
+cb_dct_DW01_add_92     reference_area_20000 smic18_ss
+cb_dct_DW01_add_93     reference_area_20000 smic18_ss
+cb_dct_DW01_add_94     reference_area_20000 smic18_ss
+cb_dct_DW01_add_95     reference_area_20000 smic18_ss
+cb_dct_DW01_add_96     reference_area_20000 smic18_ss
+cb_dct_DW01_add_97     reference_area_20000 smic18_ss
+cb_dct_DW01_add_98     reference_area_20000 smic18_ss
+cb_dct_DW01_add_99     reference_area_20000 smic18_ss
+cb_dct_DW01_add_100    reference_area_20000 smic18_ss
+cb_dct_DW01_add_101    reference_area_20000 smic18_ss
+cb_dct_DW01_add_102    reference_area_20000 smic18_ss
+cb_dct_DW01_add_103    reference_area_20000 smic18_ss
+cb_dct_DW01_add_104    reference_area_20000 smic18_ss
+cb_dct_DW01_add_105    reference_area_20000 smic18_ss
+cb_dct_DW01_add_106    reference_area_20000 smic18_ss
+cb_dct_DW01_add_107    reference_area_20000 smic18_ss
+cb_dct_DW01_add_108    reference_area_20000 smic18_ss
+cb_dct_DW01_add_109    reference_area_20000 smic18_ss
+cb_dct_DW01_add_110    reference_area_20000 smic18_ss
+cb_dct_DW01_add_111    reference_area_20000 smic18_ss
+cb_dct_DW01_add_112    reference_area_20000 smic18_ss
+cb_dct_DW01_add_113    reference_area_20000 smic18_ss
+cb_dct_DW01_add_114    reference_area_20000 smic18_ss
+cb_dct_DW01_add_115    reference_area_20000 smic18_ss
+cb_dct_DW01_add_116    reference_area_20000 smic18_ss
+cb_dct_DW01_add_117    reference_area_20000 smic18_ss
+cb_dct_DW01_add_118    reference_area_20000 smic18_ss
+cb_dct_DW01_add_119    reference_area_20000 smic18_ss
+cb_dct_DW01_add_120    reference_area_20000 smic18_ss
+cb_dct_DW01_add_121    reference_area_20000 smic18_ss
+cb_dct_DW01_add_122    reference_area_20000 smic18_ss
+cb_dct_DW01_add_123    reference_area_20000 smic18_ss
+cb_dct_DW01_add_124    reference_area_20000 smic18_ss
+cb_dct_DW01_add_125    reference_area_20000 smic18_ss
+cb_dct_DW01_add_126    reference_area_20000 smic18_ss
+cb_dct_DW01_add_127    reference_area_20000 smic18_ss
+cb_dct_DW01_add_128    reference_area_20000 smic18_ss
+cb_dct_DW01_add_129    reference_area_20000 smic18_ss
+cb_dct_DW01_add_130    reference_area_20000 smic18_ss
+cb_dct_DW01_add_131    reference_area_20000 smic18_ss
+cb_dct_DW01_add_132    reference_area_20000 smic18_ss
+cb_dct_DW01_add_133    reference_area_20000 smic18_ss
+cb_dct_DW01_add_134    reference_area_20000 smic18_ss
+cb_dct_DW01_add_135    reference_area_20000 smic18_ss
+cb_dct_DW01_add_136    reference_area_20000 smic18_ss
+cb_dct_DW01_add_137    reference_area_20000 smic18_ss
+cb_dct_DW01_add_138    reference_area_20000 smic18_ss
+cb_dct_DW01_add_139    reference_area_20000 smic18_ss
+cb_dct_DW01_add_140    reference_area_20000 smic18_ss
+cb_dct_DW01_add_141    reference_area_20000 smic18_ss
+cb_dct_DW01_add_142    reference_area_20000 smic18_ss
+cb_dct_DW01_add_143    reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_136  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_137  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_138  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_139  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_140  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_141  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_142  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_143  reference_area_20000 smic18_ss
+y_dct_DW01_add_72      reference_area_20000 smic18_ss
+y_dct_DW01_add_73      reference_area_20000 smic18_ss
+y_dct_DW01_add_74      reference_area_20000 smic18_ss
+y_dct_DW01_add_75      reference_area_20000 smic18_ss
+y_dct_DW01_add_76      reference_area_20000 smic18_ss
+y_dct_DW01_add_77      reference_area_20000 smic18_ss
+y_dct_DW01_add_78      reference_area_20000 smic18_ss
+y_dct_DW01_add_79      reference_area_20000 smic18_ss
+y_dct_DW01_add_80      reference_area_20000 smic18_ss
+y_dct_DW01_add_81      reference_area_20000 smic18_ss
+y_dct_DW01_add_82      reference_area_20000 smic18_ss
+y_dct_DW01_add_83      reference_area_20000 smic18_ss
+y_dct_DW01_add_84      reference_area_20000 smic18_ss
+y_dct_DW01_add_85      reference_area_20000 smic18_ss
+y_dct_DW01_add_86      reference_area_20000 smic18_ss
+y_dct_DW01_add_87      reference_area_20000 smic18_ss
+y_dct_DW01_add_88      reference_area_20000 smic18_ss
+y_dct_DW01_add_89      reference_area_20000 smic18_ss
+y_dct_DW01_add_90      reference_area_20000 smic18_ss
+y_dct_DW01_add_91      reference_area_20000 smic18_ss
+y_dct_DW01_add_92      reference_area_20000 smic18_ss
+y_dct_DW01_add_93      reference_area_20000 smic18_ss
+y_dct_DW01_add_94      reference_area_20000 smic18_ss
+y_dct_DW01_add_95      reference_area_20000 smic18_ss
+y_dct_DW01_add_96      reference_area_20000 smic18_ss
+y_dct_DW01_add_97      reference_area_20000 smic18_ss
+y_dct_DW01_add_98      reference_area_20000 smic18_ss
+y_dct_DW01_add_99      reference_area_20000 smic18_ss
+y_dct_DW01_add_100     reference_area_20000 smic18_ss
+y_dct_DW01_add_101     reference_area_20000 smic18_ss
+y_dct_DW01_add_102     reference_area_20000 smic18_ss
+y_dct_DW01_add_103     reference_area_20000 smic18_ss
+y_dct_DW01_add_104     reference_area_20000 smic18_ss
+y_dct_DW01_add_105     reference_area_20000 smic18_ss
+y_dct_DW01_add_106     reference_area_20000 smic18_ss
+y_dct_DW01_add_107     reference_area_20000 smic18_ss
+y_dct_DW01_add_108     reference_area_20000 smic18_ss
+y_dct_DW01_add_109     reference_area_20000 smic18_ss
+y_dct_DW01_add_110     reference_area_20000 smic18_ss
+y_dct_DW01_add_111     reference_area_20000 smic18_ss
+y_dct_DW01_add_112     reference_area_20000 smic18_ss
+y_dct_DW01_add_113     reference_area_20000 smic18_ss
+y_dct_DW01_add_114     reference_area_20000 smic18_ss
+y_dct_DW01_add_115     reference_area_20000 smic18_ss
+y_dct_DW01_add_116     reference_area_20000 smic18_ss
+y_dct_DW01_add_117     reference_area_20000 smic18_ss
+y_dct_DW01_add_118     reference_area_20000 smic18_ss
+y_dct_DW01_add_119     reference_area_20000 smic18_ss
+y_dct_DW01_add_120     reference_area_20000 smic18_ss
+y_dct_DW01_add_121     reference_area_20000 smic18_ss
+y_dct_DW01_add_122     reference_area_20000 smic18_ss
+y_dct_DW01_add_123     reference_area_20000 smic18_ss
+y_dct_DW01_add_124     reference_area_20000 smic18_ss
+y_dct_DW01_add_125     reference_area_20000 smic18_ss
+y_dct_DW01_add_126     reference_area_20000 smic18_ss
+y_dct_DW01_add_127     reference_area_20000 smic18_ss
+y_dct_DW01_add_128     reference_area_20000 smic18_ss
+y_dct_DW01_add_129     reference_area_20000 smic18_ss
+y_dct_DW01_add_130     reference_area_20000 smic18_ss
+y_dct_DW01_add_131     reference_area_20000 smic18_ss
+y_dct_DW01_add_132     reference_area_20000 smic18_ss
+y_dct_DW01_add_133     reference_area_20000 smic18_ss
+y_dct_DW01_add_134     reference_area_20000 smic18_ss
+y_dct_DW01_add_135     reference_area_20000 smic18_ss
+y_dct_DW01_add_136     reference_area_20000 smic18_ss
+y_dct_DW01_add_137     reference_area_20000 smic18_ss
+y_dct_DW01_add_138     reference_area_20000 smic18_ss
+y_dct_DW01_add_139     reference_area_20000 smic18_ss
+y_dct_DW01_add_140     reference_area_20000 smic18_ss
+y_dct_DW01_add_141     reference_area_20000 smic18_ss
+y_dct_DW01_add_142     reference_area_20000 smic18_ss
+y_dct_DW01_add_143     reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_add_4   reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_add_5   reference_area_20000 smic18_ss
+y_dct_DW01_inc_72      reference_area_20000 smic18_ss
+y_dct_DW01_inc_73      reference_area_20000 smic18_ss
+y_dct_DW01_inc_74      reference_area_20000 smic18_ss
+y_dct_DW01_inc_75      reference_area_20000 smic18_ss
+y_dct_DW01_inc_76      reference_area_20000 smic18_ss
+y_dct_DW01_inc_77      reference_area_20000 smic18_ss
+y_dct_DW01_inc_78      reference_area_20000 smic18_ss
+y_dct_DW01_inc_79      reference_area_20000 smic18_ss
+cr_huff_DW01_sub_9     reference_area_20000 smic18_ss
+cb_huff_DW01_sub_9     reference_area_20000 smic18_ss
+y_huff_DW01_sub_9      reference_area_20000 smic18_ss
+RGB2YCBCR_DW01_add_15  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_144  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_145  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_146  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_147  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_148  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_149  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_150  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_151  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_152  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_153  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_154  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_155  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_156  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_157  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_158  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_159  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_160  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_161  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_162  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_163  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_164  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_165  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_166  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_167  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_168  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_169  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_170  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_171  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_172  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_173  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_174  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_175  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_176  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_177  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_178  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_179  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_180  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_181  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_182  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_183  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_184  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_185  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_186  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_187  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_188  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_189  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_190  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_191  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_192  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_193  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_194  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_195  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_196  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_197  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_198  reference_area_100000 smic18_ss
+y_dct_DW_mult_uns_199  reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_144 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_145 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_146 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_147 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_148 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_149 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_150 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_151 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_144 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_145 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_146 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_147 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_148 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_149 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_150 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_151 reference_area_100000 smic18_ss
+RGB2YCBCR_DW01_add_17  reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_152 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_153 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_154 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_155 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_156 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_157 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_158 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_159 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_160 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_161 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_162 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_163 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_164 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_165 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_166 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_167 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_168 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_169 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_170 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_171 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_172 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_173 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_174 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_175 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_176 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_177 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_178 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_179 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_180 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_181 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_182 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_183 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_184 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_185 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_186 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_187 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_188 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_189 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_190 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_191 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_192 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_193 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_194 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_195 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_196 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_197 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_198 reference_area_100000 smic18_ss
+cr_dct_DW_mult_uns_199 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_152 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_153 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_154 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_155 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_156 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_157 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_158 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_159 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_160 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_161 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_162 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_163 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_164 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_165 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_166 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_167 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_168 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_169 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_170 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_171 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_172 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_173 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_174 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_175 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_176 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_177 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_178 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_179 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_180 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_181 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_182 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_183 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_184 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_185 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_186 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_187 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_188 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_189 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_190 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_191 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_192 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_193 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_194 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_195 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_196 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_197 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_198 reference_area_100000 smic18_ss
+cb_dct_DW_mult_uns_199 reference_area_100000 smic18_ss
+
+
+Attributes:
+   dr - drc disabled
+    d - dont_touch
+    I - ideal_network
+    h - high fanout
+
+Net Fanout Fanin     Load      LoadUR    LoadUF    LoadLR    LoadLF    Resist    Pins      Attr
+-----------------------------------------------------------------------------------------------
+JPEG_FF[0]      3      1     0.06     0.06     0.06     0.06     0.06      0.07       4    
+JPEG_FF[1]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[2]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[3]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[4]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[5]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[6]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[7]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[8]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[9]      3      1     0.06     0.06     0.06     0.06     0.06      0.06       4    
+JPEG_FF[10]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[11]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[12]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[13]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[14]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[15]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[16]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[17]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[18]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[19]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[20]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[21]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[22]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[23]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[24]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[25]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[26]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[27]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[28]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[29]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[30]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_FF[31]      3      1     0.06     0.06     0.06     0.06     0.06     0.06       4    
+JPEG_bitstream[0]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[1]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[2]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[3]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[4]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[5]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[6]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[7]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[8]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[9]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[10]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[11]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[12]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[13]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[14]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[15]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[16]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[17]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[18]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[19]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[20]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[21]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[22]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[23]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[24]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[25]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[26]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[27]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[28]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[29]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[30]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+JPEG_bitstream[31]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+clk  39391      1        2.14      2.14      2.14      2.14      2.14      2.32   39392    dr, d, h
+data_in[0]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[1]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[2]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[3]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[4]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[5]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[6]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[7]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[8]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[9]      1      1     0.01     0.01     0.01     0.01     0.01      0.01       2    
+data_in[10]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[11]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[12]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[13]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[14]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[15]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[16]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[17]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[18]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[19]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[20]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[21]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[22]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_in[23]      1      1     0.01     0.01     0.01     0.01     0.01     0.01       2    
+data_ready      1      1     0.07     0.07     0.07     0.07     0.07      0.02       2    
+data_ready_FF     10      1     0.15     0.15     0.15     0.15     0.15     0.15     11   
+enable      1      1     0.03      0.03      0.03      0.03      0.03      0.04       2    
+end_of_file_bitstream_count[0]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+end_of_file_bitstream_count[1]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+end_of_file_bitstream_count[2]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+end_of_file_bitstream_count[3]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+end_of_file_bitstream_count[4]      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+end_of_file_signal      1      1     0.02     0.02     0.02     0.02     0.02     0.02      2
+eof_data_partial_ready      1      1     0.07     0.07     0.07     0.07     0.07     0.02      2
+n1     11       1        0.19      0.19      0.19      0.19      0.19      0.16      12    
+n2     11       1        0.20      0.20      0.20      0.20      0.20      0.16      12    
+n3     12       1        0.22      0.22      0.22      0.22      0.22      0.16      13    
+n4     12       1        0.22      0.22      0.22      0.22      0.22      0.16      13    
+n5     13       1        0.26      0.26      0.26      0.26      0.26      0.18      14    
+n6     13       1        0.22      0.22      0.22      0.22      0.22      0.18      14    
+n7     13       1        0.22      0.22      0.22      0.22      0.22      0.18      14    
+n8     13       1        0.23      0.23      0.23      0.23      0.23      0.18      14    
+n9     20       1        0.32      0.32      0.32      0.32      0.32      0.25      21    
+n10     16      1        0.28      0.27      0.27      0.27      0.27      0.21      17    
+n11     18      1        0.28      0.28      0.28      0.28      0.28      0.23      19    
+n12     16      1        0.27      0.27      0.27      0.27      0.27      0.21      17    
+n13     18      1        0.28      0.28      0.28      0.28      0.28      0.23      19    
+n14     18      1        0.29      0.29      0.29      0.29      0.29      0.23      19    
+n15     19      1        0.29      0.29      0.29      0.29      0.29      0.24      20    
+n16     18      1        0.30      0.30      0.30      0.30      0.30      0.23      19    
+n17     12      1        0.20      0.20      0.20      0.20      0.20      0.16      13    
+n18     11      1        0.20      0.20      0.20      0.20      0.20      0.15      12    
+n19     11      1        0.19      0.19      0.19      0.19      0.19      0.15      12    
+n20     11      1        0.20      0.20      0.20      0.20      0.20      0.15      12    
+n21     11      1        0.19      0.19      0.19      0.19      0.19      0.15      12    
+n22     11      1        0.17      0.17      0.17      0.17      0.17      0.15      12    
+n23     10      1        0.16      0.16      0.16      0.16      0.16      0.14      11    
+n24     11      1        0.20      0.20      0.20      0.20      0.20      0.15      12    
+orc_reg_in[0]     20      1     0.31     0.31     0.31     0.31     0.31     0.32     21   
+orc_reg_in[1]     13      1     0.21     0.21     0.21     0.21     0.21     0.21     14   
+orc_reg_in[2]      4      1     0.09     0.09     0.09     0.09     0.09     0.10      5   
+orc_reg_in[3]     13      1     0.20     0.20     0.20     0.20     0.20     0.21     14   
+orc_reg_in[4]     15      1     0.27     0.27     0.27     0.27     0.27     0.30     16   
+rst     95      1        0.00      0.00      0.00      0.00      0.00      2.32      96    d, I, h
+-----------------------------------------------------------------------------------------------
+Total 129 nets  40051    129    13.89    13.89    13.86    13.89    13.86    13.65  40180
+Maximum  39391      1     2.14     2.14      2.14      2.14      2.14      2.32   39392
+Average 310.47   1.00     0.11     0.11      0.11      0.11      0.11      0.11  311.47
+1

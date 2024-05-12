@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : port
+Design : jpeg_top
+Version: P-2019.03-SP3
+Date   : Sun May 12 17:14:36 2024
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+clk            in      0.0000   0.0000   --      --      --         d
+data_in[0]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[1]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[2]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[3]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[4]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[5]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[6]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[7]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[8]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[9]     in      0.0000   0.0000    3.60    0.46   --         
+data_in[10]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[11]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[12]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[13]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[14]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[15]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[16]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[17]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[18]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[19]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[20]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[21]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[22]    in      0.0000   0.0000    3.60    0.46   --         
+data_in[23]    in      0.0000   0.0000    3.60    0.46   --         
+enable         in      0.0000   0.0000    3.60    0.46   --         
+end_of_file_signal in   0.0000   0.0000    3.60    0.46   --        
+rst            in      0.0000   0.0000   --      --      --         d, i
+JPEG_bitstream[0] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[1] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[2] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[3] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[4] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[5] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[6] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[7] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[8] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[9] out   0.0522   0.0000   --     --      --         
+JPEG_bitstream[10] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[11] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[12] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[13] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[14] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[15] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[16] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[17] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[18] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[19] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[20] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[21] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[22] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[23] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[24] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[25] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[26] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[27] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[28] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[29] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[30] out   0.0522   0.0000   --    --      --         
+JPEG_bitstream[31] out   0.0522   0.0000   --    --      --         
+data_ready     out     0.0522   0.0000   --      --      --         
+end_of_file_bitstream_count[0] out   0.0522   0.0000   --    --    -- 
+end_of_file_bitstream_count[1] out   0.0522   0.0000   --    --    -- 
+end_of_file_bitstream_count[2] out   0.0522   0.0000   --    --    -- 
+end_of_file_bitstream_count[3] out   0.0522   0.0000   --    --    -- 
+end_of_file_bitstream_count[4] out   0.0522   0.0000   --    --    -- 
+eof_data_partial_ready out   0.0522   0.0000   --    --    --       
+
+1
