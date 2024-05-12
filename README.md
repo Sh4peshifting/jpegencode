@@ -8,37 +8,27 @@
 ```
 .
 ├── DC # DC 综合
-│   ├── clean.sh
-│   ├── Readme
-│   ├── reports
-│   ├── run_dc_constraint_compile.sh
-│   ├── run_dc_read_rtl.sh
-│   ├── scripts
-│   ├── synopsys_dc.setup -> .synopsys_dc.setup
 ├── document # 原项目文档
-├── env_prep.sh # 环境准备脚本
 ├── FM_RTL_PostDC # FM 形式验证
-│   ├── clean.sh
-│   ├── lib -> ../lib/
-│   ├── netlist -> ../DC/netlist/
-│   ├── Readme
-│   ├── rtl -> ../rtl/
-│   ├── run_fm.scr
-│   ├── svf -> ../DC/svf/
-│   ├── synopsys_fm.setup
-│   └── ws2812.fms
 ├── jpeg_encode_core # JPEG 编码器 Verilog 源码
-│   ├── pic # 编码输入输出图片
-│   ├── rtl # RTL 源码
-│   └── sim # 仿真Testbench
+│   ├── pic # 存放编码输入输出图片
+│   ├── rtl # 存放RTL 源码
+│   └── sim # 存放仿真脚本和Testbench
 ├── LaTeX-src # 文档及报告的latex源码
-│   └── pic
+│   └── pic
 ├── lib # 工艺库链接
 ├── original # 原项目冗余脚本
 ├── README.md # 项目说明
-└── run_sim.sh # 运行仿真脚本
+├── run_dc.sh
+├── run_FM.sh
+└── run_sim.sh
 
 ```
+## 使用步骤
+1. 终端执行 `source /opt/eda_env.sh` 配置相关 EDA 软件环境变量
+2. 执行 `./run_sim.sh` 进行仿真
+3. 执行 `./run_dc.sh` 进行 DC 综合
+4. 执行 `./run_FM.sh` 进行形式验证
 
 ## 备注
 - 参照各个目录下的 `Readme` 文件，按照步骤进行设计。
