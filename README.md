@@ -16,6 +16,7 @@
 │   ├── scripts
 │   ├── synopsys_dc.setup -> .synopsys_dc.setup
 ├── document # 原项目文档
+├── env_prep.sh # 环境准备脚本
 ├── FM_RTL_PostDC # FM 形式验证
 │   ├── clean.sh
 │   ├── lib -> ../lib/
@@ -26,13 +27,13 @@
 │   ├── svf -> ../DC/svf/
 │   ├── synopsys_fm.setup
 │   └── ws2812.fms
-├── env_prep.sh # 环境准备脚本
 ├── jpeg_encode_core # JPEG 编码器 Verilog 源码
 │   ├── pic # 编码输入输出图片
 │   ├── rtl # RTL 源码
 │   └── sim # 仿真Testbench
 ├── LaTeX-src # 文档及报告的latex源码
 │   └── pic
+├── lib # 工艺库链接
 ├── original # 原项目冗余脚本
 ├── README.md # 项目说明
 └── run_sim.sh # 运行仿真脚本
