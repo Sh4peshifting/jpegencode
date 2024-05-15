@@ -164,7 +164,9 @@ set_max_fanout 10 [all_inputs]
 #output delay : min : -hold
 
 set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk rst]]]
-set wb_out_ports [get_ports [list JPEG_bitstream data_ready end_of_file_bitstream_count eof_data_partial_ready]]
+#set wb_out_ports [get_ports [list JPEG_bitstream data_ready end_of_file_bitstream_count eof_data_partial_ready]]
+
+set wb_out_ports [all_outputs]
 
 set_input_delay -max 10 -clock wb_clk $wb_in_ports
 set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
