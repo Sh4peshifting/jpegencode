@@ -1,14 +1,11 @@
 Information: Updating design information... (UID-85)
-Warning: Design 'jpeg_top' contains 23 high-fanout nets. A fanout number of 60 will be used for delay calculations involving these nets. (TIM-134)
+Warning: Design 'jpeg_asic' contains 25 high-fanout nets. A fanout number of 60 will be used for delay calculations involving these nets. (TIM-134)
 
 Information: Checking generated_clocks...
 
 Information: Checking loops...
 
 Information: Checking no_input_delay...
-Warning: The following input ports have no clock_relative delay specified, the command set_input_delay without -clock option will be ignored. (TIM-216)
---------------------
-rst
 
 Information: Checking unconstrained_endpoints...
 

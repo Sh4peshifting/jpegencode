@@ -1,20 +1,10 @@
-Loading db file '/home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db'
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated primary inputs. (PWR-414)
-Warning: Design has unannotated sequential cell outputs. (PWR-415)
  
 ****************************************
-Report : power
-        -analysis_effort low
-Design : jpeg_top
+Report : net
+Design : jpeg_asic
 Version: P-2019.03-SP3
-Date   : Wed May 15 12:48:28 2024
+Date   : Sat May 18 15:50:27 2024
 ****************************************
-
-
-Library(s) Used:
-
-    smic18_ss (File: /home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db)
 
 
 Operating Conditions: worst   Library: smic18_ss
@@ -22,6 +12,7 @@ Wire Load Model Mode: segmented
 
 Design        Wire Load Model            Library
 ------------------------------------------------
+jpeg_asic              reference_area_10000000 smic18_ss
 jpeg_top               reference_area_10000000 smic18_ss
 fifo_out               reference_area_10000000 smic18_ss
 ff_checker             reference_area_1000000 smic18_ss
@@ -917,6 +908,9 @@ RGB2YCBCR_DW01_add_0   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_1   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_2   reference_area_20000 smic18_ss
 RGB2YCBCR_DW01_add_3   reference_area_20000 smic18_ss
+cr_dct_DW_mult_uns_71  reference_area_20000 smic18_ss
+cb_dct_DW_mult_uns_71  reference_area_20000 smic18_ss
+y_dct_DW_mult_uns_71   reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_0 reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_1 reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_2 reference_area_20000 smic18_ss
@@ -924,38 +918,154 @@ RGB2YCBCR_DW_mult_uns_3 reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_4 reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_5 reference_area_20000 smic18_ss
 RGB2YCBCR_DW_mult_uns_6 reference_area_20000 smic18_ss
-cb_dct_DW_mult_uns_71  reference_area_20000 smic18_ss
-y_dct_DW_mult_uns_71   reference_area_20000 smic18_ss
-cr_dct_DW_mult_uns_71  reference_area_20000 smic18_ss
 
 
-Global Operating Voltage = 1.62 
-Power-specific unit information :
-    Voltage Units = 1V
-    Capacitance Units = 1.000000pf
-    Time Units = 1ns
-    Dynamic Power Units = 1mW    (derived from V,C,T units)
-    Leakage Power Units = 1nW
+Attributes:
+   dr - drc disabled
+    d - dont_touch
+    I - ideal_network
+    h - high fanout
 
-
-  Cell Internal Power  = 139.5529 mW   (96%)
-  Net Switching Power  =   5.0619 mW    (4%)
-                         ---------
-Total Dynamic Power    = 144.6148 mW  (100%)
-
-Cell Leakage Power     = 419.7097 uW
-
-
-                 Internal         Switching           Leakage            Total
-Power Group      Power            Power               Power              Power   (   %    )  Attrs
---------------------------------------------------------------------------------------------------
-io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
-black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register         135.4637            1.1251        7.2244e+04          136.6550  (  94.22%)
-sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      4.0988            3.9369        3.4747e+05            8.3831  (   5.78%)
---------------------------------------------------------------------------------------------------
-Total            139.5625 mW         5.0620 mW     4.1971e+05 nW       145.0380 mW
+Net Fanout Fanin     Load      LoadUR    LoadUF    LoadLR    LoadLF    Resist    Pins      Attr
+-----------------------------------------------------------------------------------------------
+*Logic0*    257      1     2.14     2.14     2.14      2.14      2.14      2.32     258    dr, h
+*Logic1*    173      1     2.14     2.14     2.14      2.14      2.14      2.32     174    dr, h
+JPEG_bitstream[0]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[1]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[2]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[3]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[4]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[5]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[6]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[7]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[8]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[9]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[10]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[11]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[12]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[13]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[14]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[15]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[16]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[17]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[18]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[19]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[20]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[21]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[22]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[23]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[24]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[25]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[26]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[27]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[28]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[29]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[30]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+JPEG_bitstream[31]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+PAD_clk_i      1      2     2.05     2.05     2.05     2.05      2.05      0.01       2    d
+PAD_dat_i[0]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[1]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[2]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[3]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[4]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[5]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[6]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[7]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[8]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[9]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_dat_i[10]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[11]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[12]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[13]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[14]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[15]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[16]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[17]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[18]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[19]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[20]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[21]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[22]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_i[23]      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2   
+PAD_dat_rdy_o      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2   
+PAD_enable_i      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2    
+PAD_eof_bitstr_cnt_o[0]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_bitstr_cnt_o[1]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_bitstr_cnt_o[2]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_bitstr_cnt_o[3]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_bitstr_cnt_o[4]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_dat_partial_rdy_o      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_eof_signal_i      1      2     2.05     2.05     2.05     2.05     2.05     0.01      2
+PAD_jpeg_bitstr_o[0]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[1]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[2]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[3]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[4]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[5]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[6]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[7]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[8]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[9]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[10]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[11]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[12]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[13]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[14]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[15]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[16]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[17]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[18]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[19]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[20]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[21]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[22]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[23]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[24]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[25]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[26]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[27]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[28]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[29]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[30]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_jpeg_bitstr_o[31]      2      1     2.11     2.11     2.11     2.11     2.11     0.01      2
+PAD_rst_i      1      2     2.05     2.05     2.05     2.05      2.05      0.01       2    d
+clk  39583      1        0.00      0.00      0.00      0.00      0.00      2.32   39584    dr, d, I, h
+data_in[0]     11      1     0.22     0.22     0.22     0.22     0.22      0.17      12    
+data_in[1]     11      1     0.26     0.26     0.26     0.26     0.26      0.17      12    
+data_in[2]     12      1     0.26     0.26     0.25     0.26     0.25      0.18      13    
+data_in[3]     12      1     0.26     0.26     0.26     0.26     0.26      0.18      13    
+data_in[4]     13      1     0.31     0.31     0.31     0.31     0.31      0.19      14    
+data_in[5]     13      1     0.27     0.27     0.27     0.27     0.27      0.19      14    
+data_in[6]     13      1     0.26     0.26     0.26     0.26     0.26      0.19      14    
+data_in[7]     13      1     0.26     0.26     0.26     0.26     0.26      0.19      14    
+data_in[8]     18      1     0.33     0.33     0.33     0.33     0.33      0.23      19    
+data_in[9]     19      1     0.40     0.40     0.40     0.40     0.40      0.24      20    
+data_in[10]     21      1     0.42     0.42     0.42     0.42     0.42     0.27      22    
+data_in[11]     20      1     0.41     0.41     0.41     0.41     0.41     0.25      21    
+data_in[12]     18      1     0.30     0.30     0.30     0.30     0.30     0.24      19    
+data_in[13]     20      1     0.35     0.35     0.35     0.35     0.35     0.26      21    
+data_in[14]     32      1     0.52     0.52     0.52     0.52     0.52     0.37      33    
+data_in[15]     26      1     0.53     0.53     0.53     0.53     0.53     0.30      27    
+data_in[16]     14      1     0.24     0.23     0.23     0.23     0.23     0.20      15    
+data_in[17]     13      1     0.29     0.29     0.28     0.29     0.28     0.19      14    
+data_in[18]     13      1     0.25     0.25     0.25     0.25     0.25     0.19      14    
+data_in[19]     11      1     0.29     0.29     0.29     0.29     0.29     0.17      12    
+data_in[20]     13      1     0.25     0.25     0.25     0.25     0.25     0.19      14    
+data_in[21]     11      1     0.19     0.19     0.19     0.19     0.19     0.17      12    
+data_in[22]     11      1     0.21     0.21     0.21     0.21     0.21     0.17      12    
+data_in[23]     11      1     0.25     0.25     0.24     0.25     0.24     0.17      12    
+data_ready      1      1     0.19     0.19     0.19     0.19     0.19      0.04       2    
+enable      1      1     0.05      0.05      0.05      0.05      0.05      0.07       2    
+end_of_file_bitstream_count[0]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+end_of_file_bitstream_count[1]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+end_of_file_bitstream_count[2]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+end_of_file_bitstream_count[3]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+end_of_file_bitstream_count[4]      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+end_of_file_signal      1      1     0.03     0.03     0.03     0.03     0.03     0.04      2
+eof_data_partial_ready      1      1     0.19     0.19     0.19     0.19     0.19     0.04      2
+rst    205      1        2.14      2.14      2.14      2.14      2.14      2.32     206    d, h
+-----------------------------------------------------------------------------------------------
+Total 136 nets  40734    164   160.72   160.72   160.69   160.72   160.69    16.88  40831
+Maximum  39583      2     2.14     2.14      2.14      2.14      2.14      2.32   39584
+Average 299.51   1.21     1.18     1.18      1.18      1.18      1.18      0.12  300.23
 1

@@ -1,0 +1,85 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : jpeg_asic
+Version: P-2019.03-SP3
+Date   : Sat May 18 15:50:32 2024
+****************************************
+
+ # A fanout number of 60 was used for high fanout net computations.
+
+Operating Conditions: worst   Library: smic18_ss
+Wire Load Model Mode: segmented
+
+  Startpoint: PAD_dat_i[13]
+              (input port clocked by wb_clk)
+  Endpoint: jpeg_top_inst/u19/u14/u4/CB2_product_reg[19]
+            (rising edge-triggered flip-flop clocked by wb_clk)
+  Path Group: wb_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  jpeg_asic          reference_area_10000000 smic18_ss
+  RGB2YCBCR_DW_mult_uns_4 reference_area_20000 smic18_ss
+  RGB2YCBCR_DW_mult_uns_3 reference_area_20000 smic18_ss
+  RGB2YCBCR_DW_mult_uns_2 reference_area_20000 smic18_ss
+  RGB2YCBCR          reference_area_100000 smic18_ss
+  pre_fifo           reference_area_10000000 smic18_ss
+  fifo_out           reference_area_10000000 smic18_ss
+  jpeg_top           reference_area_10000000 smic18_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock wb_clk (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   10.00      10.00 r
+  PAD_dat_i[13] (in)                                      4.76      14.76 r
+  U_dat_i_13/P (PLBI8F)                                   0.03      14.79 r
+  U_dat_i_13/D (PLBI8F)                                   1.07      15.86 r
+  jpeg_top_inst/data_in[13] (jpeg_top)                    0.00      15.86 r
+  jpeg_top_inst/u19/data_in[13] (fifo_out)                0.00      15.86 r
+  jpeg_top_inst/u19/u14/data_in[13] (pre_fifo)            0.00      15.86 r
+  jpeg_top_inst/u19/u14/u4/data_in[13] (RGB2YCBCR)        0.00      15.86 r
+  jpeg_top_inst/u19/u14/u4/mult_92/b[5] (RGB2YCBCR_DW_mult_uns_3)     0.00    15.86 r
+  jpeg_top_inst/u19/u14/u4/mult_92/U36/S (FAHHD1X)        0.53      16.39 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U126/CO (FAHHD2X)      0.33      16.72 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U125/CO (FAHHD2X)      0.22      16.94 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U93/CO (FAHHD4X)       0.30      17.24 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U92/Z (NAND2HD2X)      0.12      17.36 r
+  jpeg_top_inst/u19/u14/u4/mult_92/U97/Z (NAND3HD4X)      0.14      17.51 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U75/Z (NAND2B1HD4X)     0.11     17.62 r
+  jpeg_top_inst/u19/u14/u4/mult_92/U100/Z (NAND3HD4X)     0.14      17.76 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U66/Z (NAND2B1HD4X)     0.09     17.85 r
+  jpeg_top_inst/u19/u14/u4/mult_92/U74/Z (NAND3HD4X)      0.11      17.96 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U72/CO (FAHHD2X)       0.26      18.21 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U107/Z (NAND2HD2X)     0.09      18.30 r
+  jpeg_top_inst/u19/u14/u4/mult_92/U82/Z (NAND3B1HD2X)     0.10     18.40 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U122/CO (FAHHD2X)      0.23      18.63 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U124/CO (FAHHD2X)      0.22      18.85 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U123/CO (FAHHD2X)      0.22      19.07 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U127/CO (FAHHD2X)      0.26      19.33 f
+  jpeg_top_inst/u19/u14/u4/mult_92/U61/S (HAHD4X)         0.20      19.53 r
+  jpeg_top_inst/u19/u14/u4/mult_92/product[19] (RGB2YCBCR_DW_mult_uns_3)     0.00    19.53 r
+  jpeg_top_inst/u19/u14/u4/U23/Z (AOI22B2HD4X)            0.09      19.63 f
+  jpeg_top_inst/u19/u14/u4/U24/Z (INVHD4X)                0.06      19.68 r
+  jpeg_top_inst/u19/u14/u4/CB2_product_reg[19]/RN (FFDCRHD1X)     0.00    19.68 r
+  data arrival time                                                 19.68
+
+  clock wb_clk (rise edge)                               20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  clock uncertainty                                      -0.10      19.90
+  jpeg_top_inst/u19/u14/u4/CB2_product_reg[19]/CK (FFDCRHD1X)     0.00    19.90 r
+  library setup time                                     -0.22      19.68
+  data required time                                                19.68
+  --------------------------------------------------------------------------
+  data required time                                                19.68
+  data arrival time                                                -19.68
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

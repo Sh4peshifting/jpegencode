@@ -1,0 +1,59 @@
+ 
+****************************************
+check_design summary:
+Version:     P-2019.03-SP3
+Date:        Sat May 18 15:50:08 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     44
+    Multiply driven inputs (LINT-6)                                28
+    Unloaded inputs (LINT-8)                                       16
+--------------------------------------------------------------------------------
+
+Warning: In design 'jpeg_asic', input port 'PAD_clk_i' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_rst_i' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_eof_signal_i' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_enable_i' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[23]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[22]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[21]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[20]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[19]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[18]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[17]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[16]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[15]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[14]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[13]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[12]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[11]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[10]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[9]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[8]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[7]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[6]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[5]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[4]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[3]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[2]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[1]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'jpeg_asic', input port 'PAD_dat_i[0]' drives wired logic; the port direction may have been specified incorrectly. (LINT-6)
+Warning: In design 'cb_dct_DW_mult_uns_3', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_11', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_19', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_27', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_35', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_43', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_51', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cb_dct_DW_mult_uns_59', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_3', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_11', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_19', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_27', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_35', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_43', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_51', input port 'b[0]' is unloaded. (LINT-8)
+Warning: In design 'cr_dct_DW_mult_uns_59', input port 'b[0]' is unloaded. (LINT-8)
+1

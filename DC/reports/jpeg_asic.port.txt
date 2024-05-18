@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : port
+Design : jpeg_asic
+Version: P-2019.03-SP3
+Date   : Sat May 18 15:50:27 2024
+****************************************
+
+
+
+Attributes:
+    d - dont_touch_network
+    i - ideal_network
+
+                       Pin      Wire     Max     Max     Connection
+Port           Dir     Load     Load     Trans   Cap     Class      Attrs
+--------------------------------------------------------------------------------
+PAD_clk_i      in      0.0000   0.0000   --      --      --         d
+PAD_dat_i[0]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[1]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[2]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[3]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[4]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[5]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[6]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[7]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[8]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[9]   in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[10]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[11]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[12]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[13]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[14]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[15]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[16]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[17]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[18]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[19]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[20]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[21]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[22]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_dat_i[23]  in      0.0000   0.0000    3.60    0.46   --         
+PAD_enable_i   in      0.0000   0.0000    3.60    0.46   --         
+PAD_eof_signal_i in    0.0000   0.0000    3.60    0.46   --         
+PAD_rst_i      in      0.0000   0.0000   --      --      --         d, i
+PAD_dat_rdy_o  out     0.0522   0.0000   --      --      --         
+PAD_eof_bitstr_cnt_o[0] out   0.0522   0.0000   --    --    --      
+PAD_eof_bitstr_cnt_o[1] out   0.0522   0.0000   --    --    --      
+PAD_eof_bitstr_cnt_o[2] out   0.0522   0.0000   --    --    --      
+PAD_eof_bitstr_cnt_o[3] out   0.0522   0.0000   --    --    --      
+PAD_eof_bitstr_cnt_o[4] out   0.0522   0.0000   --    --    --      
+PAD_eof_dat_partial_rdy_o out   0.0522   0.0000   --    --    --    
+PAD_jpeg_bitstr_o[0] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[1] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[2] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[3] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[4] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[5] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[6] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[7] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[8] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[9] out   0.0522   0.0000   --    --    --         
+PAD_jpeg_bitstr_o[10] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[11] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[12] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[13] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[14] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[15] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[16] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[17] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[18] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[19] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[20] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[21] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[22] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[23] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[24] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[25] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[26] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[27] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[28] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[29] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[30] out   0.0522   0.0000   --    --    --        
+PAD_jpeg_bitstr_o[31] out   0.0522   0.0000   --    --    --        
+
+1

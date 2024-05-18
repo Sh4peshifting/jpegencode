@@ -1,13 +1,13 @@
 module jpeg_asic(
-	PAD_clk, 
-	PAD_rst, 
-	PAD_eof_signal, 
-	PAD_enable, 
+	PAD_clk_i, 
+	PAD_rst_i, 
+	PAD_eof_signal_i, 
+	PAD_enable_i, 
 	PAD_dat_i, 
-	PAD_jpeg_bitstr, 
-	PAD_dat_rdy, 
-	PAD_eof_bitstr_cnt, 
-	PAD_eof_dat_partial_rdy
+	PAD_jpeg_bitstr_o, 
+	PAD_dat_rdy_o, 
+	PAD_eof_bitstr_cnt_o, 
+	PAD_eof_dat_partial_rdy_o
 	);
 
 input PAD_clk_i;
@@ -20,15 +20,15 @@ output PAD_dat_rdy_o;
 output [4:0] PAD_eof_bitstr_cnt_o;
 output PAD_eof_dat_partial_rdy_o;
 
-input           clk;
-input           rst;
-input           end_of_file_signal;
-input           enable;
-input   [23:0]  data_in;
-output  [31:0]  JPEG_bitstream;
-output          data_ready;
-output  [4:0] end_of_file_bitstream_count;
-output          eof_data_partial_ready;
+wire           clk;
+wire           rst;
+wire           end_of_file_signal;
+wire           enable;
+wire   [23:0]  data_in;
+wire  [31:0]  JPEG_bitstream;
+wire          data_ready;
+wire  [4:0] end_of_file_bitstream_count;
+wire          eof_data_partial_ready;
 
 
 //PAD
@@ -65,7 +65,6 @@ PLBI8F	U_dat_i_20	(.D( data_in[20] ), .P( PAD_dat_i[20] ), .A( 1'b0 ), .CONOF( 1
 PLBI8F	U_dat_i_21	(.D( data_in[21] ), .P( PAD_dat_i[21] ), .A( 1'b0 ), .CONOF( 1'b1 ), .NEN( 1'b0 ), .PD( 1'b0 ), .PEN( 1'b0 ), .PU( 1'b1 ), .SONOF( 1'b0 )); 
 PLBI8F	U_dat_i_22	(.D( data_in[22] ), .P( PAD_dat_i[22] ), .A( 1'b0 ), .CONOF( 1'b1 ), .NEN( 1'b0 ), .PD( 1'b0 ), .PEN( 1'b0 ), .PU( 1'b1 ), .SONOF( 1'b0 )); 
 PLBI8F	U_dat_i_23	(.D( data_in[23] ), .P( PAD_dat_i[23] ), .A( 1'b0 ), .CONOF( 1'b1 ), .NEN( 1'b0 ), .PD( 1'b0 ), .PEN( 1'b0 ), .PU( 1'b1 ), .SONOF( 1'b0 )); 
-PLBI8F	U_dat_i_24	(.D( data_in[24] ), .P( PAD_dat_i[24] ), .A( 1'b0 ), .CONOF( 1'b1 ), .NEN( 1'b0 ), .PD( 1'b0 ), .PEN( 1'b0 ), .PU( 1'b1 ), .SONOF( 1'b0 ));
 
 //out
 PLBI8F	U_dat_o_0	(.D(  ), .P( PAD_jpeg_bitstr_o[0] ), .A( JPEG_bitstream[0] ), .CONOF( 1'b0 ), .NEN( 1'b1 ), .PD( 1'b0 ), .PEN( 1'b1 ), .PU( 1'b1 ), .SONOF( 1'b0 )); 

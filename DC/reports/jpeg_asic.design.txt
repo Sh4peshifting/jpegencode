@@ -1,9 +1,9 @@
  
 ****************************************
 Report : design
-Design : jpeg_top
+Design : jpeg_asic
 Version: P-2019.03-SP3
-Date   : Wed May 15 12:48:01 2024
+Date   : Sat May 18 15:50:27 2024
 ****************************************
 
 Design allows ideal nets on clock nets.
@@ -11,6 +11,7 @@ Design allows ideal nets on clock nets.
 Library(s) Used:
 
     smic18_ss (File: /home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db)
+    smic18IO_line_ss (File: /home/class/U65/Desktop/jpegencode/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ss.db)
 
 Local Link Library:
 

@@ -4,12 +4,13 @@ date
 
 set exit_switch 	[getenv exit_switch]
 
-set TOP_MODULE  jpeg_top
+# set TOP_MODULE  jpeg_top
+set TOP_MODULE  jpeg_asic
 set_svf ${svfDir}/${TOP_MODULE}.svf
 
 define_design_lib WORK -path WORK
 
-analyze -format sverilog -lib WORK  [sh ls $topDir/*.v]
+analyze -format verilog -lib WORK  [sh ls $topDir/*.v]
 elaborate $TOP_MODULE
 
 current_design $TOP_MODULE	

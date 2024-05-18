@@ -5,6 +5,8 @@
 #****************************************************
 #MAX freq : 125M
 #set SYS_CLK_PERIOD 9.0
+
+#Current freq : 50M
 set SYS_CLK_PERIOD 20
 #****************************************************
 
@@ -23,9 +25,10 @@ set remove_tie_dont_use_switch [getenv remove_tie_dont_use_switch]
 
 # Define some variables for design 
 #****************************************************
-set TOP_MODULE		jpeg_top
-set Rst_list		[list rst]
-set Clk_list		[list clk]
+# set TOP_MODULE		jpeg_top
+set TOP_MODULE  jpeg_asic
+set Rst_list		[list PAD_rst_i]
+set Clk_list		[list PAD_clk_i]
 
 set_svf 	${svfDir}/${TOP_MODULE}.svf
 
@@ -109,12 +112,12 @@ current_design $TOP_MODULE
 
 #should use pins? Can PAD_* be used?
 
-create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD /2]]  [get_ports clk]
+create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD /2]]  [get_ports PAD_clk_i]
 #create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD/2]]  [get_pins U_wb_clk_i/D]
 
 set_dont_touch_network  [all_clocks]
 #wb_clk
-#set_ideal_network [get_pins "U_wb_clk_i/D"]
+set_ideal_network [get_pins "U_clk_i/D"]
 
 set_dont_touch_network  [get_ports "$Rst_list"]
 set_ideal_network [get_ports "$Rst_list"]
@@ -139,7 +142,7 @@ set_drive 0 	[get_ports "$Clk_list"]
 
 
 set_driving_cell -lib_cell INVHD2X [remove_from_collection [all_inputs] \
-         [get_ports [list clk rst]]]
+         [get_ports [list PAD_clk_i PAD_rst_i]]]
 #set_max_capacitance [expr $MAX_LOAD*12] [get_designs *]
 
 #set_load [expr $MAX_LOAD*15] [all_outputs]
@@ -163,10 +166,10 @@ set_max_fanout 10 [all_inputs]
 #output delay : max : setup
 #output delay : min : -hold
 
-set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk rst]]]
-#set wb_out_ports [get_ports [list JPEG_bitstream data_ready end_of_file_bitstream_count eof_data_partial_ready]]
+set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list PAD_clk_i PAD_rst_i]]]
+set wb_out_ports [get_ports [list PAD_jpeg_bitstr_o PAD_dat_rdy_o PAD_eof_bitstr_cnt_o PAD_eof_dat_partial_rdy_o]]
 
-set wb_out_ports [all_outputs]
+# set wb_out_ports [all_outputs]
 
 set_input_delay -max 10 -clock wb_clk $wb_in_ports
 set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
@@ -187,7 +190,7 @@ set_false_path -from [get_ports "$Rst_list"]
 #****************************************************
 # case_analysis
 #****************************************************
-#set_case_analysis 0 [get_pins "U_wb_rst_i/D"]
+set_case_analysis 0 [get_pins "U_rst_i/D"]
 
 #****************************************************
 # area and power
@@ -203,7 +206,7 @@ if { $power_switch == "true" } {
 # don't touch
 #****************************************************
 
-#set_dont_touch        [get_cells U_* ]
+set_dont_touch        [get_cells U_* ]
 
 #****************************************************
 #  Map and Optimize the design

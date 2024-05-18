@@ -1,5 +1,5 @@
 date
-set TOP_MODULE jpeg_top
+set TOP_MODULE jpeg_asic
 set	search_path	"$search_path  $topDir "
 
 set 	synopsys_auto_setup 	true

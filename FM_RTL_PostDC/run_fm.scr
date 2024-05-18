@@ -2,5 +2,5 @@
 
 mkdir -p logs
 
-fm_shell -f jpeg_encode_core.fms 	| tee -i logs/jpeg_encode_core.log
+fm_shell -f jpeg_encode_asic.fms 	| tee -i logs/jpeg_encode_asic.log
 
