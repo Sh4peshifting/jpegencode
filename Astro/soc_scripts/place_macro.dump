@@ -1,0 +1,26 @@
+;*************************************************************************
+;* Avant!'s Scheme constructs (commands, format, syntax, and semantics), *
+;* documentation, and I/O file formats are Avant!'s confidential         *
+;* intellectual property.  Confidential Property may only be used        *
+;* by valid licensees of Avant! software.  Unauthorized use of           *
+;* Confidential Property is strictly prohibited.                         *
+;*************************************************************************/
+;**********
+;* Macros *
+;**********/
+define _cell (geGetEditCell)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_immu_top/or1200_immu_tlb/itlb_tr_ram/vs_sp_64x22_or1200" "0" "no" "origin" '(1805.205 2007.705)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_immu_top/or1200_immu_tlb/itlb_mr_ram/vs_sp_64x14_or1200" "0" "no" "origin" '(2673.115 2015.56)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_ic_top/or1200_ic_tag/ic_tag0/vs_sp_512x20_or1200" "0" "no" "origin" '(1233.41 1893.115)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_ic_top/or1200_ic_ram/ic_ram0/vs_sp_2kx32_bw_or1200" "90" "no" "origin" '(1116.41 1551.695)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_dmmu_top/or1200_dmmu_tlb/dtlb_tr_ram/vs_sp_64x24" "0" "no" "origin" '(2220.08 2003.78)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/or1200_top_inst/or1200_dmmu_top/or1200_dmmu_tlb/dtlb_mr_ram/vs_sp_64x14_or1200" "0" "no" "origin" '(3178.16 2015.515)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sdram0/cachetags/vs_sp_yadmc" "0" "no" "origin" '(3577.035 1901.1)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sdram0/cacheline3/vs_dp_yadmc" "180" "X" "origin" '(283.925 881.54)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sdram0/cacheline2/vs_dp_yadmc" "180" "X" "origin" '(2551.9 881.74)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sdram0/cacheline1/vs_dp_yadmc" "180" "X" "origin" '(1795.985 882.3)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sdram0/cacheline0/vs_dp_yadmc" "180" "X" "origin" '(1040.145 882.3)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/aes_top_inst/aes_inst/u_ram_1/vs_sp_aes" "0" "no" "origin" '(4035.58 1985.695)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/aes_top_inst/aes_inst/u_ram_0/vs_sp_aes" "180" "X" "origin" '(4035.635 1925.71)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sd_card/u_sm_txFifo/u_sm_fifo/u_sm_dpMem_dc/vs_dp_sdcard" "180" "X" "origin" '(3730.695 650.22)
+dbSetCellInstPlacement _cell "or1200_soc_top_inst/sd_card/u_sm_rxFifo/u_sm_fifo/u_sm_dpMem_dc/vs_dp_sdcard" "180" "X" "origin" '(4236.395 650.225)

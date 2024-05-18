@@ -1,0 +1,11 @@
+axgCreateStraps
+setFormField "Create Straps" "Direction" "Vertical"
+setFormField "Create Straps" "Start X" "800"
+setFormField "Create Straps" "Net Name(s)" "VDD,VDD,GND,GND"
+setFormField "Create Straps" "Width" "18"
+setFormField "Create Straps" "Layer" "66"
+setFormField "Create Straps" "Extend for Multiple Connections" "1"
+setFormField "Create Straps" "For Gap <" "2"
+formApply "Create Straps"
+setFormField "Create Straps" "Start X" "1500"
+formOK "Create Straps"

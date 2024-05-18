@@ -1,0 +1,26 @@
+#!/bin/bash
+rm -rf Astro.*
+rm -rf logs/*
+rm -rf *.log
+rm -rf vs_*
+rm -rf skip*
+rm -rf lefPin*
+rm -rf mw_lib/vs_*
+rm -rf mw_lib/stdcell_lib
+rm -rf mw_lib/pad_*
+rm -rf reports/*
+rm -rf stdcell6.lef*
+rm -rf SMIC18IO*
+rm -rf lib_aes_ASIC
+rm -rf data_bend/aes_ASIC*
+rm -rf data_fend/aes_ASIC*
+rm -rf A2Hdl*
+rm -rf buffer.acts
+rm -rf net.acts
+rm -rf ECO*
+rm -rf adrc*
+rm -rf adv_drc*
+rm -rf hx2*
+rm -rf run_details*
+rm -rf AddIOText.txt
+rm -rf syncInfo
