@@ -1,7 +1,7 @@
 ;# Scheme
 geOpenLib
 formDefault "Open Library"
-setFormField "Open Library" "Library Name" "design_lib_aes_ASIC"
+setFormField "Open Library" "Library Name" "design_lib_jpeg_asic"
 formOK "Open Library"
 
 geOpenCell
@@ -11,7 +11,7 @@ formOK "Open Cell"
 
 ataLoadSDC
 formDefault "Load SDC File"
-setFormField "Load SDC File" "SDC File Name" "data_fend/aes_ASIC.sdc"
+setFormField "Load SDC File" "SDC File Name" "data_fend/jpeg_asic.sdc"
 formOK "Load SDC File"
 
 atTimingSetup

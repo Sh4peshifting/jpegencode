@@ -1,7 +1,7 @@
 ;# Scheme
 geOpenLib
 formDefault "Open Library"
-setFormField "Open Library" "Library Name" "design_lib_aes_ASIC"
+setFormField "Open Library" "Library Name" "design_lib_jpeg_asic"
 formOK "Open Library"
 geOpenCell
 formDefault "Open Cell"
@@ -10,7 +10,7 @@ formOK "Open Cell"
 
 axgLoadTDF
 formDefault "Load TDF File"
-setFormField "Load TDF File" "TDF File Name" "aes_ASIC.tdf"
+setFormField "Load TDF File" "TDF File Name" "jpeg_asic.tdf"
 setFormField "Load TDF File" "Cell Name" "10_design_setup"
 formOK "Load TDF File"
 
@@ -19,9 +19,9 @@ formDefault "Floor Planning"
 setFormField "Floor Planning" "Control Parameter" "width & height"
 setFormField "Floor Planning" "Row/Core Ratio" "0.75"
 
-;# ( 26*74 + 184*2 ) - 80*2 - 184*2
-setFormField "Floor Planning" "Core Width" "1800"
-setFormField "Floor Planning" "Core Height" "1800"
+;# ( 23*74 + 184*2 ) - 80*2 - 184*2 = 1542
+setFormField "Floor Planning" "Core Width" "5000"
+setFormField "Floor Planning" "Core Height" "5000"
 setFormField "Floor Planning" "Core To Left" "80"
 setFormField "Floor Planning" "Core To Bottom" "80"
 setFormField "Floor Planning" "Core To Right" "80"

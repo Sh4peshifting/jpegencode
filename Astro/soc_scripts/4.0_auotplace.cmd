@@ -1,7 +1,7 @@
 ;# Scheme
 geOpenLib
 formDefault "Open Library"
-setFormField "Open Library" "Library Name" "design_lib_aes_ASIC"
+setFormField "Open Library" "Library Name" "design_lib_jpeg_asic"
 formOK "Open Library"
 
 geOpenCell

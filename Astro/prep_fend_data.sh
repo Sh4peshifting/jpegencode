@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOP_MODULE=jpeg_top
+TOP_MODULE=jpeg_asic
 cp ../DC/netlist/${TOP_MODULE}.vg ./data_fend
 cp ../DC/netlist/${TOP_MODULE}.sdc ./data_fend
 cp ../DC/netlist/${TOP_MODULE}.ddc ./data_fend

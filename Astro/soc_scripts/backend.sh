@@ -44,7 +44,7 @@ echo "##############################################################"
 
 
 date >> astro.log
-echo "Astro Backend Script for aes_ASIC"
+echo "Astro Backend Script for jpeg_asic"
 mkdir -p reports
 
 
@@ -179,6 +179,6 @@ execute_prog_with_retry Astro -cmdd logs/9.0  -logd logs/9.0  -load ./soc_script
 if [ `grep ERROR logs/9.0.log* | wc -l` != 0 ] ; then echo "ERROR Found , please check"; exit;fi
 date >> astro.log
 
-echo "aes_ASIC backend scripts finished, check logs and reports directory"
+echo "jpeg_asic backend scripts finished, check logs and reports directory"
  
 date >> astro.log

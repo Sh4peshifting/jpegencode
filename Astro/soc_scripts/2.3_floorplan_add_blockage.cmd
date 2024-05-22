@@ -1,7 +1,7 @@
 ;# Scheme
 geOpenLib
 formDefault "Open Library"
-setFormField "Open Library" "Library Name" "design_lib_aes_ASIC"
+setFormField "Open Library" "Library Name" "design_lib_jpeg_asic"
 formOK "Open Library"
 geOpenCell
 formDefault "Open Cell"
@@ -9,7 +9,7 @@ setFormField "Open Cell" "Cell Name" "22_design_floorplan_add_macro_pg_ring"
 formOK "Open Cell"
 
 ;#load "soc_scripts/blockage.dump"
-load "soc_scripts/row.dump"
+load "soc_scripts/jpeg_row.dump"
 
 
 axgPrerouteStandardCells

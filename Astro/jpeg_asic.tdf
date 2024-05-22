@@ -1,0 +1,203 @@
+;TDF file for jpeg_asic
+
+;Chip Directions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;		(Top)		       ;
+;(Left)				(Right);
+;		(Bottom)	       ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+define _cell (geGetEditCell)
+
+;pad record section
+tdfPurgePadConstr
+tdfSetMinIODistance 0 0 0 0
+
+;use insertPad or dbCreateCellInst for PLVDD* and PLVSS*
+dbCreateNet _cell "VDDH"
+dbCreateNet _cell "VSSH"
+
+
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH1" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH2" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH3" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH4" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH5" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH6" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH7" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDH.FRAM" "pad_L_VDDH8" "0" "NO" '(0 0)
+
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH1" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH2" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH3" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH4" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH5" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH6" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH7" "VDDH"
+insertPad "VDDH" "PLVDDH" "pad_L_VDDH8" "VDDH"
+
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH1" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH2" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH3" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH4" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH5" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH6" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH7" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSH.FRAM" "pad_L_VSSH8" "0" "NO" '(0 0)
+
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH1" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH2" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH3" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH4" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH5" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH6" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH7" "VSSH"
+insertPad "VSSH" "PLVSSH" "pad_L_VSSH8" "VSSH"
+
+;dbCreateCellInst (geGetEditCell) "" "PLVDDC.FRAM" "pad_L_VDDC1" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDC.FRAM" "pad_L_VDDC2" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDC.FRAM" "pad_L_VDDC3" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVDDC.FRAM" "pad_L_VDDC4" "0" "NO" '(0 0)
+
+insertPad "VDD" "PLVDDC" "pad_L_VDDC1" "VDD"
+insertPad "VDD" "PLVDDC" "pad_L_VDDC2" "VDD"
+insertPad "VDD" "PLVDDC" "pad_L_VDDC3" "VDD"
+insertPad "VDD" "PLVDDC" "pad_L_VDDC4" "VDD"
+
+
+;dbCreateCellInst (geGetEditCell) "" "PLVSSC.FRAM" "pad_L_VSSC1" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSC.FRAM" "pad_L_VSSC2" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSC.FRAM" "pad_L_VSSC3" "0" "NO" '(0 0)
+;dbCreateCellInst (geGetEditCell) "" "PLVSSC.FRAM" "pad_L_VSSC4" "0" "NO" '(0 0)
+
+insertPad "GND" "PLVSSC" "pad_L_VSSC1" "GND"
+insertPad "GND" "PLVSSC" "pad_L_VSSC2" "GND"
+insertPad "GND" "PLVSSC" "pad_L_VSSC3" "GND"
+insertPad "GND" "PLVSSC" "pad_L_VSSC4" "GND"
+
+
+;#dbCreateCellInst (geGetEditCell) "" "PLCORNER" "corner_ll" "0" "NO" '(10 10)
+;#dbCreateCellInst (geGetEditCell) "" "PLCORNER" "corner_lr" "90" "NO" '(10 10)
+;#dbCreateCellInst (geGetEditCell) "" "PLCORNER" "corner_ul" "180" "NO" '(10 10)
+;#dbCreateCellInst (geGetEditCell) "" "PLCORNER" "corner_ur" "270" "NO" '(10 10)
+
+insertPad "GND" "PLCORNER" "corner_ll" "GND"
+insertPad "GND" "PLCORNER" "corner_lr" "GND"
+insertPad "GND" "PLCORNER" "corner_ul" "GND"
+insertPad "GND" "PLCORNER" "corner_ur" "GND"
+
+pad	"corner_ll"	"bottom" 	
+pad	"corner_ul"	"left"	 
+pad	"corner_lr"	"right"	 	
+pad	"corner_ur"	"top"	 
+
+; Bottom ( --> 23 pads )	 
+
+pad "U_dat_i_0" 	"bottom" 	1
+pad "U_dat_i_1" 	"bottom" 	2
+pad "U_dat_i_2" 	"bottom" 	3
+pad "U_dat_i_3" 	"bottom" 	4
+pad "U_dat_i_4" 	"bottom" 	5
+pad "pad_L_VSSH1"	"bottom" 	6
+pad "pad_L_VDDH1" 	"bottom" 	7
+pad "U_dat_i_5" 	"bottom" 	8
+pad "U_dat_i_6" 	"bottom" 	9
+pad "U_dat_i_7" 	"bottom" 	10
+pad "U_dat_i_8" 	"bottom" 	11
+pad "pad_L_VDDC1"	"bottom"	12
+pad "pad_L_VSSC1"	"bottom" 	13
+pad "U_dat_i_9" 	"bottom" 	14
+pad "U_dat_i_10" 	"bottom" 	15
+pad "U_dat_i_11" 	"bottom"	16
+pad "U_dat_i_12" 	"bottom"	17
+pad "pad_L_VSSH2"	"bottom" 	18
+pad "pad_L_VDDH2" 	"bottom" 	19
+pad "U_dat_i_13" 	"bottom"	20
+pad "U_dat_i_14" 	"bottom"	21
+pad "U_dat_i_15" 	"bottom"	22
+pad "U_dat_i_16" 	"bottom"	23
+
+
+
+
+;Right ( --> 23 pads)
+
+pad "U_dat_i_17" 	"right"	    1
+pad "U_dat_i_18" 	"right"		2
+pad "U_dat_i_19" 	"right"		3
+pad "U_dat_i_20" 	"right"		4
+pad "U_dat_i_21" 	"right"		5
+pad "pad_L_VSSH3"	"right" 	6
+pad "pad_L_VDDH3" 	"right" 	7
+pad "U_dat_i_22" 	"right"		8
+pad "U_dat_i_23" 	"right" 	9
+pad "U_dat_o_0" 	"right"		10
+pad "U_dat_o_1" 	"right"	    11
+pad "pad_L_VDDC2"	"right"		12
+pad "pad_L_VSSC2"	"right" 	13
+pad "U_dat_o_2" 	"right"		14	
+pad "U_dat_o_3" 	"right"		15
+pad "U_dat_o_4" 	"right"		16
+pad "U_dat_o_5" 	"right"		17
+pad "pad_L_VSSH4"	"right" 	18
+pad "pad_L_VDDH4" 	"right" 	19
+pad "U_dat_o_6" 	"right"		10
+pad "U_dat_o_7" 	"right"		21
+pad "U_dat_o_8" 	"right"		22
+pad "U_dat_o_9" 	"right"		23
+
+
+
+; Top ( --> 23 pads )
+
+pad "U_dat_o_10" 	"top"		1
+pad "U_dat_o_11" 	"top"		2
+pad "U_dat_o_12" 	"top"		3
+pad "U_dat_o_13" 	"top"		4
+pad "U_dat_o_14" 	"top"		5
+pad "pad_L_VSSH5"	"top" 		6
+pad "pad_L_VDDH5" 	"top" 		7
+pad "U_dat_o_15" 	"top"		8
+pad "U_dat_o_16" 	"top"		9
+pad "U_dat_o_17" 	"top"		10
+pad "U_dat_o_18" 	"top"		11
+pad "pad_L_VDDC3"	"top"		12
+pad "pad_L_VSSC3"	"top" 		13
+pad "U_dat_o_19" 	"top"		14
+pad "U_dat_o_20" 	"top"		15
+pad "U_dat_o_21" 	"top"		16
+pad "U_dat_o_22" 	"top"		17
+pad "pad_L_VSSH6"	"top" 		18
+pad "pad_L_VDDH6" 	"top" 		19
+pad "U_dat_o_23" 	"top"		20
+pad "U_dat_o_24" 	"top"		21
+pad "U_dat_o_25" 	"top"		22
+pad "U_dat_o_26" 	"top"		23
+
+
+; Left( --> 22 pads)
+
+pad "U_dat_o_27" 	            "left"		1
+pad "U_dat_o_28" 	            "left"		2
+pad "U_dat_o_29" 	            "left"		3
+pad "U_dat_o_30" 	            "left"		4
+pad "U_dat_o_31" 	            "left"		5
+pad "pad_L_VSSH7"	            "left" 		6
+pad "pad_L_VDDH7" 	            "left" 		7
+pad "U_eof_bitstr_cnt_o_0" 	    "left"		8
+pad "U_eof_bitstr_cnt_o_1" 	    "left"		9
+pad "U_eof_bitstr_cnt_o_2" 	    "left"		10
+pad "U_eof_bitstr_cnt_o_3" 	    "left"		11
+pad "pad_L_VDDC4"	            "left"		12
+pad "pad_L_VSSC4"	            "left" 		13
+pad "U_eof_bitstr_cnt_o_4" 	    "left"		14
+pad "U_enable_i" 	            "left"		15
+pad "U_clk_i" 	                "left"		16
+pad "U_rst_i" 	                "left"		17
+pad "pad_L_VSSH8"	            "left" 		18
+pad "pad_L_VDDH8" 	            "left" 	    19
+pad "U_dat_rdy_o" 	            "left"		20
+pad "U_eof_dat_partial_rdy_o" 	"left"		21
+pad "U_eof_signal_i" 	        "left"		22
+
+;;Finished

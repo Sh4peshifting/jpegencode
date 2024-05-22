@@ -1,7 +1,7 @@
 ;# Scheme
 geOpenLib
 formDefault "Open Library"
-setFormField "Open Library" "Library Name" "design_lib_aes_ASIC"
+setFormField "Open Library" "Library Name" "design_lib_jpeg_asic"
 formOK "Open Library"
 
 astRepairHierPreservation
@@ -21,7 +21,7 @@ astDumpHierVerilog
 ;# fudan
 formDefault "Dump Hierarchical Verilog"
 setFormField "Dump Hierarchical Verilog" "Flattened Cell Name" "DFM_final"
-setFormField "Dump Hierarchical Verilog" "Hierarcical Verilog File Name" "data_bend/aes_ASIC.lvs.vg"
+setFormField "Dump Hierarchical Verilog" "Hierarcical Verilog File Name" "data_bend/jpeg_asic.lvs.vg"
 setFormField "Dump Hierarchical Verilog" "No power/ground ports" "1"
 setFormField "Dump Hierarchical Verilog" "No power/ground nets" "1"
 setFormField "Dump Hierarchical Verilog" "Output bus as individual bits" "0"
@@ -40,7 +40,7 @@ setFormField "Dump Hierarchical Verilog" "1'b0 Net Name" "GND"
 ;# for post-APR simulation
 ;#formDefault "Dump Hierarchical Verilog"
 ;#setFormField "Dump Hierarchical Verilog" "Flattened Cell Name" "DFM_final"
-;#setFormField "Dump Hierarchical Verilog" "Hierarcical Verilog File Name" "data_bend/aes_ASIC.hier.vg"
+;#setFormField "Dump Hierarchical Verilog" "Hierarcical Verilog File Name" "data_bend/jpeg_asic.hier.vg"
 ;#setFormField "Dump Hierarchical Verilog" "No power/ground ports" "1"
 ;#setFormField "Dump Hierarchical Verilog" "No power/ground nets" "0"
 ;#setFormField "Dump Hierarchical Verilog" "Output bus as individual bits" "0"
@@ -60,8 +60,8 @@ formOK "Dump Hierarchical Verilog"
 
 auStreamOut
 formDefault "Stream Out Data File"
-setFormField "Stream Out Data File" "Stream File Name" "data_bend/aes_ASIC.gds"
-setFormField "Stream Out Data File" "Library Name" "design_lib_aes_ASIC"
+setFormField "Stream Out Data File" "Stream File Name" "data_bend/jpeg_asic.gds"
+setFormField "Stream Out Data File" "Library Name" "design_lib_jpeg_asic"
 setFormField "Stream Out Data File" "Convert" "Specified Cell"
 setFormField "Stream Out Data File" "Cell Name" "DFM_final"
 setToggleField "Stream Out Data File" "Fill" "Notch" 1
@@ -78,15 +78,15 @@ formOK "Stream Out Data File"
 menuReload "Astro"
 astSPEFOut
 formDefault "SPEF Out"
-setFormField "SPEF Out" "Output file" "data_bend/aes_ASIC.spef"
+setFormField "SPEF Out" "Output file" "data_bend/jpeg_asic.spef"
 formOK "SPEF Out"
 
 ataDumpSDF
 formDefault "SDF Write"
-setFormField "SDF Write" "SDF Design Name" "aes_ASIC"
-setFormField "SDF Write" "SDF CellType Name" "aes_ASIC"
+setFormField "SDF Write" "SDF Design Name" "jpeg_asic"
+setFormField "SDF Write" "SDF CellType Name" "jpeg_asic"
 setFormField "SDF Write" "SDF Instance Name" ""
-setFormField "SDF Write" "File Name" "data_bend/aes_ASIC_post_APR.Astro.sdf"
+setFormField "SDF Write" "File Name" "data_bend/jpeg_asic_post_APR.Astro.sdf"
 formOK "SDF Write"
 
 menuQuit

@@ -7,13 +7,9 @@ lefPin*
 
 stdcell6.lef*
 SMIC18IO*
-lib_aes_ASIC
 
-data_bend/aes_ASIC*
-data_fend/aes_ASIC*
-
-data_bend/jpeg_top*
-data_fend/jpeg_top*
+data_bend/jpeg_asic*
+data_fend/jpeg_asic*
 
 A2Hdl*
 buffer.acts
@@ -26,7 +22,8 @@ run_details*
 AddIOText.txt
 syncInfo
 .zr.sg
-aes_ASIC.tdf
 
 mw_lib/
 logs/
+design_lib_jpeg_asic/
+reports/
