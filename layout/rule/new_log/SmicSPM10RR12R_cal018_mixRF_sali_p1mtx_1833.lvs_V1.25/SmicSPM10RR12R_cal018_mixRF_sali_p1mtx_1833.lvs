@@ -1,0 +1,2918 @@
+///////////////////////////////////////////////////////////////////////////////////
+// $RCSfile: SmicSPM10RR12R_cal018_mixRF_sali_p1mtx_1833.lvs,v $                   //
+// Calibre LVS Deck for SMIC 018u Mixed Signal & RF 1PXM Salicide 1.8V/3.3V Process//
+// Author:SMIC DSD                                                               //
+//                                                                               //
+// Revision: 1.25                                                                //
+// $Date: 2009/07/17 01:21:08 $                                                  //
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+// Revision History:                                                             //
+// Rev.         Date       Who      What                                         //
+// ------------ ---------- ---- ------------------------------------------------ //
+// Revision1.2  2003/07/11 Paul New created one.                                 //
+// Revision1.3  2003/07/18 Paul Update ERC check about nwell pick-up layer.      //
+// Revision1.4  2003/10/10 Paul Update parameters based on new spice model 2T.   //
+//                              Change UNIT Capacitance to FF.                   //
+// Revision1.5  2003/12/19 Paul Add Metal Resistors.                             //
+// Revision1.6  2003/12/24 Paul Add NPN33 and PNP33.                             //
+// Revision1.7  2004/01/09 Paul Update parameters based on Spice Model 3T.       //
+// Revision1.8  2004/03/05 Paul Add RF Devices.                                  //
+// Revision1.9  2004/03/09 Paul Update layer defination HRPDMY(210),INDUMY(212). //
+// Revision1.10 2004/04/02 Paul Update property definition of RF device.         //
+// Revision1.11 2004/04/09 Paul Add MIMDMY to define MIM capacitor.              //
+// Revision1.12 2004/06/01 Paul 1.)Update defination of MIM capacitor.           //
+//                              2.)Add dummy layer VARMOS(93).                   //
+//                              3.)Add dummy layer Var_Jumc(94).                 //
+// Revision1.13 2004/08/24 Paul 1.)Update parameters based on Spice Model 4T.    //
+//                              2.)Update parameters based on RF spice model 3T. //
+//                              3.)Redifine M3 layer number (63;0-2).            //
+//                              4.)Assign layer number NPAA(12) PPAA(13) to AA.  //
+//                              5.)Remove MIMDMY in MIM Capacitor defination.    //
+// Revision1.14 2004/09/30 Paul 1.)Remove devices: NN ND MD .                    //
+//                              2.)Change terminal names of the devices:         //
+//                                 rpposab_ckt_rf, rpdifsab_ckt_rf, ind_rf,      //
+//                                 rnposab_ckt_rf ,rndifsab_ckt_rf, mim1_rf,     //
+//                                 rhrpo_ckt_rf, pvar18_ckt_rf, pvardio18_ckt_rf.//
+//                                 use the names(PLUS,MINUS) from Cadence PDK.   //
+// Revision1.15 2004/10/13 Paul 1.)Update parameters based on Spice Model 5T.    //
+//                              2.)Add Rint in non-silicide resistance calculation/
+//                                formula.                                       //
+// Revision1.16 2005/01/27 Paul  1.)Update DW value of RNOPSAB RPPOSAB.          //
+//                               2.)Update M3 TEXT definition.                   //
+// Revision1.17 2005/03/02 Yang 1)Update to Spice Model6R:No rule change         //
+// Revision1.18 2005/12/28 Yang 1)Modify dummy layer name from Var_Mos to VARMOS.//
+//                              2)Add the "pvar18_ckt" device based on spice model/ 
+// Revision1.19 2006/02/23 Yang 1)Devide the PNP18 -> PNP18A4,PNP18A25,PNP18A100 //  
+//                                PNP33 -> PNP33A4,PNP33A25,PNP33A100;NPN18 ->   //
+//                                NPN18A4,NPN18A25,NPN18A100;NPN33 -> NPN33A4,   //
+//                                NPN33A25,NPN33A100 based on spice model:Rev:7R.//
+//                              2)Change dummy layer name:Res_P1->RESP1.Res_AA-> //
+//                                RESAA,Res_NW->RESNW,BJTDM->DMPNP.              //
+//                              3)Update the definition of interface:The DW has  // 
+//                                been added to formula of R0=RSH*L/(W-2*DW).    //
+//                              4)Modify the model name of MiM cap from CMIM to  //
+//                                MIM based on spice model.                      //
+// Revision1.20 2006/10/19 cherry 1) Add the Sram Cell(NPD, NPG, PL)             //
+//                                2) Add the option"VIR_ART".Detailed information//
+//                                  is described in 7# item of below README.     //
+// Revision1.21 2006/11/14 Cherry 1) Add RES_PROPERTY option for resistor        //
+//                                2) Add pvar33_ckt_rf AND pvardio33_ckt_rf based//
+//                                  on RF spice model.                           //
+// Revision1.22 2007/01/11 Cherry modify the defination of RM2 when topmetal=3.  //
+// Revision1.23 2007/05/11 Cherry 1)Add 3T poly resistors.                        //
+//                               2)Update the following sheet resistances:       //
+//                                 RPDIF: 7.83->6.75; RNDIF: 7.08->7.57;         //
+//                                 RPPO: 8.18->9.78;  RNPO: 7.74->7.87;          //
+//                                 RPDIFSAB: 114->116.2; RNDIFSAB: 56.1->57.5;   //
+//                                 RPPOSAB: 319->311.3; RNPOSAB: 290->271.6;     //
+//                                 RHRPO: 1030->995;                             //
+//                               3)Add diff_ind_rf device, update the definition //
+//                                 of ind_rf device.                             //
+//                               4)Modify the property of pvardio18_ckt_rf and   //
+//                                 pvardio33_ckt_rf from total Area to NF,LR,WR. //
+//                               5)Turn off the ERC check for floating polygon.  //
+//                               6)Modify the following property tolerance:      //
+//                                                                               //
+//                                 Device Type     Property  from  to            //
+//                                                                               //
+//                                 Resistor        R         10%-->5%;           //
+//                                 PNP             Area      0%--->5%;           //
+//                                 resistor_ckt    W&L       0%--->5%;           //
+//                                 MIM&CPM         C         2%--->5%;           //
+//                                 Mos Varactor    WR&LR     0%--->5%;           //
+//                                 RF Device       W&L       0%--->5%;           //
+//                                7)Add mim1_rf and RF inductor device for       //
+//                                  TOP Metal =5, 4, 3.                          //
+//                                8)Modify the res**_ckt terminal names from     //
+//                                  (n1,n2) to (PLUS,MINUS).                     //
+// Revision1.24 2007/08/14 Cherry Based on the following Process Documents:      //
+//                                                                               //
+//                               LOGIC DESIGN RULE:     TD-LO18-DR-2001 Rev.:4P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                               MIX & RF DESIGN RULE:  TD-MM18-DR-2001 Rev.:6P  //
+//                                                      (Tech Dev. Rev.:2.4)     //
+//                               MIXED SIGNAL SPICE MODEL:TD-MM18-SP-2001 Rev.:8R//
+//                                                      (Tech Dev. Rev.:1.7)     //
+//                               RF SPICE MODEL:        TD-MM18-RM-2001 Rev.:7R  //
+//                                                      (Tech Dev. Rev.:1.5)     //
+//                               SRAM SPICE MODEL:      TD-SM18-CL-2002 Rev.:3P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                               SRAM  LAYOUT:          TD-SM18-CL-2004 Rev.:2P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                                                                               //
+//                               What's modified:                                //
+//                               1)divide pvar18_ckt_rf to:                      //
+//                                 pvar18w10l1_ckt_rf,pvar18w10ld5_ckt_rf        //
+//                                 pvar18w5l1_ckt_rf, pvar18w5ld5_ckt_rf.        //
+//                                 pvar33_ckt_rf to:pvar33w10l1_ckt_rf,pvar33w10ld5_ckt_rf//
+//                               2)Modify 3t poly resistor terminal from 3 to 2. //
+//                                 Update its defination.                        //
+//                               3)Optimize the defination of inductor.          //
+//                               4)Add option THICK_RF_TM for RF process.        //
+//                                                                               //
+// Revision1.25 2009/07/17 Betty Based on the following Process Documents:       //
+//                               LOGIC DESIGN RULE:     TD-LO18-DR-2001 Rev.:4P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                               MIX & RF DESIGN RULE:  TD-MM18-DR-2001 Rev.:7P  //
+//                                                      (Tech Dev. Rev.:2.5)     //
+//                               MIXED SIGNAL SPICE MODEL:TD-MM18-SP-2001 Rev.:10R//
+//                                                      (Tech Dev. Rev.:1.9)     //
+//                               RF SPICE MODEL:        TD-MM18-RM-2001 Rev.:12R //
+//                                                      (Tech Dev. Rev.:1.9)     //
+//                               SRAM SPICE MODEL:      TD-SM18-CL-2002 Rev.:3P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                               SRAM  LAYOUT:          TD-SM18-CL-2004 Rev.:2P  //
+//                                                      (Tech Dev. Rev.:2.0)     //
+//                               What's modified:                                //
+//                               1)add below devices due to spice model update   //
+//                                 dnw18_ckt_rf;dnw33_ckt_rf;pvar33_ckt;diff_ind_3t_rf;//
+//                                 mim_ckt;                                      //
+//                               2)add parallel merge for subckt resistors       //
+//                               3)add parallel merge for pvar18_ckt/pvar33_ckt  //
+//                               4)add mim option for C and subckt               //
+// ----------------------------------------------------------------------------- //
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+//                                                                               //
+// DISCLAIMER                                                                    //
+//                                                                               //
+//   SMIC hereby provides the quality information to you but makes no claims,    //
+// promises or guarantees about the accuracy, completeness, or adequacy of the   //
+// information herein. The information contained herein is provided on an "AS IS"//
+// basis without any warranty, and SMIC assumes no obligation to provide support //
+// of any kind or otherwise maintain the information.                            //
+//                                                                               //
+//   SMIC disclaims any representation that the information does not infringe any//
+// intellectual property rights or proprietary rights of any third parties.SMIC  //
+// makes no other warranty, whether express, implied or statutory as to any      //
+// matter whatsoever,including but not limited to the accuracy or sufficiency of //
+// any information or the merchantability and fitness for a particular purpose.  //
+// Neither SMIC nor any of its representatives shall be liable for any cause of  //
+// action incurred to connect to this service.                                   //
+//                                                                               //
+//                                                                               //
+// STATEMENT OF USE AND CONFIDENTIALITY                                          // 
+//                                                                               //
+//   The following/attached material contains confidential and proprietary       //
+// information of SMIC. This material is based upon information which SMIC       //
+// considers reliable, but SMIC neither represents nor warrants that such        //
+// information is accurate or complete, and it must not be relied upon as such.  //
+// This information was prepared for informational purposes and is for the use   //
+// by SMIC's customer only. SMIC reserves the right to make changes in the       //
+// information at any time without notice.                                       //
+//   No part of this information may be reproduced, transmitted, transcribed,    //
+// stored in a retrieval system, or translated into any human or computer        //
+// language, in any form or by any means, electronic, mechanical, magnetic,      //
+// optical, chemical, manual, or otherwise, without the prior written consent of //
+// SMIC. Any unauthorized use or disclosure of this material is strictly         //
+// prohibited and may be unlawful. By accepting this material, the receiving     //
+// party shall be deemed to have acknowledged, accepted, and agreed to be bound  //
+// by the foregoing limitations and restrictions. Thank you.                     //
+//                                                                               //
+///////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////////
+//                                                                               //
+// NOTICE                                                                        //
+//                                                                               //
+//   This file includes SVRF/TVF Technology under license by Mentor Graphics     //
+// Corporation. "SVRF/TVF Technology" shall mean Mentor Graphics' Standard       //
+// Verification Rule Format ("SVRF") and Tcl Verification Format ("TVF")         //
+// proprietary syntaxes for expressing process rules.  You shall not use         //
+// SVRF/TVF Technology unless you are a Mentor Graphics customer with a license  //
+// to use the applicable Mentor Graphics software.  The exact terms of your      //
+// obligations and rights are governed by your respective license.  You shall    //
+// not use SVRF/TVF Technology except: (a) for your internal business purposes   //
+// and (b) for use with Mentor Graphics' Calibre@ tools.  All SVRF/TVF           //
+// Technology constitutes or contains trade secrets and confidential information //
+// of Mentor Graphics or its licensors.  You shall not make SVRF/TVF Technology  //
+// available in any form to any person other than your employees and on-site     //
+// contractors, excluding Mentor Graphics competitors, whose job performance     //
+// requires access and who are under obligations of confidentiality.             //
+//                                                                               //
+///////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Device Formula                                                                //
+//                                                                               //
+// NGATE  = AA*GT*SN-NW; PGATE  = AA*GT*SP*NW; CNGATE = AA*GT*SN*NW              //
+//                                                                               //
+// ----------- ----------------------------- ----------------------------------- //
+// Name        Description                   Device Layer Operation              //
+// ----------- ----------------------------- ----------------------------------- //
+//                                                                               //
+// ----------------------------------------------------------------------------- //
+// *Mix Signal Devices:                                                          //
+// ----------------------------------------------------------------------------- //
+//                                                                               //
+// MOSFET Type:                                                                  //
+//                                                                               //
+// N18         1.8V NMOS                     (NGATE-DG-MVN-PSUB)                 //
+// N33         3.3V NMOS                     (NGATE*DG-MVN-PSUB)                 //
+// P18         1.8V PMOS                     (PGATE-DG-MVN-PSUB)                 //
+// P33         3.3V PMOS                     (PGATE*DG-MVN-PSUB)                 //
+// NNT18       1.8V Native NMOS              (NGATE-DG-MVN*PSUB)                 //
+// NNT33       3.3V Native NMOS              (NGATE*DG-MVN*PSUB)                 //
+// NMVT18      1.8V Medium NMOS              (NGATE-DG*MVN)                      //
+// NMVT33      3.3V Medium NMOS              (NGATE*DG*MVN)                      //
+// PMVT18      1.8V Medium PMOS              (PGATE-DG*MVP)                      //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// Resistor Type:                                                                //
+//                                                                               //
+// RNWSTI      NWELL Resistor under STI      (RESNW*NW)                          //
+// RNWAA       NWELL Resistor under AA       (RESNW*NW*AA*SAB)                   //
+// RNDIFSAB    N+diff resistor w/o Salicide  (RESAA*SN*AA*SAB)                   //
+// RNDIF       N+diff resistor w/i Salicide  (RESAA*SN*AA-SAB)                   //
+// RPDIFSAB    P+diff resistor w/o Salicide  (RESAA*SP*AA*SAB)                   //
+// RPDIF       P+diff resistor w/i Salicide  (RESAA*SP*AA-SAB)                   //
+// RPPOSAB     P+poly resistor w/o Salicide  (RESP1-RESP3T*SP*GT*SAB)            //
+// RPPO        P+poly resistor w/i Salicide  (RESP1-RESP3T*SP*GT-SAB)            //
+// RNPOSAB     N+poly resistor w/o Salicide  (RESP1-RESP3T*SN*GT*SAB)            //
+// RNPO        N+poly resistor w/i Salicide  (RESP1-RESP3T*SN*GT-SAB)            //
+// RHRPO       Hign Poly Resistor            (HRPDMY*HRP*GT*SAB-RESP3T)          //
+// RM1         Metal1 Resistor               (M1R*M1)                            //
+// RM2         Metal2 Resistor               (M2R*M2)                            //
+// RM3         Metal3 Resistor               (M3R*M3)                            //
+// RM4         Metal4 Resistor               (M4R*M4)                            //
+// RM5         Metal5 Resistor               (M5R*M5)                            //
+// RM6         Metal6 Resistor               (M6R*M6)                            //
+//                                                                               //
+// RNPO_3T     N+Poly resistor w/i Salicide(3T)   (RESP1*RESP3T*SN*GT-SAB)       //
+// RPPO_3T     P+poly resistor w/i Salicide(3T)   (RESP1*RESP3T*SP*GT-SAB)       //
+// RNPOSAB_3T  N+poly resistor w/o Salicide(3T)   (RESP1*RESP3T*SN*GT*SAB)       //
+// RPPOSAB_3T  P+poly resistor w/o Salicide(3T)   (RESP1*RESP3T*SP*GT*SAB)       //
+// RHRPO_3T    High Poly Rsistor(3T)              (HRPDMY*HRP*GT*SAB*RESP3T)     //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// DIODE Type:                                                                   //
+//                                                                               //
+// NDIO18      1.8V diode N+/PW              (DSTR*AA*SN-DG-PSUB)                //
+// NDIO33      3.3V diode N+/PW              (DSTR*AA*SN*DG-PSUB)                //
+// NNDIO18     Native N+/PW Diode            (DSTR*AA*SN-DG*PSUB)                //
+// NNDIO33     Native N+/PW Diode            (DSTR*AA*SN*DG*PSUB)                //
+// PDIO18      1.8V diode P+/NW              (DSTR*AA*SP-DG*NW)                  //
+// PDIO33      3.3V diode P+/NW              (DSTR*AA*SP*DG*NW)                  //
+// NWDIO       NW/PW DIODE                   (DSTR*NW)                           //
+// DIOBPW      Buried PWELL/Deep NWELL Diode (DSTR*SP*DNW)                       //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// BJT Type:                                                                     //
+//                                                                               //
+// PNP18A4     1.8V PNP BJT                  (DMPNP*SP*AA*NW-DG)                 //
+// PNP18A25    1.8V PNP BJT                  (DMPNP*SP*AA*NW-DG)                 //
+// PNP18A100   1.8V PNP BJT                  (DMPNP*SP*AA*NW-DG)                 //
+// PNP33A4     3.3V PNP BJT                  (DMPNP*SP*AA*NW*DG)                 //
+// PNP33A25    3.3V PNP BJT                  (DMPNP*SP*AA*NW*DG)                 //
+// PNP33A100   3.3V PNP BJT                  (DMPNP*SP*AA*NW*DG)                 //
+// NPN18A4     1.8V NPN BJT                  (DMPNP*SN*AA*DNW-DG)                //
+// NPN18A25    1.8V NPN BJT                  (DMPNP*SN*AA*DNW-DG)                //
+// NPN18A100   1.8V NPN BJT                  (DMPNP*SN*AA*DNW-DG)                //
+// NPN33A4     3.3V NPN BJT                  (DMPNP*SN*AA*DNW*DG)                //
+// NPN33A25    3.3V NPN BJT                  (DMPNP*SN*AA*DNW*DG)                //
+// NPN33A100   3.3V NPN BJT                  (DMPNP*SN*AA*DNW*DG)                //
+//                                                                               //
+//-------------------------------------------------------------------------------//
+//                                                                               //
+// SMIC SRAM                                                                     //
+//                                                                               //
+// NPD         Sram cell pull down           (NGATE*NC*OPC)                      //
+// NPG         Sram Cell pass gate           (NGATE*NC*OPC)                      //
+// PL          Sram cell pull up             (PGATE*PC*OPC)                      //
+//                                                                               //
+//-------------------------------------------------------------------------------//
+//                                                                               //
+// MOS Varactor                                                                  //
+//                                                                               //
+// pvar18_ckt  MOSFET Varactor subckt        (CNGATE-DG*VARMOS-RFDEV)            //
+// pvar33_ckt  MOSFET Varactor subckt        (CNGATE*DG*VARMOS-RFDEV)            //
+//                                                                               //
+//-------------------------------------------------------------------------------//
+//                                                                               //
+// Special Capacitor                                                             //
+//                                                                               //
+// C1          1.8V NMOS in nwell            (CNGATE-DG)                         //
+// C2          3.3V NMOS in nwell            (CNGATE*DG)                         //
+// CPM         Metal1/poly Capacitor         (M1*GT*CAPBP)                       //
+// MIM         MIM Capacitor                 (MIM*M5[M4,M3,M2]*V5[V4,V3,V2])     // 
+// mim_ckt     MIM subckt                    (MIM*M5[M4,M3,M2]*V5[V4,V3,V2])     // 
+//                                                                               //
+// ----------------------------------------------------------------------------- //
+// *RF Devices:                                                                  //
+// ----------------------------------------------------------------------------- //
+//                                                                               //
+// MOSFET subckt:                                                                //
+//                                                                               //
+// n18_ckt_rf       1.8V RF NMOS subckt            (NGATE-DG*RFDEV*RFMOSD)       //
+// n33_ckt_rf       3.3V RF NMOS subckt            (NGATE*DG*RFDEV*RFMOSD)       //
+// dnw18_ckt_rf     1.8V RF DNW MOS subckt         (NGATE-DG*RFDEV*RFMOSD*DNW)   //
+// dnw33_ckt_rf     3.3V RF DNW MOS subckt         (NGATE*DG*RFDEV*RFMOSD*DNW)   //
+// p18_ckt_rf       1.8V RF PMOS subckt            (PGATE-DG*RFDEV*RFMOSD)       //
+// p33_ckt_rf       3.3V RF PMOS subckt            (PGATE*DG*RFDEV*RFMOSD)       //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// Resistor subckt:                                                              //
+//                                                                               //
+// rndifsab_ckt_rf  SAB N+ Diff Resistor subckt    (RESAA*SN*AA*SAB*RFDEV)       //
+// rpdifsab_ckt_rf  SAB P+ Diff Resistor subckt    (RESAA*SP*AA*SAB*RFDEV)       //
+// rnposab_ckt_rf   SAB N+ Poly Resistor subckt    (RESP1*SN*GT*SAB*RFDEV)       //
+// rpposab_ckt_rf   SAB P+ Poly Resistor subckt    (RESP1*SP*GT*SAB*RFDEV)       //
+// rhrpo_ckt_rf     RF HRP Poly Resistor subckt    (HRPDMY*HRP*GT*SAB*RFDEV)     //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// Varactor:                                                                     //
+//                                                                               //
+// pvar18w10l1_ckt_rf  MOSFET Varactor subckt      (CNGATE-DG*VARMOS*RFDEV)      //
+// pvar18w10ld5_ckt_rf MOSFET Varactor subckt      (CNGATE-DG*VARMOS*RFDEV)      //
+// pvar18w5l1_ckt_rf   MOSFET Varactor subckt      (CNGATE-DG*VARMOS*RFDEV)      //
+// pvar18w5ld5_ckt_rf  MOSFET Varactor subckt      (CNGATE-DG*VARMOS*RFDEV)      //
+// pvar33w10l1_ckt_rf  MOSFET Varactor subckt      (CNGATE*DG*VARMOS*RFDEV)      //
+// pvar33w10ld5_ckt_rf MOSFET Varactor subckt      (CNGATE*DG*VARMOS*RFDEV)      //
+//                                                                               //
+// pvardio18_ckt_rf Junction Diode Varactor subckt (NW*AA*SN*SP-DG*VARJUN*RFDEV) //
+// pvardio33_ckt_rf Junction Diode Varactor subckt (NW*AA*SN*SP*DG*VARJUN*RFDEV) //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// MIM Capacitor:                                                                //
+//                                                                               //
+// mim1_rf          RF MIM Capacitor subckt        (MIM*M5*V5*RFDEV)             //
+//                                                                               //
+//------------------------------------------------------------------------------ //
+//                                                                               //
+// Inductor:                                                                     //
+//                                                                               //
+// ind_rf           RF inductor subckt             (M6*M5*V5*INDUMY*RFDEV)       //
+// diff_ind_rf      RF inductor subckt             (M6*M5*V5*INDUMY*RFDEV)       //
+// diff_ind_3t_rf   RF 3T inductor subckt          (M6*M5*V5*INDUMY*RFDEV)       //
+// ----------------------------------------------------------------------------- //
+///////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//                             Environment Setting                               //
+///////////////////////////////////////////////////////////////////////////////////
+
+//add by dxzhang
+//LVS GLOBAL LAYOUT NAME P VDD
+//LVS GLOBAL LAYOUT NAME G GND
+//LVS GLOBAL LAYOUT NAME PP VDDH
+//LVS GLOBAL LAYOUT NAME PG VSSH
+SOURCE CASE YES
+LAYOUT CASE YES
+LVS COMPARE CASE YES
+//LVS GLOBALS ARE PORTS NO
+//LVS Ignore Trivial Named Ports YES
+//LVS CHECK PORT NAMES NO
+
+//dxzhang: wrong!
+//LVS EXCLUDE HCELL "vs_"
+//LVS EXCLUDE HCELL "SPH*"
+
+LAYOUT ALLOW DUPLICATE CELL YES
+DRC Cell TEXT YES
+//dxzhang:20100907,when use memory module and new version calibre, set INJECT LOGIC to NO
+LVS INJECT LOGIC NO
+//end
+
+//---------------------------------------------------------------------------------
+
+//*OPTION 1: Define TOP Metal. The value can be 6, 5, 4, 3
+
+#DEFINE TOPMETAL 6
+
+//----------------------------------------------------------------------------------
+
+//*OPTION 2: Define ERC Check or Not. The value can be TRUE or FALSE(Upper Case).
+//disabled by dxzhang
+//#DEFINE ERCCHECK TRUE
+#DEFINE ERCCHECK FALSE
+//end
+//----------------------------------------------------------------------------------
+
+//*OPTION 3: Define RF Process Top Metal. The value can be TRUE or FALSE.
+//* TRUE(Upper Case): Sheet Resistance of Top Metal is 0.0145 ohm/sq.
+//* FALSE(Upper Case) : Sheet Resistance of Top Metal is 0.036 ohm/sq.
+
+//disabled by dxzhang
+//#DEFINE THICK_RF_TM TRUE
+#DEFINE THICK_RF_TM  FALSE
+//end
+
+//----------------------------------------------------------------------------------
+
+//*OPTION 4: Define Property of resistor. The value can be WL or R.
+//* WL(Upper Case): Using W & L as the property of Resistor.
+//* R(Upper Case) : Using R as the property of Resistor.
+
+#DEFINE RES_PROPERTY  R
+
+//----------------------------------------------------------------------------------
+
+//*OPTION 5: Define interface resistance or not. The value can be TRUE or FALSE.
+//*TRUE(Upper Case)  : Total resistance R = Rsh*L/(W-2*DW)+2*Rint
+//*FALSE(Upper Case) : Total resistance R = Rsh*L/(W-2*DW)
+
+#DEFINE ADD_RINT FALSE 
+
+//----------------------------------------------------------------------------------
+
+//*OPTION 6: Define Model name of the Memory for Virage or Artisan Library.
+//*TRUE(Upper Case): Model name of sram device is N18, P18.
+//*FALSE(Upper Case):Model name of sram device is NPG, NPD, PL.
+
+//disabled by dxzhang
+#DEFINE VIR_ART TRUE //*Can be TRUE or FALSE
+//#DEFINE VIR_ART FALSE //*Can be TRUE or FALSE
+//end
+
+//----------------------------------------------------------------------------------
+
+//*OPTION 7: Define  different model of mim.The value can be C or SUBCKT.
+//*C (Upper Case):the model name of mim is mim and the property is C.
+//*SUBCKT(Upper Case):the model name of mim is mim_ckt and the property is LR&WR.
+
+#DEFINE MIM   C    
+
+//-----------------------------------------------------------------------------------
+
+SOURCE PATH "xxx"
+SOURCE PRIMARY "xxx"
+SOURCE SYSTEM SPICE
+
+LAYOUT PATH "xxx.gds"
+LAYOUT PRIMARY "xxx"
+LAYOUT SYSTEM GDSII
+
+LVS REPORT "lvs.rep"
+LVS REPORT OPTION A B C D S
+
+UNIT CAPACITANCE FF
+UNIT RESISTANCE OHM
+UNIT LENGTH U
+
+ERC MAXIMUM RESULTS 100
+ERC RESULTS DATABASE erc.db
+MASK SVDB DIRECTORY "svdb" QUERY
+FLAG SKEW YES
+FLAG OFFGRID YES
+LVS ISOLATE SHORTS             YES
+LVS SPICE PREFER PINS          YES
+LVS RECOGNIZE GATES            NONE
+LVS ABORT ON SUPPLY ERROR      NO
+LVS ALL CAPACITOR PINS SWAPPABLE YES
+LVS IGNORE PORTS               NO
+LVS CHECK PORT NAMES           YES
+LVS REDUCE PARALLEL BIPOLAR    YES
+LVS REDUCE PARALLEL MOS        YES
+LVS REDUCE PARALLEL DIODES     YES
+LVS REDUCE PARALLEL CAPACITORS YES
+LVS REDUCE PARALLEL RESISTORS  YES
+LVS REDUCE SERIES RESISTORS    YES
+LVS REDUCE SERIES CAPACITORS   YES
+LVS REDUCE SPLIT GATES         YES 
+LVS FILTER UNUSED OPTION AB RC RE RG
+LVS PROPERTY RESOLUTION MAXIMUM 65536
+LAYOUT TOP LAYER M1 V1 M2 V2 M3 V3 M4 V4 M5 V5 M6
+VIRTUAL CONNECT COLON YES
+//modify by dxzhang
+LVS GROUND NAME "VSS" "SAVSS?" "gnd" "GND" "?VSS?" "?vss?"
+LVS POWER NAME "VDD" "SAVDD?" "VCC?" "?VDD?" "?VCC?" "?vcc?" "?vdd?"
+
+//LVS GROUND NAME "GND"
+//LVS GROUND NAME "VSSH" 
+//LVS POWER NAME "VDD"
+//LVS POWER NAME "VDDH"
+//end
+
+//////////////////////////////////////////////
+// Layer Mapping                            //  
+//////////////////////////////////////////////
+LAYER AA       10 12 13 // Active Area 
+LAYER NW       14 // N-Well
+LAYER iPC      16 // PCH HV VT adjust
+LAYER iNC      21 // NCH HV VT adjust
+LAYER DNW      19 // Deep N Well imp for substrate noise suppression
+LAYER DG       29 // Dual Gate 
+LAYER GT       30 // Poly Gate
+LAYER HRP      39 // High Resistant Poly Imp
+LAYER SN       40 // N+ S/D implant
+LAYER SP       43 // P+ S/D implant
+LAYER MVP      44 // Medium Vtp adjust
+LAYER MVN      45 // Medium Vtn adjust
+LAYER SAB      48 // Resist Protect Oxide/Salicide Block
+LAYER CT       50 // Contact Hole
+LAYER MIM      58 // Top plate of MIM Capacitor
+LAYER M1       61 // Metal1
+LAYER M2       62 // Metal2
+LAYER IGNORE   363
+LAYER MAP 63 TEXTTYPE 63 363
+LAYER M3       63 // Metal3
+LAYER M4       64 // Metal4
+LAYER M5       65 // Metal5
+LAYER M6       66 // Metal6
+LAYER M1TXT    141
+LAYER M2TXT    142
+LAYER M3TXT    143
+LAYER M4TXT    144
+LAYER M5TXT    145
+LAYER M6TXT    146
+LAYER V1       70 // Via1
+LAYER V2       71 // Via2
+LAYER V3       72 // Via3
+LAYER V4       73 // Via4
+LAYER V5       74 // Via5
+LAYER PSUB     85 // Native Device Region
+
+LAYER RESNW    95 // Dummy for NW resistor
+LAYER MAP      96 DATATYPE 0 960
+LAYER RESP1    960 // Dummy for Poly resistor
+LAYER MAP      96 DATATYPE 1 961
+LAYER RESP3T   961 // Dummy for Poly resistor
+LAYER RESAA    97 // Dummy for AA resistor
+LAYER SUBD     300 
+LAYER MAP      131 DATATYPE 1 300 // Dummy for psub
+LAYER OPCBA    100// Blocking Layer for OPC operation on AA
+LAYER OPCBP    101// Blocking Layer for OPC operation on GT
+LAYER OPCBM    102// Blocking Layer for OPC operation on M1
+LAYER DMPNP    134  // Dummy for BJT
+LAYER CAPBP    137  // Dummy for Cap
+LAYER DSTR     138  // Dummy for Diode
+LAYER M1R      171  // Dummy for Metal1 Resistor
+LAYER M2R      172  // Dummy for Metal2 Resistor
+LAYER M3R      173  // Dummy for Metal3 Resistor
+LAYER M4R      174  // Dummy for Metal4 Resistor
+LAYER M5R      175  // Dummy for Metal5 Resistor
+LAYER M6R      176  // Dummy for Metal6 Resistor
+LAYER RFDEV    181  // Dummy for RF device
+LAYER RFMOSD   182  // Dummy for RF MOSFET Drain
+LAYER VARMOS   93   // Dummy for MOS Type varactor.
+LAYER VARJUN   183 94  // Dummy for Junction Diode
+LAYER HRPDMY   210  // Dummy patten for HRP Resistor
+LAYER MIMDMY   211  // Dummy for MIM capacitor
+LAYER INDUMY   212  // Dummy for Inductor
+
+#IFDEF TOPMETAL 6 
+//dxzhang:20100902
+//when LVS option "Ignore layout and source pins during comparison" is disabled(unselect),PORT LAYER should only defined on ONE layer - the layer which top cell port labeled on, maybe M5TXT (145) or M6TXT (146),
+//
+TEXT LAYER 146 ATTACH 146 metal6
+//PORT LAYER TEXT 146
+TEXT LAYER 66  ATTACH 66  metal6
+//PORT LAYER TEXT 66
+TEXT LAYER 145 ATTACH 145 metal5
+PORT LAYER TEXT 145
+TEXT LAYER 65  ATTACH 65  metal5
+//PORT LAYER TEXT 65
+TEXT LAYER 144 ATTACH 144 metal4
+//PORT LAYER TEXT 144
+TEXT LAYER 64  ATTACH 64  metal4
+//PORT LAYER TEXT 64
+TEXT LAYER 143 ATTACH 143 metal3
+//PORT LAYER TEXT 143
+TEXT LAYER 63  ATTACH 63  metal3
+//PORT LAYER TEXT 63
+TEXT LAYER 142 ATTACH 142 metal2
+//PORT LAYER TEXT 142
+TEXT LAYER 62  ATTACH 62  metal2
+//PORT LAYER TEXT 62
+#ENDIF
+#IFDEF TOPMETAL 5
+TEXT LAYER 145 ATTACH 145 metal5
+PORT LAYER TEXT 145
+TEXT LAYER 65  ATTACH 65  metal5
+PORT LAYER TEXT 65
+TEXT LAYER 144 ATTACH 144 metal4
+PORT LAYER TEXT 144
+TEXT LAYER 64  ATTACH 64  metal4
+PORT LAYER TEXT 64
+TEXT LAYER 143 ATTACH 143 metal3
+PORT LAYER TEXT 143
+TEXT LAYER 63  ATTACH 63  metal3
+PORT LAYER TEXT 63
+TEXT LAYER 142 ATTACH 142 metal2
+PORT LAYER TEXT 142
+TEXT LAYER 62  ATTACH 62  metal2
+PORT LAYER TEXT 62
+#ENDIF
+#IFDEF TOPMETAL 4
+TEXT LAYER 144 ATTACH 144 metal4
+PORT LAYER TEXT 144
+TEXT LAYER 64  ATTACH 64  metal4
+PORT LAYER TEXT 64
+TEXT LAYER 143 ATTACH 143 metal3
+PORT LAYER TEXT 143
+TEXT LAYER 63  ATTACH 63  metal3
+PORT LAYER TEXT 63
+TEXT LAYER 142 ATTACH 142 metal2
+PORT LAYER TEXT 142
+TEXT LAYER 62  ATTACH 62  metal2
+PORT LAYER TEXT 62
+#ENDIF
+#IFDEF TOPMETAL 3
+TEXT LAYER 143 ATTACH 143 metal3
+PORT LAYER TEXT 143
+TEXT LAYER 63  ATTACH 63  metal3
+PORT LAYER TEXT 63
+TEXT LAYER 142 ATTACH 142 metal2
+PORT LAYER TEXT 142
+TEXT LAYER 62  ATTACH 62  metal2
+PORT LAYER TEXT 62
+#ENDIF
+
+//*Define OPC
+OPCB = (OPCBA OR OPCBP) OR OPCBM
+
+TEXT LAYER 141 ATTACH 141 metal1
+//dxzhang
+//PORT LAYER TEXT 141
+//end
+TEXT LAYER 61 ATTACH 61 metal1
+//dxzhang
+//PORT LAYER TEXT 61
+//end
+
+//////////////////////////////////////////////
+// Loigc Operation                          //
+//////////////////////////////////////////////
+
+//*Form Bulk layer
+DRC:1   = EXTENT
+BULK    = SIZE DRC:1 BY 1.0
+
+//*Define Pwell layer
+scut    = SIZE SUBD  BY 0.005
+cutring = scut NOT SUBD
+wella   = cutring OR NW
+pwell   = BULK NOT wella
+
+//*Define original P/N diffusion Area
+pdifi   = AA AND SP
+ndifi   = AA AND SN
+
+//*Divide Resistor DUMMY for SAB
+hresd   = RESAA AND SAB
+hresdd  = RESAA INTERACT SAB
+lresd   = RESAA NOT hresdd
+
+hresp   = RESP1 AND SAB
+hrespd  = RESP1 INTERACT SAB
+lresp   = RESP1 NOT hrespd
+
+//*Define P+ Diffusion resistor
+pdrsab1 = pdifi AND hresd
+pdrnosab= pdifi AND lresd
+
+pdrsab  = pdrsab1 NOT RFDEV
+pdrsabrf= pdrsab1 NOT pdrsab
+
+pdr     = pdrsab1 OR pdrnosab
+pdif    = pdifi NOT pdr
+
+//*Define N+ Diffusion resistor
+ndrsab1 = ndifi AND hresd 
+ndrnosab= ndifi AND lresd 
+
+ndrsab  = ndrsab1 NOT RFDEV
+ndrsabrf= ndrsab1 NOT ndrsab
+
+ndr     = ndrsab1 OR ndrnosab
+ndif    = ndifi   NOT ndr
+
+//*Define P+ Poly resistor
+ppoly   = GT AND SP
+pprsab1 = (ppoly AND hresp) NOT RESP3T
+pprnosab= (ppoly AND lresp) NOT RESP3T
+
+pprsab_3t  = (ppoly AND hresp) AND RESP3T
+pprnosab_3t = (ppoly AND lresp) AND RESP3T
+pprsab_3t_nw = pprsab_3t AND nwell
+pprsab_3t_pw = pprsab_3t NOT nwell
+pprnosab_3t_nw = pprnosab_3t AND nwell
+pprnosab_3t_pw = pprnosab_3t NOT nwell
+
+pprsab  = pprsab1 NOT RFDEV
+pprsabrf= pprsab1 NOT pprsab
+
+ppr1     = pprsab1 OR pprnosab
+ppr2     = pprsab_3t OR pprnosab_3t
+ppr      = ppr1 OR ppr2
+
+//*Define N+ Poly resistor
+npoly   = GT AND SN
+nprsab1 = (npoly AND hresp) NOT RESP3T
+nprnosab= (npoly AND lresp) NOT RESP3T
+
+nprsab_3t  = (npoly AND hresp) AND RESP3T
+nprnosab_3t = (npoly AND lresp) AND RESP3T
+nprsab_3t_nw = nprsab_3t AND nwell
+nprsab_3t_pw = nprsab_3t NOT nwell
+nprnosab_3t_nw = nprnosab_3t AND nwell
+nprnosab_3t_pw = nprnosab_3t NOT nwell
+
+nprsab  = nprsab1 NOT RFDEV
+nprsabrf= nprsab1 NOT nprsab
+
+npr1     = nprsab1 OR nprnosab
+npr2     = nprsab_3t OR nprnosab_3t
+npr      = npr1 OR npr2
+
+//*Define HRP poly resisitor
+hrppoly = GT AND HRP
+hrpdums = HRPDMY AND SAB
+hrppo1  = (hrppoly AND hrpdums) NOT RESP3T
+hrpporf = hrppo1 AND RFDEV
+hrppo   = hrppo1 NOT hrpporf
+
+hrppo_3t = (hrppoly AND hrpdums) AND RESP3T
+hrppo_3t_nw = hrppo_3t AND nwell
+hrppo_3t_pw = hrppo_3t NOT nwell
+
+//*subtract Poly used as resistor
+rpoly   = ppr OR npr
+rpoly_1 = (rpoly OR hrppo1) OR hrppo_3t
+poly1   = GT  NOT rpoly_1
+
+//*Define Nwell Resistor
+nwr     = NW AND RESNW
+sabaa   = aa AND sab
+nwraa   = nwr AND sabaa
+nwrsti  = nwr NOT sabaa
+
+nwell   = NW NOT nwr
+
+//*Define Metal Resistor
+
+#IFDEF TOPMETAL 6
+rm1     = M1 AND M1R
+metal1  = M1 NOT M1R
+rm2     = M2 AND M2R
+metal2  = M2 NOT M2R
+rm3     = M3 AND M3R
+metal3  = M3 NOT M3R
+rm4     = M4 AND M4R
+metal4a = M4 NOT M4R
+rm5     = M5 AND M5R
+metal5a = M5 NOT M5R
+rm6     = M6 AND M6R
+metal6a = M6 NOT M6R
+#ENDIF
+
+#IFDEF TOPMETAL 5
+rm1     = M1 AND M1R
+metal1  = M1 NOT M1R
+rm2     = M2 AND M2R
+metal2  = M2 NOT M2R
+rm3     = M3 AND M3R
+metal3a = M3 NOT M3R
+rm4     = M4 AND M4R
+metal4a = M4 NOT M4R
+rm5     = M5 AND M5R
+metal5a = M5 NOT M5R
+#ENDIF
+
+#IFDEF TOPMETAL 4
+rm1     = M1 AND M1R
+metal1  = M1 NOT M1R
+rm2     = M2 AND M2R
+metal2a = M2 NOT M2R
+rm3     = M3 AND M3R
+metal3a = M3 NOT M3R
+rm4     = M4 AND M4R
+metal4a  = M4 NOT M4R
+#ENDIF
+
+#IFDEF TOPMETAL 3
+rm1     = M1 AND M1R
+metal1a = M1 NOT M1R
+rm2     = M2 AND M2R
+metal2a = M2 NOT M2R
+rm3     = M3 AND M3R
+metal3a  = M3 NOT M3R
+#ENDIF
+
+//*Define Metal1/Poly Capacitor
+pmcp1   = poly1 AND metal1
+pmcap   = pmcp1 AND CAPBP
+
+poly2   = poly1 NOT pmcap
+
+//*Define MIM Capacitor and Inductor
+diff_ind    = INDUMY WITH TEXT "diff_ind_rf"
+diff_ind_3t = INDUMY WITH TEXT "diff_ind_3t_rf"
+spri_ind    = INDUMY NOT WITH TEXT "?"
+
+#IFDEF TOPMETAL 6
+mimcap1 = metal5a AND (MIM ENCLOSE V5)
+mimcaprf= mimcap1 AND RFDEV
+mimcap  = mimcap1 NOT mimcaprf
+metal5b = metal5a NOT mimcap1
+
+via5a   = V5 AND MIM
+via5b   = V5 NOT via5a
+
+indrfdumy = INDUMY AND RFDEV
+m6_ind  = metal6a AND indrfdumy
+m5_ind  = metal5b AND indrfdumy
+m4_ind  = metal4a AND indrfdumy
+metal_ind = m6_ind OR m5_ind
+
+m6ind_hole1 = HOLES metal_ind INNER EMPTY
+m6ind_hole2 = SIZE m6ind_hole1 BY 3.5 UNDEROVER
+m6ind_hole = EXTENTS m6ind_hole2
+
+ind_pin6 = SIZE M6TXT BY 4.0 INSIDE OF m6_ind STEP 1.0
+ind_pin4 = SIZE M4TXT BY 4.0 INSIDE OF m4_ind STEP 1.0
+m_ind_touch = m6_ind AND (m5_ind NOT INTERACT ind_pin6)
+dind_pm6 = m6_ind AND ind_pin6
+dind_pm4 = m4_ind AND ind_pin4
+
+metal6  = metal6a NOT m6_ind
+metal5  = metal5b NOT m5_ind
+metal4  = metal4a NOT m4_ind
+#ENDIF
+
+#IFDEF TOPMETAL 5
+mimcap1  = metal4a AND (MIM ENCLOSE V4)
+mimcaprf = mimcap1 AND RFDEV
+mimcap   = mimcap1 NOT mimcaprf
+metal4b  = metal4a NOT mimcap1
+
+via4a   = V4 AND MIM
+via4b   = V4 NOT via4a
+
+indrfdumy = INDUMY AND RFDEV
+m5_ind  = metal5a AND indrfdumy
+m4_ind  = metal4b AND indrfdumy
+m3_ind  = metal3a AND indrfdumy
+metal_ind = m5_ind OR m4_ind
+
+m5ind_hole1 = HOLES metal_ind INNER EMPTY
+m5ind_hole2 = SIZE m5ind_hole1 BY 3.5 UNDEROVER
+m5ind_hole = EXTENTS m5ind_hole2
+
+ind_pin5 = SIZE M5TXT BY 4.0 INSIDE OF m5_ind STEP 1.0
+ind_pin3 = SIZE M3TXT BY 4.0 INSIDE OF m3_ind STEP 1.0
+m_ind_touch = m5_ind AND (m4_ind NOT INTERACT ind_pin5)
+dind_pm5 = m5_ind AND ind_pin5
+dind_pm3 = m3_ind AND ind_pin3
+
+metal5  = metal5a NOT m5_ind
+metal4  = metal4b NOT m4_ind
+metal3  = metal3a NOT m3_ind
+#ENDIF
+
+#IFDEF TOPMETAL 4
+mimcap1  = metal3a AND (MIM ENCLOSE V3)
+mimcaprf = mimcap1 AND RFDEV
+mimcap   = mimcap1 NOT mimcaprf
+metal3b = metal3a NOT mimcap1
+
+via3a   = V3 AND MIM
+via3b   = V3 NOT via3a
+
+indrfdumy = INDUMY AND RFDEV
+m4_ind  = metal4a AND indrfdumy
+m3_ind  = metal3b AND indrfdumy
+m2_ind  = metal2a AND indrfdumy
+metal_ind = m4_ind OR m3_ind
+
+m4ind_hole1 = HOLES metal_ind INNER EMPTY
+m4ind_hole2 = SIZE m4ind_hole1 BY 3.5 UNDEROVER
+m4ind_hole = EXTENTS m4ind_hole2
+
+ind_pin4 = SIZE M4TXT BY 4.0 INSIDE OF m4_ind STEP 1.0
+ind_pin2 = SIZE M2TXT BY 4.0 INSIDE OF m2_ind STEP 1.0
+m_ind_touch = m4_ind AND (m3_ind NOT INTERACT ind_pin4)
+dind_pm4 = m4_ind AND ind_pin4
+dind_pm2 = m2_ind AND ind_pin2
+
+metal4  = metal4a NOT m4_ind
+metal3  = metal3b NOT m3_ind
+metal2  = metal2a NOT m2_ind
+#ENDIF
+
+#IFDEF TOPMETAL 3
+mimcap1  = metal2a AND (MIM ENCLOSE V2)
+mimcaprf = mimcap1 AND RFDEV
+mimcap   = mimcap1 NOT mimcaprf
+metal2b = metal2a NOT mimcap1
+
+via2a   = V2 AND MIM
+via2b   = V2 NOT via2a
+
+indrfdumy = INDUMY AND RFDEV
+m3_ind  = metal3a AND indrfdumy
+m2_ind  = metal2b AND indrfdumy
+m1_ind  = metal1a AND indrfdumy
+metal_ind = m3_ind OR m2_ind
+
+m3ind_hole1 = HOLES metal_ind INNER EMPTY
+m3ind_hole2 = SIZE m3ind_hole1 BY 3.5 UNDEROVER
+m3ind_hole = EXTENTS m3ind_hole2
+
+ind_pin3 = SIZE M3TXT BY 4.0 INSIDE OF m3_ind STEP 1.0
+ind_pin1 = SIZE M1TXT BY 4.0 INSIDE OF m3_ind STEP 1.0
+m_ind_touch = m3_ind AND (m2_ind NOT INTERACT ind_pin3)
+dind_pm3 = m3_ind AND ind_pin3
+dind_pm1 = m1_ind AND ind_pin1
+
+metal3  = metal3a NOT m3_ind
+metal2  = metal2b NOT m2_ind
+metal1  = metal1a NOT m1_ind
+#ENDIF
+
+//*Define MOS Device
+ntd1    = ndif AND nwell
+ptd     = pdif AND pwell
+ndiff   = ndif AND pwell
+pdiff   = pdif AND nwell
+
+ngate   = poly2 AND ndiff
+pgate   = poly2 AND pdiff
+cngate  = poly2 AND ntd1
+
+poly3   = poly2 NOT ngate
+poly4   = poly3 NOT pgate
+poly    = poly4 NOT cngate
+
+nsd1    = ndiff NOT ngate
+psd1    = pdiff NOT pgate
+ntd     = ntd1  NOT cngate
+
+//*Define Diode terminal.
+// Define N+/PW diode
+dio_np  = nsd1 INSIDE DSTR
+ndio    = dio_np NOT PSUB
+ndio18  = ndio   NOT DG
+ndio33  = ndio   AND DG
+
+nndio   = dio_np AND PSUB
+nndio18 = nndio  NOT DG
+nndio33 = nndio  AND DG
+
+nsd2    = nsd1 NOT dio_np
+
+// Define P+/NW Diode 
+dio_pn  = psd1 INSIDE DSTR
+pdio18  = dio_pn NOT DG
+pdio33  = dio_pn AND DG
+
+//*Define Buried PW/Deep NW Diode
+diopsub = pwell AND DNW
+diobpw  = diopsub AND DSTR
+
+// Define NW/PW diode
+dio_nw  = nwell AND DSTR
+dionw1  = dio_nw NOT INTERACT dio_pn
+dionw   = dionw1 NOT INTERACT DNW
+
+psd2    = psd1 NOT dio_pn
+
+//*Define PNP Device
+pnpemit = psd2  AND DMPNP
+pnpbase = nwell INTERACT pnpemit
+collsur = pwell TOUCH pnpbase
+coll    = collsur OR pnpbase
+pnpcoll = STAMP coll BY pwell
+
+pnpemit18 = pnpemit NOT DG
+pnpemit18a4   = AREA pnpemit18 >3.9 <4.1
+pnpemit18a25  = AREA pnpemit18 >24.9 <25.1
+pnpemit18a100 = AREA pnpemit18 >99.9 <100.1
+pnpemit33 = pnpemit AND DG
+pnpemit33a4   = AREA pnpemit33 >3.9 <4.1
+pnpemit33a25  = AREA pnpemit33 >24.9 <25.1
+pnpemit33a100 = AREA pnpemit33 >99.9 <100.1
+
+psd3    = psd2  NOT pnpemit
+psdrf   = psd3 AND RFDEV
+psdrfd  = psdrf AND RFMOSD
+psd     = psd3 NOT psdrfd
+
+#IFDEF VIR_ART FALSE
+
+//* Logic operation for NC,PC
+nwellup   = SIZE NW  BY 2.15
+lognc     = nwellup AND SN
+NC        = iNC OR lognc
+
+spnwell   = NW AND SP
+ncszup    = SIZE NC BY 0.6
+sramnc    = spnwell AND ncszup
+PC        = iPC OR sramnc
+
+//*Gate extraction to distinguish 1.8 and 3.3 V transistor
+ngate18a = ngate NOT DG 
+nsramgate18 = (ngate18a AND NC) AND OPCB
+pgate18a  = pgate NOT DG
+psramgate18 = (pgate18a AND PC) AND OPCB
+pgat18    = pgate18a NOT psramgate18
+
+
+//*Define Sram cell(NPG,NPD) based on sram document(TD-SM18-CL-2002V3P.doc)
+npgd18ps = AREA nsramgate18 >=0.0638 < 0.064
+npgd18pd = AREA nsramgate18 >=0.045 < 0.046
+ngat18  = (ngate18a NOT npgd18ps) NOT npgd18pd
+
+#ENDIF
+
+#IFDEF VIR_ART TRUE
+//*Gate extraction to distinguish 1.8 and 3.3 V transistor
+pgat18  = pgate NOT DG
+ngat18  = ngate NOT DG
+
+#ENDIF
+
+//*Define RF Juction varactor
+jvar1   = (nwell AND RFDEV) AND VARJUN
+jvar2   = (jvar1 INTERACT psdrf) INTERACT ntd
+jvar33  = jvar2 AND DG
+jvar18  = jvar2 NOT jvar33
+
+//*Define NPN Device
+dnwnpn  = DNW AND DMPNP
+npnemit = nsd2 INTERACT dnwnpn
+nwell1  = nwell INTERACT DNW
+dnw1    = DNW OR nwell1
+dnwell  = STAMP dnw1 BY nwell
+
+npnemit18 = npnemit NOT DG
+npnemit18a4   = AREA npnemit18 >3.9 <4.1
+npnemit18a25  = AREA npnemit18 >24.9 <25.1
+npnemit18a100 = AREA npnemit18 >99.9 <100.1
+npnemit33 = npnemit AND DG
+npnemit33a4   = AREA npnemit33 >3.9 <4.1
+npnemit33a25  = AREA npnemit33 >24.9 <25.1
+npnemit33a100 = AREA npnemit33 >99.9 <100.1
+
+nsd3    = nsd2 NOT npnemit
+nsdrf   = nsd3 AND RFDEV
+nsdrfd  = nsdrf AND RFMOSD
+nsd     = nsd3 NOT nsdrfd
+//nsdrf   = nsd3 AND RFDEV
+//nsd     = nsd3 NOT nsdrf
+
+//*Gate extraction to distinguish 1.8 and 3.3 V transistor
+ngat33   = ngate AND DG
+pgat33   = pgate AND DG
+
+//*Gate for Normal 1.8V and 3.3V MOS
+/*
+ngnormal33 = ngat33 AND DNW
+ngnormal18 = ngat18 AND DNW
+
+ngat33a    = ngat33 NOT ngnormal33
+ngat18a    = ngat18 NOT ngnormal18
+*/
+
+//*Gate for Medium 1.8V and 3.3V MOS
+//ngmedium33 = ngat33a AND MVN
+ngmedium33 = ngat33  AND MVN
+pgmedium33 = pgat33  AND MVP
+//ngmedium18 = ngat18a AND MVN
+ngmedium18 = ngat18  AND MVN
+pgmedium18 = pgat18  AND MVP
+
+//ngat33b    = ngat33a NOT ngmedium33
+//ngat18b    = ngat18a NOT ngmedium18
+ngat33b    = ngat33  NOT ngmedium33
+ngat18b    = ngat18  NOT ngmedium18
+pgat33a    = pgat33  NOT pgmedium33
+pgat18a    = pgat18  NOT pgmedium18
+
+pgate33    = pgat33a NOT RFDEV
+pgate33_rf = pgat33a NOT pgate33
+
+pgate18    = pgat18a NOT RFDEV
+pgate18_rf = pgat18a NOT pgate18
+
+//*Gate for Native NMOS
+ngnative33 = ngat33b AND PSUB
+ngnative18 = ngat18b AND PSUB
+
+ngat33c    = ngat33b NOT ngnative33
+ngat18c    = ngat18b NOT ngnative18
+
+ngate18    = ngat18c NOT RFDEV
+ngate18_rf = ngat18c NOT ngate18
+ngate33    = ngat33c NOT RFDEV
+ngate33_rf = ngat33c NOT ngate33
+
+//*Define RF MODFET device layer.
+n18rfgt1    = GT ENCLOSE ngate18_rf
+dnw18rfgt   = n18rfgt1 INTERACT DNW
+n18rfgt     = n18rfgt1 NOT dnw18rfgt
+n33rfgt1    = GT ENCLOSE ngate33_rf
+dnw33rfgt   = n33rfgt1 INTERACT DNW
+n33rfgt     = n33rfgt1 NOT dnw33rfgt
+p18rfgt    = GT ENCLOSE pgate18_rf
+p33rfgt    = GT ENCLOSE pgate33_rf
+
+dnwngate18_rf = ngate18_rf INTERACT DNW
+dnwngate33_rf = ngate33_rf INTERACT DNW
+dnwngate      = dnwngate18_rf OR dnwngate33_rf
+
+ndifd     = ndiff AND DNW
+dnwwdedge = ndifd TOUCH EDGE dnwngate
+
+dnwwaddrec = ENC dnwwdedge DNW <1000 opposite region
+
+
+
+//* Gate for NMOS in Nwell
+cngate18a  = cngate NOT DG
+cngate33a  = cngate AND DG
+cngate18_rf= (cngate18a AND RFDEV) AND VARMOS
+cngate18w10l1_rf = AREA cngate18_rf >9.9 <10.1
+cngate18w10ld5w5l1_rf = AREA cngate18_rf >4.9 < 5.1
+cngate18w10ld5_rf = PERIMETER cngate18w10ld5w5l1_rf >20 <22
+cngate18w5l1_rf   = PERIMETER cngate18w10ld5w5l1_rf >11 <13
+cngate18w5ld5_rf = AREA cngate18_rf >2.4 < 2.6
+cngate33_rf= (cngate33a AND RFDEV) AND VARMOS
+cngate33w10l1_rf= AREA cngate33_rf >9.9 <10.1
+cngate33w10ld5_rf= AREA cngate33_rf >4.9 < 5.1
+cngate18_va= (cngate18a AND VARMOS) NOT RFDEV
+cngate18   = cngate18a NOT (cngate18_rf OR cngate18_va)
+cn18rfgtw10l1   = GT ENCLOSE cngate18w10l1_rf
+cn18rfgtw10ld5  = GT ENCLOSE cngate18w10ld5_rf
+cn18rfgtw5l1    = GT ENCLOSE cngate18w5l1_rf
+cn18rfgtw5ld5   = GT ENCLOSE cngate18w5ld5_rf
+cn33rfgtw10l1   = GT ENCLOSE cngate33w10l1_rf
+cn33rfgtw10ld5  = GT ENCLOSE cngate33w10ld5_rf
+cn18vargt  = GT ENCLOSE cngate18_va
+cngate33_va= (cngate33a AND VARMOS) NOT RFDEV
+cn33vargt  = GT ENCLOSE cngate33_va
+cngate33   = cngate33a NOT (cngate33_rf OR cngate33_va)
+
+//*Divide the cont into polycont and dfcont
+polycont   = CT AND GT
+dfcont     = CT NOT polycont
+
+//*Define well contact
+nplug      = ntd  AND nwell
+pplug      = ptd  AND pwell
+
+//*Define layer for ERC check
+rnwell     = nwell TOUCH nwr
+bnwell     = nwell INTERACT DMPNP
+ntap1      = ntd   NOT rnwell
+ntap2      = ntap1 NOT bnwell
+ntap       = STAMP ntap2 BY ntd
+ptap1      = COPY ptd
+ptap       = STAMP ptap1 BY ptd
+
+////////////////////////////////////////////
+//*Connect Section                        //
+////////////////////////////////////////////
+#IFDEF TOPMETAL 6
+CONNECT metal6 metal5 BY via5b
+CONNECT metal6 MIM    BY via5a
+CONNECT metal5 mimcap
+CONNECT metal5 mimcaprf
+CONNECT dind_pm6 m6_ind
+CONNECT dind_pm6 m5_ind BY via5b
+CONNECT dind_pm4 m5_ind BY V4
+CONNECT m5_ind m4_ind   BY V4
+CONNECT m6_ind metal6
+CONNECT m5_ind metal5
+CONNECT m4_ind metal4
+CONNECT metal5 metal4 BY V4
+CONNECT metal4 metal3 BY V3
+CONNECT metal3 metal2 BY V2
+CONNECT metal2 metal1 BY V1
+#ENDIF
+
+#IFDEF TOPMETAL 5
+CONNECT metal5 metal4 BY via4b
+CONNECT metal5 MIM    BY via4a
+CONNECT metal4 mimcap
+CONNECT metal4 mimcaprf
+CONNECT dind_pm5 m5_ind
+CONNECT dind_pm5 m4_ind BY via4b
+CONNECT dind_pm3 m4_ind BY V3
+CONNECT m4_ind m3_ind   BY V3
+CONNECT m5_ind metal5
+CONNECT m4_ind metal4
+CONNECT m3_ind metal3
+CONNECT metal4 metal3 BY V3
+CONNECT metal3 metal2 BY V2
+CONNECT metal2 metal1 BY V1
+#ENDIF
+
+#IFDEF TOPMETAL 4
+CONNECT metal4 metal3 BY via3b
+CONNECT metal4 MIM    BY via3a
+CONNECT metal3 mimcap
+CONNECT metal3 mimcaprf
+CONNECT dind_pm4 m4_ind
+CONNECT dind_pm4 m3_ind BY via3b
+CONNECT dind_pm2 m3_ind BY V2
+CONNECT m3_ind m2_ind BY V2
+CONNECT m4_ind metal4
+CONNECT m3_ind metal3
+CONNECT m2_ind metal2
+CONNECT metal3 metal2 BY V2
+CONNECT metal2 metal1 BY V1
+#ENDIF
+
+#IFDEF TOPMETAL 3
+CONNECT metal3 metal2 BY via2b
+CONNECT metal3 MIM    BY via2a
+CONNECT metal2 mimcap
+CONNECT metal2 mimcaprf
+CONNECT dind_pm3 m3_ind
+CONNECT dind_pm3 m2_ind BY via2b
+CONNECT dind_pm1 m2_ind BY V1
+CONNECT m2_ind m1_ind BY V1
+CONNECT m3_ind metal3
+CONNECT m2_ind metal2
+CONNECT m1_ind metal1
+CONNECT metal2 metal1 BY V1
+#ENDIF
+
+#IFDEF VIR_ART FALSE
+CONNECT poly npgd18pd
+CONNECT poly npgd18ps
+CONNECT poly psramgate18
+#ENDIF
+
+//CONNECT poly pgate18 pgate33 ngate18 ngate33 cngate18 cngate33 ngnormal18 ngnormal33 ngmedium18 
+CONNECT poly pgate18 pgate33 ngate18 ngate33 cngate18 cngate33 ngmedium18 
+CONNECT poly ngmedium33 pgmedium18 ngnative18 ngnative33 pmcap
+//CONNECT poly ngmedium33 pgmedium18 pgmedium33 ngnative18 ngnative33 pmcap
+CONNECT metal1 nsd psd ntd ptd ndio18 ndio33 nndio18 nndio33 pdio18  pdio33 BY dfcont
+CONNECT metal1 pnpemit18 pnpemit33 npnemit18 npnemit33 BY dfcont
+CONNECT metal1 n18rfgt p18rfgt n33rfgt p33rfgt dnw18rfgt dnw33rfgt cn18rfgtw10l1 cn18rfgtw10ld5 cn18rfgtw5l1 cn18rfgtw5ld5 cn33rfgtw10l1 cn33rfgtw10ld5 cn18vargt  cn33vargt BY polycont
+CONNECT metal1 poly BY polycont
+CONNECT metal1 nsdrfd psdrfd psdrf BY dfcont
+CONNECT psd ntd
+CONNECT nsd ptd
+SCONNECT ntd nwell BY nplug
+SCONNECT ptd pwell BY pplug
+
+////////////////////////////////////////////////////////////////////////
+//*Define Devices                                                     //
+////////////////////////////////////////////////////////////////////////
+
+#IFDEF VIR_ART FALSE
+DEVICE MN(NPG) npgd18ps npgd18ps(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(npgd18ps,nsd)/2
+        L = AREA(npgd18ps)/W  ]
+
+DEVICE MN(NPD) npgd18pd npgd18pd(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(npgd18pd,nsd)/2
+        L = AREA(npgd18pd)/W  ]
+
+DEVICE MP(PL) psramgate18 psramgate18(G) psd(S) psd(D) nwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(psramgate18,psd)/2
+        L = AREA(psramgate18)/W ]
+#ENDIF
+
+DEVICE MN(N18) ngate18 ngate18(G) nsd(S) nsd(D) pwell(B)
+	[ PROPERTY W, L
+	W = PERIM_CO(ngate18,nsd)/2
+	L = AREA(ngate18)/W  ]
+
+DEVICE MN(N33) ngate33 ngate33(G) nsd(S) nsd(D) pwell(B)
+	[ PROPERTY W, L
+	W = PERIM_CO(ngate33,nsd)/2
+	L = AREA(ngate33)/W ]
+
+DEVICE MN(NNT18) ngnative18 ngnative18(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(ngnative18,nsd)/2
+        L = AREA(ngnative18)/W  ]
+
+DEVICE MN(NNT33) ngnative33 ngnative33(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(ngnative33,nsd)/2
+        L = AREA(ngnative33)/W  ]
+
+DEVICE MP(P18) pgate18 pgate18(G) psd(S) psd(D) nwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(pgate18,psd)/2
+        L = AREA(pgate18)/W ]
+
+DEVICE MP(P33) pgate33 pgate33(G) psd(S) psd(D) nwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(pgate33,psd)/2
+        L = AREA(pgate33)/W ]
+
+DEVICE MN(NMVT18) ngmedium18 ngmedium18(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(ngmedium18,nsd)/2
+        L = AREA(ngmedium18)/W  ]
+
+DEVICE MN(NMVT33) ngmedium33 ngmedium33(G) nsd(S) nsd(D) pwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(ngmedium33,nsd)/2
+        L = AREA(ngmedium33)/W  ]
+
+DEVICE MP(PMVT18) pgmedium18 pgmedium18(G) psd(S) psd(D) nwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(pgmedium18,psd)/2
+        L = AREA(pgmedium18)/W ]
+
+DEVICE M(C1) cngate18 cngate18(G) ntd(S) ntd(D) nwell(B)
+	[ PROPERTY W, L
+	W = PERIM_CO(cngate18,ntd)/2
+	L = AREA(cngate18)/W ]
+
+DEVICE M(C2) cngate33 cngate33(G) ntd(S) ntd(D) nwell(B)
+        [ PROPERTY W, L
+        W = PERIM_CO(cngate33,ntd)/2
+        L = AREA(cngate33)/W ]
+
+DEVICE pvar18_ckt cn18vargt cn18vargt(PLUS) nwell(MINUS) <cngate18_va> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate18_va)
+        WR = PERIM_CO(cngate18_va,ntd)/(2*NF)
+        LR = AREA(cngate18_va)/(WR*NF) ]
+
+        LVS REDUCE pvar18_ckt PARALLEL yes
+        [ effective LR,WR,NF
+        LR = sum ( LR*NF )/sum( NF )
+        WR = sum ( WR*NF )/sum (NF )
+        NF = sum ( NF )
+        ]
+
+
+DEVICE pvar33_ckt cn33vargt cn33vargt(PLUS) nwell(MINUS) <cngate33_va> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate33_va)
+        WR = PERIM_CO(cngate33_va,ntd)/(2*NF)
+        LR = AREA(cngate33_va)/(WR*NF) ]
+
+        LVS REDUCE pvar33_ckt PARALLEL yes
+        [ effective LR,WR,NF
+        LR = sum ( LR*NF )/sum( NF )
+        WR = sum ( WR*NF )/sum (NF )
+        NF = sum ( NF )
+        ]
+
+//DEVICE MN(NN) ngnormal18 ngnormal18(G) nsd(S) nsd(D) pwell(B)
+//	[ PROPERTY W, L
+//	W = PERIM_CO(ngnormal18,nsd)/2
+//	L = AREA(ngnormal18)/W  ]
+//
+//DEVICE MN(ND) ngnormal33 ngnormal33(G) nsd(S) nsd(D) pwell(B)
+//	[ PROPERTY W, L
+//	W = PERIM_CO(ngnormal33,nsd)/2
+//	L = AREA(ngnormal33)/W  ]
+//
+//DEVICE M(MD) pgmedium33 pgmedium33(G) psd(S) psd(D) nwell(B)
+//	[ PROPERTY W, L
+//	W = PERIM_CO(pgmedium33,psd)/2
+//	L = AREA(pgmedium33)/W ]
+
+DEVICE Q(PNP18A4) pnpemit18a4 pnpcoll nwell pnpemit18a4
+        [ PROPERTY A
+        A = AREA(pnpemit18a4) ]
+
+DEVICE Q(PNP18A25) pnpemit18a25 pnpcoll nwell pnpemit18a25
+        [ PROPERTY A
+        A = AREA(pnpemit18a25) ]
+
+DEVICE Q(PNP18A100) pnpemit18a100 pnpcoll nwell pnpemit18a100
+        [ PROPERTY A
+        A = AREA(pnpemit18a100) ]
+
+DEVICE Q(PNP33A4) pnpemit33a4 pnpcoll nwell pnpemit33a4
+        [ PROPERTY A
+        A = AREA(pnpemit33a4) ]
+
+DEVICE Q(PNP33A25) pnpemit33a25 pnpcoll nwell pnpemit33a25
+        [ PROPERTY A
+        A = AREA(pnpemit33a25) ]
+
+DEVICE Q(PNP33A100) pnpemit33a100 pnpcoll nwell pnpemit33a100
+        [ PROPERTY A
+        A = AREA(pnpemit33a100) ]
+
+DEVICE Q(NPN18A4) npnemit18a4 dnwell pwell npnemit18a4
+	[ PROPERTY A
+	A = AREA(npnemit18a4) ]
+
+DEVICE Q(NPN18A25) npnemit18a25 dnwell pwell npnemit18a25
+        [ PROPERTY A
+        A = AREA(npnemit18a25) ]
+
+DEVICE Q(NPN18A100) npnemit18a100 dnwell pwell npnemit18a100
+        [ PROPERTY A
+        A = AREA(npnemit18a100) ]
+
+DEVICE Q(NPN33A4) npnemit33a4 dnwell pwell npnemit33a4
+	[ PROPERTY A
+	A = AREA(npnemit33a4) ]
+
+DEVICE Q(NPN33A25) npnemit33a25 dnwell pwell npnemit33a25
+        [ PROPERTY A
+        A = AREA(npnemit33a25) ]
+
+DEVICE Q(NPN33A100) npnemit33a100 dnwell pwell npnemit33a100
+        [ PROPERTY A
+        A = AREA(npnemit33a100) ]
+
+DEVICE D(PDIO18)   pdio18 pdio18 nwell
+DEVICE D(PDIO33)   pdio33 pdio33 nwell
+DEVICE D(NDIO18)   ndio18 pwell ndio18
+DEVICE D(NDIO33)   ndio33 pwell ndio33
+DEVICE D(NNDIO18)  nndio18 pwell nndio18
+DEVICE D(NNDIO33)  nndio33 pwell nndio33
+DEVICE D(NWDIO)    dionw  pwell nwell
+DEVICE D(DIOBPW)   diobpw diobpw dnwell
+
+//*--------------------------------------------------------
+
+#IFDEF RES_PROPERTY WL
+DEVICE rnwaa_ckt  nwraa  nwell(PLUS) nwell(MINUS) pwell(SUB)
+        [ PROPERTY W, L
+        W = PERIM_CO(nwraa,nwell)/2
+        L = AREA(nwraa)/W ]
+
+        LVS REDUCE rnwaa_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnwaa_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+DEVICE rnwsti_ckt nwrsti nwell(PLUS) nwell(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(nwrsti,nwell)/2
+        L = AREA(nwrsti)/W ]
+
+        LVS REDUCE rnwsti_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnwsti_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpdif_ckt  pdrnosab psd(PLUS) psd(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pdrnosab,psd)/2
+        L = AREA(pdrnosab)/W ]
+
+        LVS REDUCE rpdif_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpdif_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+DEVICE rndif_ckt  ndrnosab nsd(PLUS) nsd(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(ndrnosab,nsd)/2
+        L = AREA(ndrnosab)/W ]
+
+        LVS REDUCE rndif_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rndif_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rppo_ckt pprnosab poly(PLUS) poly(MINUS)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprnosab,poly)/2
+        L = AREA(pprnosab)/W ]
+
+        LVS REDUCE rppo_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rppo_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rppo_3t_ckt pprnosab_3t_nw poly(PLUS) poly(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprnosab_3t_nw,poly)/2
+        L = AREA(pprnosab_3t_nw)/W ]
+
+DEVICE rppo_3t_ckt pprnosab_3t_pw poly(PLUS) poly(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprnosab_3t_pw,poly)/2
+        L = AREA(pprnosab_3t_pw)/W ]
+
+        LVS REDUCE rppo_3t_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rppo_3t_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+
+DEVICE rnpo_ckt nprnosab poly(PLUS) poly(MINUS)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprnosab,poly)/2
+        L = AREA(nprnosab)/W ]
+
+        LVS REDUCE rnpo_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnpo_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rnpo_3t_ckt nprnosab_3t_pw poly(PLUS) poly(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprnosab_3t_pw,poly)/2
+        L = AREA(nprnosab_3t_pw)/W ]
+DEVICE rnpo_3t_ckt nprnosab_3t_nw poly(PLUS) poly(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprnosab_3t_nw,poly)/2
+        L = AREA(nprnosab_3t_nw)/W ]
+
+        LVS REDUCE rnpo_3t_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnpo_3t_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpdifsab_ckt pdrsab psd(PLUS) psd(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pdrsab,psd)/2
+        L = AREA(pdrsab)/W ]
+
+        LVS REDUCE rpdifsab_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpdifsab_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rndifsab_ckt ndrsab nsd(PLUS) nsd(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(ndrsab,nsd)/2
+        L = AREA(ndrsab)/W ]
+
+        LVS REDUCE rndifsab_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rndifsab_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpposab_ckt pprsab poly(PLUS) poly(MINUS)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprsab,poly)/2
+        L = AREA(pprsab)/W ]
+
+        LVS REDUCE rpposab_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpposab_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpposab_3t_ckt pprsab_3t_nw poly(PLUS) poly(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprsab_3t_nw,poly)/2
+        L = AREA(pprsab_3t_nw)/W ]
+DEVICE rpposab_3t_ckt pprsab_3t_pw poly(PLUS) poly(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(pprsab_3t_pw,poly)/2
+        L = AREA(pprsab_3t_pw)/W ]
+
+        LVS REDUCE rpposab_3t_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpposab_3t_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rnposab_ckt  nprsab poly(PLUS) poly(MINUS)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprsab,poly)/2
+        L = AREA(nprsab)/W ]
+
+        LVS REDUCE rnposab_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnposab_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rnposab_3t_ckt  nprsab_3t_pw poly(PLUS) poly(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprsab_3t_pw,poly)/2
+        L = AREA(nprsab_3t_pw)/W ]
+DEVICE rnposab_3t_ckt  nprsab_3t_nw poly(PLUS) poly(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(nprsab_3t_nw,poly)/2
+        L = AREA(nprsab_3t_nw)/W ]
+
+        LVS REDUCE rnposab_3t_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnposab_3t_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rhrpo_ckt  hrppo poly(PLUS) poly(MINUS)
+        [ PROPERTY W,L
+        W = PERIM_CO(hrppo,poly)/2
+        L = AREA(hrppo)/W ]
+
+        LVS REDUCE rhrpo_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rhrpo_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rhrpo_3t_ckt  hrppo_3t_nw poly(PLUS) poly(MINUS) nwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(hrppo_3t_nw,poly)/2
+        L = AREA(hrppo_3t_nw)/W ]
+DEVICE rhrpo_3t_ckt  hrppo_3t_pw poly(PLUS) poly(MINUS) pwell(SUB)
+        [ PROPERTY W,L
+        W = PERIM_CO(hrppo_3t_pw,poly)/2
+        L = AREA(hrppo_3t_pw)/W ]
+
+        LVS REDUCE rhrpo_3t_ckt SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rhrpo_3t_ckt PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+#ENDIF
+
+#IFDEF RES_PROPERTY R
+
+DEVICE R(RNWAA) nwraa  nwell nwell
+                [
+                PROPERTY R
+                RS    = 441
+                DW    = 7.25E-08
+                W     = PERIM_CO(nwraa,nwell)/2
+                L     = AREA(nwraa)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RNWSTI) nwrsti nwell nwell
+                [
+                PROPERTY R
+                RS    = 890
+                DW    = 1.83E-07
+                W     = PERIM_CO(nwrsti,nwell)/2
+                L     = AREA(nwrsti)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RPDIF) pdrnosab psd  psd
+                [
+                PROPERTY R
+                RS    = 6.75
+                DW    = -2.80E-08
+                W     = PERIM_CO(pdrnosab,psd)/2
+                L     = AREA(pdrnosab)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RNDIF) ndrnosab nsd  nsd
+                [
+                PROPERTY R
+                RS    = 7.57
+                DW    = -4.14E-08
+                W     = PERIM_CO(ndrnosab,nsd)/2
+                L     = AREA(ndrnosab)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RPPO) pprnosab poly poly
+                [
+                PROPERTY R
+                RS    = 9.78
+                DW    = -1.35E-08
+                W     = PERIM_CO(pprnosab,poly)/2
+                L     = AREA(pprnosab)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RPPO_3T) pprnosab_3t poly poly
+                [
+                PROPERTY R
+                RS    = 9.78
+                DW    = -1.35E-08
+                W     = PERIM_CO(pprnosab_3t,poly)/2
+                L     = AREA(pprnosab_3t)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+//DEVICE R(RPPO_3T) pprnosab_3t_pw poly poly pwell
+//                [
+//                PROPERTY R
+//                RS    = 9.78
+//                DW    = -1.35E-08
+//                W     = PERIM_CO(pprnosab_3t_pw,poly)/2
+//                L     = AREA(pprnosab_3t_pw)/W
+//                R0    = (L*RS)/(W-2*DW)
+//                R     = R0
+//                ]
+
+DEVICE R(RNPO) nprnosab poly poly
+                [
+                PROPERTY R
+                RS    = 7.87
+                DW    = -1.89E-08
+                W     = PERIM_CO(nprnosab,poly)/2
+                L     = AREA(nprnosab)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+
+DEVICE R(RNPO_3T) nprnosab_3t poly poly
+                [
+                PROPERTY R
+                RS    = 7.87
+                DW    = -1.89E-08
+                W     = PERIM_CO(nprnosab_3t,poly)/2
+                L     = AREA(nprnosab_3t)/W
+                R0    = (L*RS)/(W-2*DW)
+                R     = R0
+                ]
+//DEVICE R(RNPO_3T) nprnosab_3t_nw poly poly nwell
+//                [
+//                PROPERTY R
+//                RS    = 7.87
+//                DW    = -1.89E-08
+//                W     = PERIM_CO(nprnosab_3t_nw,poly)/2
+//                L     = AREA(nprnosab_3t_nw)/W
+//                R0    = (L*RS)/(W-2*DW)
+//                R     = R0
+//                ]
+
+DEVICE R(RPDIFSAB) pdrsab psd psd
+                [
+                PROPERTY R
+                RS=116.2
+                Rintc = 15.446
+                Rint0 = 4.37E-05
+                Rint1 = 0
+                DW    = -1.37E-09
+                W = PERIM_CO(pdrsab,psd)/2
+                L = AREA(pdrsab)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0   =  (L*RS)/(W-2*DW)
+                #IFDEF ADD_RINT TRUE
+                        R = R0 + 2*Rint
+                #ELSE
+                        R = R0
+                #ENDIF
+                ]
+
+DEVICE R(RNDIFSAB) ndrsab nsd nsd
+                [
+                PROPERTY R
+                RS=57.5
+                Rintc = 12.25
+                Rint0 = 2.18E-05
+                Rint1 = 0
+                DW    = -2.62E-08
+                W = PERIM_CO(ndrsab,nsd)/2
+                L = AREA(ndrsab)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF  ADD_RINT TRUE
+                        R = R0 + 2*Rint
+                #ELSE
+                        R = R0
+                #ENDIF
+                ]
+
+DEVICE R(RPPOSAB)  pprsab poly poly
+                [
+                PROPERTY R
+                RS=311.3
+                Rintc = 29.965
+                Rint0 = 1.18E-04
+                Rint1 = 0
+                DW    = 2.73E-08
+                W = PERIM_CO(pprsab,poly)/2
+                L = AREA(pprsab)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF  ADD_RINT TRUE
+                         R = R0 + 2*Rint
+                #ELSE
+                         R = R0
+                #ENDIF
+                ]
+
+DEVICE R(RPPOSAB_3T)  pprsab_3t poly poly
+                [
+                PROPERTY R
+                RS=311.3
+                Rintc = 29.965
+                Rint0 = 1.18E-04
+                Rint1 = 0
+                DW    = 2.73E-08
+                W = PERIM_CO(pprsab_3t,poly)/2
+                L = AREA(pprsab_3t)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF  ADD_RINT TRUE
+                         R = R0 + 2*Rint
+                #ELSE
+                         R = R0
+                #ENDIF
+                ]
+//DEVICE R(RPPOSAB_3T)  pprsab_3t_pw poly poly pwell
+//                [
+//                PROPERTY R
+//                RS=311.3
+//                Rintc = 29.965
+//                Rint0 = 1.18E-04
+//                Rint1 = 0
+//                DW    = 2.73E-08
+//                W = PERIM_CO(pprsab_3t_pw,poly)/2
+//                L = AREA(pprsab_3t_pw)/W
+//                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+//                R0 = (L*RS)/(W-2*DW)
+//                #IFDEF  ADD_RINT TRUE
+//                         R = R0 + 2*Rint
+//                #ELSE
+//                         R = R0
+//                #ENDIF
+//                ]
+
+DEVICE R(RNPOSAB)  nprsab poly poly
+                [
+                PROPERTY R
+                RS=271.6
+                Rintc = 23.415
+                Rint0 = 9.50E-05
+                Rint1 = 0
+                DW    = 4.71E-08
+                W = PERIM_CO(nprsab,poly)/2
+                L = AREA(nprsab)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF ADD_RINT TRUE
+                        R = R0 + 2*Rint
+                #ELSE
+                        R = R0
+                #ENDIF
+                ]
+
+DEVICE R(RNPOSAB_3T)  nprsab_3t poly poly
+                [
+                PROPERTY R
+                RS=271.6
+                Rintc = 23.415
+                Rint0 = 9.50E-05
+                Rint1 = 0
+                DW    = 4.71E-08
+                W = PERIM_CO(nprsab_3t,poly)/2
+                L = AREA(nprsab_3t)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF ADD_RINT TRUE
+                        R = R0 + 2*Rint
+                #ELSE
+                        R = R0
+                #ENDIF
+                ]
+//DEVICE R(RNPOSAB_3T)  nprsab_3t_nw poly poly nwell
+//                [
+//                PROPERTY R
+//                RS=271.6
+//                Rintc = 23.415
+//                Rint0 = 9.50E-05
+//                Rint1 = 0
+//                DW    = 4.71E-08
+//                W = PERIM_CO(nprsab_3t_nw,poly)/2
+//                L = AREA(nprsab_3t_nw)/W
+//                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+//                R0 = (L*RS)/(W-2*DW)
+//                #IFDEF ADD_RINT TRUE
+//                        R = R0 + 2*Rint
+//                #ELSE
+//                        R = R0
+//                #ENDIF
+//                ]
+
+DEVICE R(RHRPO)    hrppo    poly poly
+        	[
+                PROPERTY R
+                RS=995
+                Rintc = 7.88
+                Rint0 = 3.96E-05
+                Rint1 = 0
+                DW    = -6.0E-09
+                W = PERIM_CO(hrppo,poly)/2
+                L = AREA(hrppo)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF  ADD_RINT TRUE
+                         R = R0 + 2*Rint
+                #ELSE
+                         R = R0
+                #ENDIF
+                ]
+
+DEVICE R(RHRPO_3T)    hrppo_3t   poly poly
+                [
+                PROPERTY R
+                RS=995
+                Rintc = 7.88
+                Rint0 = 3.96E-05
+                Rint1 = 0
+                DW    = -6.0E-09
+                W = PERIM_CO(hrppo_3t,poly)/2
+                L = AREA(hrppo_3t)/W
+                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+                R0 = (L*RS)/(W-2*DW)
+                #IFDEF  ADD_RINT TRUE
+                         R = R0 + 2*Rint
+                #ELSE
+                         R = R0
+                #ENDIF
+                ]
+//DEVICE R(RHRPO_3T)    hrppo_3t_pw    poly poly pwell
+//                [
+//                PROPERTY R
+//                RS=995
+//                Rintc = 7.88
+//                Rint0 = 3.96E-05
+//                Rint1 = 0
+//                DW    = -6.0E-09
+//                W = PERIM_CO(hrppo_3t_pw,poly)/2
+//                L = AREA(hrppo_3t_pw)/W
+//                Rint  = Rintc + (Rint0)/(W-2*DW) + (Rint1)/((W-2*DW)*(W-2*DW))
+//                R0 = (L*RS)/(W-2*DW)
+//                #IFDEF  ADD_RINT TRUE
+//                         R = R0 + 2*Rint
+//                #ELSE
+//                         R = R0
+//                #ENDIF
+//                ]
+
+#ENDIF
+
+DEVICE R(RM1)      rm1  metal1 metal1
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= -4.93E-09
+            W = PERIM_CO(rm1,metal1)/2
+            L = AREA(rm1)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#IFDEF TOPMETAL 6
+DEVICE R(RM2)      rm2  metal2 metal2
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm2,metal2)/2
+            L = AREA(rm2)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM3)      rm3  metal3 metal3
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm3,metal3)/2
+            L = AREA(rm3)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM4)      rm4  metal4 metal4
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm4,metal4)/2
+            L = AREA(rm4)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM5)    rm5  metal5 metal5
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm5,metal5)/2
+            L = AREA(rm5)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#IFDEF THICK_RF_TM FALSE
+DEVICE R(RM6)      rm6  metal6 metal6
+            [
+            PROPERTY R
+            RS= 0.036
+            DW= -4.41E-08
+            W = PERIM_CO(rm6,metal6)/2
+            L = AREA(rm6)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+DEVICE R(RM6_RF)      rm6  metal6 metal6
+            [
+            PROPERTY R
+            RS= 0.0145
+            DW= -5.6494E-09
+            W = PERIM_CO(rm6,metal6)/2
+            L = AREA(rm6)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+#ENDIF
+
+#IFDEF TOPMETAL 5
+DEVICE R(RM2)      rm2  metal2 metal2
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm2,metal2)/2
+            L = AREA(rm2)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM3)      rm3  metal3 metal3
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm3,metal3)/2
+            L = AREA(rm3)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM4)    rm4  metal4 metal4
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm4,metal4)/2
+            L = AREA(rm4)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#IFDEF THICK_RF_TM FALSE
+DEVICE R(RM5)      rm5  metal5 metal5
+            [
+            PROPERTY R
+            RS= 0.036
+            DW= -4.41E-08
+            W = PERIM_CO(rm5,metal5)/2
+            L = AREA(rm5)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+DEVICE R(RM5_RF)      rm5  metal5 metal5
+            [
+            PROPERTY R
+            RS= 0.0145
+            DW= -5.6494E-09
+            W = PERIM_CO(rm5,metal5)/2
+            L = AREA(rm5)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+#ENDIF
+
+#IFDEF TOPMETAL 4
+DEVICE R(RM2)      rm2  metal2 metal2
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm2,metal2)/2
+            L = AREA(rm2)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+DEVICE R(RM3)    rm3  metal3 metal3
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm3,metal3)/2
+            L = AREA(rm3)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#IFDEF THICK_RF_TM FALSE
+DEVICE R(RM4)      rm4  metal4 metal4
+            [
+            PROPERTY R
+            RS= 0.036
+            DW= -4.41E-08
+            W = PERIM_CO(rm4,metal4)/2
+            L = AREA(rm4)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+DEVICE R(RM4_RF)      rm4  metal4 metal4
+            [
+            PROPERTY R
+            RS= 0.0145
+            DW= -5.6494E-09
+            W = PERIM_CO(rm4,metal4)/2
+            L = AREA(rm4)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+#ENDIF
+
+#IFDEF TOPMETAL 3
+DEVICE R(RM2)      rm2  metal2 metal2
+            [
+            PROPERTY R
+            RS= 0.078
+            DW= 6.0E-09
+            W = PERIM_CO(rm2,metal2)/2
+            L = AREA(rm2)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+
+#IFDEF THICK_RF_TM FALSE
+DEVICE R(RM3)      rm3  metal3 metal3
+            [
+            PROPERTY R
+            RS= 0.036
+            DW= -4.41E-08
+            W = PERIM_CO(rm3,metal3)/2
+            L = AREA(rm3)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+DEVICE R(RM3_RF)      rm3  metal3 metal3
+            [
+            PROPERTY R
+            RS= 0.0145
+            DW= -5.6494E-09
+            W = PERIM_CO(rm3,metal3)/2
+            L = AREA(rm3)/W
+            R0= (L*RS)/(W-2*DW)
+            R = R0
+            ]
+#ENDIF
+#ENDIF
+
+DEVICE C(CPM) pmcap metal1 pmcap [6.760E-2 0]
+
+#IFDEF MIM C
+DEVICE C(MIM) mimcap MIM mimcap  [0.971 0]
+#ENDIF
+
+#IFDEF MIM SUBCKT
+DEVICE mim_ckt mimcap MIM(PLUS) mimcap(MINUS)
+       [PROPERTY LR,WR
+        P = PERIMETER(mimcap)
+        A = AREA(mimcap)
+        LR = (P+SQRT(abs(P*P-16*A)))/4
+        WR = (P-SQRT(abs(P*P-16*A)))/4
+        ]
+#ENDIF
+
+DEVICE n18_ckt_rf n18rfgt nsdrfd(DRN) n18rfgt(GATE) nsd(SRC) pwell(BULK) <ngate18_rf> <nsdrf>
+	[ PROPERTY LR,WR,NF
+        NF = COUNT(ngate18_rf) 
+	WR = PERIM_CO(ngate18_rf,nsdrf)/(2*NF)
+        LR = AREA(ngate18_rf)/(WR*NF)]
+
+DEVICE dnw18_ckt_rf dnw18rfgt nsdrfd(DRN) dnw18rfgt(GATE) nsd(SRC) pwell(BULK) dnwell(T) <ngate18_rf> <nsdrf> <ndifd> <DNW>
+<dnwwaddrec>
+        [ PROPERTY LR,WR,NF,LADDR,WADDR
+        NF = COUNT(ngate18_rf)
+        WR = PERIM_CO(ngate18_rf,nsdrf)/(2*NF)
+        LR = AREA(ngate18_rf)/(WR*NF)
+        DP = PERIMETER(DNW)
+        RA = AREA(dnwwaddrec)/2
+        NP = PERIMETER(ndifd)
+        NL = NP/2-WR
+        WADDR = RA/NL
+        LADDR = DP/4-WADDR-WR/2-NL/2 ]
+
+
+DEVICE p18_ckt_rf p18rfgt psdrfd(DRN) p18rfgt(GATE) psd(SRC) nwell(BULK) <pgate18_rf> <psdrf>
+	[ PROPERTY LR,WR,NF
+	NF = COUNT(pgate18_rf) 
+	WR = PERIM_CO(pgate18_rf,psdrf)/(2*NF)
+	LR = AREA(pgate18_rf)/(WR*NF) ]
+
+DEVICE n33_ckt_rf n33rfgt nsdrfd(DRN) n33rfgt(GATE) nsd(SRC) pwell(BULK) <ngate33_rf> <nsdrf>
+	[ PROPERTY LR,WR,NF
+	NF = COUNT(ngate33_rf) 
+	WR = PERIM_CO(ngate33_rf,nsdrf)/(2*NF)
+	LR = AREA(ngate33_rf)/(WR*NF) ]
+
+
+DEVICE dnw33_ckt_rf dnw33rfgt nsdrfd(DRN) dnw33rfgt(GATE) nsd(SRC) pwell(BULK) dnwell(T) <ngate33_rf> <nsdrf> <ndifd> <DNW>
+<dnwwaddrec>
+        [ PROPERTY LR,WR,NF,LADDR,WADDR
+        NF = COUNT(ngate33_rf)
+        WR = PERIM_CO(ngate33_rf,nsdrf)/(2*NF)
+        LR = AREA(ngate33_rf)/(WR*NF)
+        DP = PERIMETER(DNW)
+        RA = AREA(dnwwaddrec)/2
+        NP = PERIMETER(ndifd)
+        NL = NP/2-WR
+        WADDR = RA/NL
+        LADDR = DP/4-WADDR-WR/2-NL/2 ]
+
+DEVICE p33_ckt_rf p33rfgt psdrfd(DRN) p33rfgt(GATE) psd(SRC) nwell(BULK) <pgate33_rf> <psdrf>
+	[ PROPERTY LR,WR,NF
+	NF = COUNT(pgate33_rf) 
+	WR = PERIM_CO(pgate33_rf,psdrf)/(2*NF)
+	LR = AREA(pgate33_rf)/(WR*NF) ]
+
+DEVICE pvar18w10l1_ckt_rf cn18rfgtw10l1 cn18rfgtw10l1(PLUS) nwell(MINUS) <cngate18w10l1_rf> <ntd>
+	[ PROPERTY LR,WR,NF
+	NF = COUNT(cngate18w10l1_rf)
+	WR = PERIM_CO(cngate18w10l1_rf,ntd)/(2*NF)
+	LR = AREA(cngate18w10l1_rf)/(WR*NF) ]
+
+
+DEVICE pvar18w10ld5_ckt_rf cn18rfgtw10ld5 cn18rfgtw10ld5(PLUS) nwell(MINUS) <cngate18w10ld5_rf> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate18w10ld5_rf)
+        WR = PERIM_CO(cngate18w10ld5_rf,ntd)/(2*NF) 
+        LR = AREA(cngate18w10ld5_rf)/(WR*NF) ]
+
+
+DEVICE pvar18w5l1_ckt_rf cn18rfgtw5l1 cn18rfgtw5l1(PLUS) nwell(MINUS) <cngate18w5l1_rf> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate18w5l1_rf)
+        WR = PERIM_CO(cngate18w5l1_rf,ntd)/(2*NF)
+        LR = AREA(cngate18w5l1_rf)/(WR*NF) ]
+
+
+DEVICE pvar18w5ld5_ckt_rf cn18rfgtw5ld5 cn18rfgtw5ld5(PLUS) nwell(MINUS) <cngate18w5ld5_rf> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate18w5ld5_rf)
+        WR = PERIM_CO(cngate18w5ld5_rf,ntd)/(2*NF)
+        LR = AREA(cngate18w5ld5_rf)/(WR*NF) ]
+
+
+DEVICE pvar33w10l1_ckt_rf cn33rfgtw10l1 cn33rfgtw10l1(PLUS) nwell(MINUS) <cngate33w10l1_rf> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate33w10l1_rf)
+        WR = PERIM_CO(cngate33w10l1_rf,ntd)/(2*NF)
+        LR = AREA(cngate33w10l1_rf)/(WR*NF) ]
+
+
+DEVICE pvar33w10ld5_ckt_rf cn33rfgtw10ld5 cn33rfgtw10ld5(PLUS) nwell(MINUS) <cngate33w10ld5_rf> <ntd>
+        [ PROPERTY LR,WR,NF
+        NF = COUNT(cngate33w10ld5_rf)
+        WR = PERIM_CO(cngate33w10ld5_rf,ntd)/(2*NF)
+        LR = AREA(cngate33w10ld5_rf)/(WR*NF) ]
+
+DEVICE pvardio18_ckt_rf jvar18 psdrf(PLUS) ntd(MINUS)
+        [ PROPERTY LR,WR,NF
+        P  = PERIMETER(psdrf)
+        A  = AREA(psdrf)
+        NF = COUNT(psdrf)
+        WR = (P-(SQRT(P*P-16*A*NF)))/(4*NF)
+        LR = (P+(SQRT(P*P-16*A*NF)))/(4*NF) ]
+
+
+DEVICE pvardio33_ckt_rf jvar33 psdrf(PLUS) ntd(MINUS)
+        [PROPERTY LR,WR,NF
+        P  = PERIMETER(psdrf)
+        A  = AREA(psdrf)
+        NF = COUNT(psdrf)
+        WR = (P-(SQRT(P*P-16*A*NF)))/(4*NF)
+        LR = (P+(SQRT(P*P-16*A*NF)))/(4*NF) ]
+
+
+DEVICE rndifsab_ckt_rf ndrsabrf nsd(PLUS) nsd(MINUS)
+	[PROPERTY L,W
+	W = PERIM_CO(ndrsabrf,nsd)/2
+	L = AREA(ndrsabrf)/W]
+
+        LVS REDUCE rndifsab_ckt_rf SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rndifsab_ckt_rf PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpdifsab_ckt_rf pdrsabrf psd(PLUS) psd(MINUS)
+	[PROPERTY L,W
+	W = PERIM_CO(pdrsabrf,psd)/2
+	L = AREA(pdrsabrf)/W]
+
+        LVS REDUCE rpdifsab_ckt_rf SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpdifsab_ckt_rf PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rnposab_ckt_rf nprsabrf poly(PLUS) poly(MINUS)
+	[PROPERTY L,W
+	W = PERIM_CO(nprsabrf,poly)/2
+	L = AREA(nprsabrf)/W]
+
+        LVS REDUCE rnposab_ckt_rf SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rnposab_ckt_rf PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rpposab_ckt_rf pprsabrf poly(PLUS) poly(MINUS)
+	[PROPERTY L,W
+	W = PERIM_CO(pprsabrf,poly)/2
+	L = AREA(pprsabrf)/W]
+
+        LVS REDUCE rpposab_ckt_rf SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rpposab_ckt_rf PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE rhrpo_ckt_rf hrpporf poly(PLUS) poly(MINUS)
+	[PROPERTY L,W
+	W = PERIM_CO(hrpporf,poly)/2
+	L = AREA(hrpporf)/W]
+
+        LVS REDUCE rhrpo_ckt_rf SERIES PLUS MINUS yes
+        [effective L,W
+        L = sum(L)
+        W = sum (W)/count()
+        ]
+        LVS REDUCE rhrpo_ckt_rf PARALLEL yes
+        [effective L,W
+        L = sum(L)/count()
+        W = sum (W)
+        ]
+
+
+DEVICE mim1_rf mimcaprf MIM(PLUS) mimcaprf(MINUS)
+        [PROPERTY LR,WR
+      //  LR=PERIMETER(mimcaprf)/4
+      //  WR=AREA(mimcaprf)/LR]
+        P = PERIMETER(mimcaprf)
+        A = AREA(mimcaprf)
+        LR = (P+SQRT(abs(P*P-16*A)))/4
+        WR = (P-SQRT(abs(P*P-16*A)))/4
+        ]
+
+
+#IFDEF TOPMETAL 6
+DEVICE ind_rf spri_ind m6_ind(PLUS) m6_ind(MINUS) <m6ind_hole> <m_ind_touch>
+	[PROPERTY R,N
+	R=(PERIMETER(m6ind_hole)-(19E-6))/8
+	N=COUNT(m_ind_touch)-1.5]
+
+DEVICE diff_ind_rf diff_ind dind_pm6(PLUS) dind_pm6(MINUS) <m6ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m6ind_hole))/8
+        N=(COUNT(m_ind_touch))/3+1]
+
+DEVICE diff_ind_3t_rf diff_ind_3t dind_pm6(PLUS) dind_pm6(MINUS) dind_pm4(B) <m6ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m6ind_hole))/8
+        N=((COUNT(m_ind_touch))-1)/3+1]
+
+
+#ENDIF
+#IFDEF TOPMETAL 5
+DEVICE ind_rf spri_ind m5_ind(PLUS) m5_ind(MINUS) <m5ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m5ind_hole)-(19E-6))/8
+        N=COUNT(m_ind_touch)-1.5]
+
+DEVICE diff_ind_rf diff_ind dind_pm5(PLUS) dind_pm5(MINUS) <m5ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m5ind_hole))/8
+        N=(COUNT(m_ind_touch))/3+1]
+
+DEVICE diff_ind_3t_rf diff_ind_3t dind_pm5(PLUS) dind_pm5(MINUS) dind_pm3(B) <m5ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m5ind_hole))/8
+        N=((COUNT(m_ind_touch))-1)/3+1]
+
+
+#ENDIF
+#IFDEF TOPMETAL 4
+DEVICE ind_rf spri_ind m4_ind(PLUS) m4_ind(MINUS) <m4ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m4ind_hole)-(19E-6))/8
+        N=COUNT(m_ind_touch)-1.5]
+
+DEVICE diff_ind_rf diff_ind dind_pm4(PLUS) dind_pm4(MINUS) <m4ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m4ind_hole))/8
+        N=(COUNT(m_ind_touch))/3+1]
+
+DEVICE diff_ind_3t_rf diff_ind_3t dind_pm4(PLUS) dind_pm4(MINUS) dind_pm2(B) <m4ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m4ind_hole))/8
+        N=((COUNT(m_ind_touch))-1)/3+1]
+
+
+#ENDIF
+#IFDEF TOPMETAL 3
+DEVICE ind_rf spri_ind m3_ind(PLUS) m3_ind(MINUS) <m3ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m3ind_hole)-(19E-6))/8
+        N=COUNT(m_ind_touch)-1.5]
+
+DEVICE diff_ind_rf diff_ind dind_pm3(PLUS) dind_pm3(MINUS) <m3ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m3ind_hole))/8
+        N=(COUNT(m_ind_touch))/3+1]
+
+DEVICE diff_ind_3t_rf diff_ind_3t dind_pm3(PLUS) dind_pm3(MINUS) dind_pm1(B) <m3ind_hole> <m_ind_touch>
+        [PROPERTY R,N
+        R=(PERIMETER(m3ind_hole))/8
+        N=((COUNT(m_ind_touch))-1)/3+1]
+
+
+#ENDIF
+
+
+//////////////////////////////////////////////////////////
+//*Define property check tolerance                      // 
+//////////////////////////////////////////////////////////
+#IFDEF VIR_ART FALSE
+TRACE PROPERTY MN(NPG)      L L 5
+TRACE PROPERTY MN(NPG)      W W 5
+TRACE PROPERTY MN(NPD)      L L 5
+TRACE PROPERTY MN(NPD)      W W 5
+TRACE PROPERTY MP(PL)       L L 5
+TRACE PROPERTY MP(PL)       W W 5
+#ENDIF
+TRACE PROPERTY MN(N18)      L L 5
+TRACE PROPERTY MN(N18)      W W 5
+TRACE PROPERTY MN(N33)      L L 5
+TRACE PROPERTY MN(N33)      W W 5
+TRACE PROPERTY MP(P18)      L L 5
+TRACE PROPERTY MP(P18)      W W 5
+TRACE PROPERTY MP(P33)      L L 5
+TRACE PROPERTY MP(P33)      W W 5
+TRACE PROPERTY MN(NNT18)    L L 5
+TRACE PROPERTY MN(NNT18)    W W 5
+TRACE PROPERTY MN(NNT33)    L L 5
+TRACE PROPERTY MN(NNT33)    W W 5
+TRACE PROPERTY MN(NMVT18)   L L 5
+TRACE PROPERTY MN(NMVT18)   W W 5
+TRACE PROPERTY MN(NMVT33)   L L 5
+TRACE PROPERTY MN(NMVT33)   W W 5
+TRACE PROPERTY MP(PMVT18)   L L 5
+TRACE PROPERTY MP(PMVT18)   W W 5
+TRACE PROPERTY M(C1)        L L 5
+TRACE PROPERTY M(C1)        W W 5
+TRACE PROPERTY M(C2)        L L 5
+TRACE PROPERTY M(C2)        W W 5
+TRACE PROPERTY pvar18_ckt   WR WR 5
+TRACE PROPERTY pvar18_ckt   LR LR 5
+TRACE PROPERTY pvar18_ckt   NF NF 0
+
+TRACE PROPERTY pvar33_ckt   WR WR 5
+TRACE PROPERTY pvar33_ckt   LR LR 5
+TRACE PROPERTY pvar33_ckt   NF NF 0
+
+//TRACE PROPERTY MN(NN)     L L 5
+//TRACE PROPERTY MN(NN)     W W 5
+//TRACE PROPERTY MN(ND)     L L 5
+//TRACE PROPERTY MN(ND)     W W 5
+//TRACE PROPERTY M(MD)      L L 5
+//TRACE PROPERTY M(MD)      W W 5
+TRACE PROPERTY D(PDIO18)    A A 5
+TRACE PROPERTY D(PDIO33)    A A 5
+TRACE PROPERTY D(NDIO18)    A A 5
+TRACE PROPERTY D(NDIO33)    A A 5
+TRACE PROPERTY D(NNDIO18)   A A 5
+TRACE PROPERTY D(NNDIO33)   A A 5
+TRACE PROPERTY D(NWDIO)     A A 5
+TRACE PROPERTY D(DIOBPW)    A A 5
+TRACE PROPERTY Q(PNP18A4)   A A 5
+TRACE PROPERTY Q(PNP18A25)  A A 5
+TRACE PROPERTY Q(PNP18A100) A A 5
+TRACE PROPERTY Q(PNP33A4)   A A 5
+TRACE PROPERTY Q(PNP33A25)  A A 5
+TRACE PROPERTY Q(PNP33A100) A A 5
+
+TRACE PROPERTY Q(NPN18A4)   A A 5
+TRACE PROPERTY Q(NPN18A25)  A A 5
+TRACE PROPERTY Q(NPN18A100) A A 5
+TRACE PROPERTY Q(NPN33A4)   A A 5
+TRACE PROPERTY Q(NPN33A25)  A A 5
+TRACE PROPERTY Q(NPN33A100) A A 5
+
+#IFDEF RES_PROPERTY WL
+
+TRACE PROPERTY rnwaa_ckt    W W 5
+TRACE PROPERTY rnwaa_ckt    L L 5
+TRACE PROPERTY rnwsti_ckt   W W 5
+TRACE PROPERTY rnwsti_ckt   L L 5
+TRACE PROPERTY rpdif_ckt    W W 5
+TRACE PROPERTY rpdif_ckt    L L 5
+TRACE PROPERTY rndif_ckt    W W 5
+TRACE PROPERTY rndif_ckt    L L 5
+TRACE PROPERTY rppo_ckt     W W 5
+TRACE PROPERTY rppo_ckt     L L 5
+TRACE PROPERTY rppo_3t_ckt  W W 5
+TRACE PROPERTY rppo_3t_ckt  L L 5
+TRACE PROPERTY rnpo_ckt     W W 5
+TRACE PROPERTY rnpo_ckt     L L 5
+TRACE PROPERTY rnpo_3t_ckt  W W 5
+TRACE PROPERTY rnpo_3t_ckt  L L 5
+TRACE PROPERTY rpdifsab_ckt W W 5
+TRACE PROPERTY rpdifsab_ckt L L 5
+TRACE PROPERTY rndifsab_ckt W W 5
+TRACE PROPERTY rndifsab_ckt L L 5
+TRACE PROPERTY rpposab_ckt  W W 5
+TRACE PROPERTY rpposab_ckt  L L 5
+TRACE PROPERTY rpposab_3t_ckt W W 5
+TRACE PROPERTY rpposab_3t_ckt L L 5
+TRACE PROPERTY rnposab_ckt  W W 5
+TRACE PROPERTY rnposab_ckt  L L 5
+TRACE PROPERTY rnposab_3t_ckt W W 5
+TRACE PROPERTY rnposab_3t_ckt L L 5
+TRACE PROPERTY rhrpo_ckt    W W 5
+TRACE PROPERTY rhrpo_ckt    L L 5
+TRACE PROPERTY rhrpo_3t_ckt W W 5
+TRACE PROPERTY rhrpo_3t_ckt L L 5
+
+#ENDIF
+
+#IFDEF RES_PROPERTY R
+
+TRACE PROPERTY R(RNWAA)     R R 5
+TRACE PROPERTY R(RNWSTI)    R R 5
+TRACE PROPERTY R(RNDIF)     R R 5
+TRACE PROPERTY R(RNDIFSAB)  R R 5
+TRACE PROPERTY R(RPDIF)     R R 5
+TRACE PROPERTY R(RPDIFSAB)  R R 5
+TRACE PROPERTY R(RNPO)      R R 5
+TRACE PROPERTY R(RNPO_3T)   R R 5
+TRACE PROPERTY R(RNPOSAB)   R R 5
+TRACE PROPERTY R(RNPOSAB_3T)  R R 5
+TRACE PROPERTY R(RPPO)      R R 5
+TRACE PROPERTY R(RPPO_3T)   R R 5
+TRACE PROPERTY R(RPPOSAB)   R R 5
+TRACE PROPERTY R(RPPOSAB_3T)  R R 5
+TRACE PROPERTY R(RHRPO)     R R 5
+TRACE PROPERTY R(RHRPO_3T)  R R 5
+#ENDIF
+
+TRACE PROPERTY R(RM1)       R R 5
+TRACE PROPERTY R(RM2)       R R 5
+
+#IFDEF TOPMETAL 6
+TRACE PROPERTY R(RM3)       R R 5
+TRACE PROPERTY R(RM4)       R R 5
+TRACE PROPERTY R(RM5)       R R 5
+
+#IFDEF THICK_RF_TM FALSE
+TRACE PROPERTY R(RM6)       R R 5
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+TRACE PROPERTY R(RM6_RF)    R R 5
+#ENDIF
+
+#ENDIF
+
+#IFDEF TOPMETAL 5
+TRACE PROPERTY R(RM3)       R R 5
+TRACE PROPERTY R(RM4)       R R 5
+
+#IFDEF THICK_RF_TM FALSE
+TRACE PROPERTY R(RM5)       R R 5
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+TRACE PROPERTY R(RM5_RF)    R R 5
+#ENDIF
+
+#ENDIF
+
+#IFDEF TOPMETAL 4
+TRACE PROPERTY R(RM3)       R R 5
+
+#IFDEF THICK_RF_TM FALSE
+TRACE PROPERTY R(RM4)       R R 5
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+TRACE PROPERTY R(RM4_RF)    R R 5
+#ENDIF
+
+#ENDIF
+
+#IFDEF TOPMETAL 3
+
+#IFDEF THICK_RF_TM FALSE
+TRACE PROPERTY R(RM3)       R R 5
+#ENDIF
+
+#IFDEF THICK_RF_TM TRUE
+TRACE PROPERTY R(RM3_RF)    R R 5
+#ENDIF
+
+#ENDIF
+
+TRACE PROPERTY C(CPM)       C C 5
+#IFDEF MIM C
+TRACE PROPERTY C(MIM)       C C 5
+#ENDIF
+
+#IFDEF MIM SUBCKT
+TRACE PROPERTY mim_ckt   WR WR 5
+TRACE PROPERTY mim_ckt   LR LR 5
+#ENDIF
+
+//*For RF Devices
+TRACE PROPERTY n18_ckt_rf   WR WR 5
+TRACE PROPERTY n18_ckt_rf   LR LR 5
+TRACE PROPERTY n18_ckt_rf   NF NF 0
+
+TRACE PROPERTY dnw18_ckt_rf WR WR 5
+TRACE PROPERTY dnw18_ckt_rf LR LR 5
+TRACE PROPERTY dnw18_ckt_rf NF NF 0
+TRACE PROPERTY dnw18_ckt_rf LADDR LADDR 5
+TRACE PROPERTY dnw18_ckt_rf WADDR WADDR 5
+
+TRACE PROPERTY dnw33_ckt_rf WR WR 5
+TRACE PROPERTY dnw33_ckt_rf LR LR 5
+TRACE PROPERTY dnw33_ckt_rf NF NF 0
+TRACE PROPERTY dnw33_ckt_rf LADDR LADDR 5
+TRACE PROPERTY dnw33_ckt_rf WADDR WADDR 5
+
+
+TRACE PROPERTY p18_ckt_rf   WR WR 5
+TRACE PROPERTY p18_ckt_rf   LR LR 5
+TRACE PROPERTY p18_ckt_rf   NF NF 0
+
+TRACE PROPERTY n33_ckt_rf   WR WR 5
+TRACE PROPERTY n33_ckt_rf   LR LR 5
+TRACE PROPERTY n33_ckt_rf   NF NF 0
+
+TRACE PROPERTY p33_ckt_rf   WR WR 5
+TRACE PROPERTY p33_ckt_rf   LR LR 5
+TRACE PROPERTY p33_ckt_rf   NF NF 0
+
+TRACE PROPERTY pvar18w10l1_ckt_rf  WR WR 5
+TRACE PROPERTY pvar18w10l1_ckt_rf  LR LR 5
+TRACE PROPERTY pvar18w10l1_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvar18w10ld5_ckt_rf  WR WR 5
+TRACE PROPERTY pvar18w10ld5_ckt_rf  LR LR 5
+TRACE PROPERTY pvar18w10ld5_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvar18w5l1_ckt_rf  WR WR 5
+TRACE PROPERTY pvar18w5l1_ckt_rf  LR LR 5
+TRACE PROPERTY pvar18w5l1_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvar18w5ld5_ckt_rf  WR WR 5
+TRACE PROPERTY pvar18w5ld5_ckt_rf  LR LR 5
+TRACE PROPERTY pvar18w5ld5_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvar33w10l1_ckt_rf  WR WR 5
+TRACE PROPERTY pvar33w10l1_ckt_rf  LR LR 5
+TRACE PROPERTY pvar33w10l1_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvar33w10ld5_ckt_rf  WR WR 5
+TRACE PROPERTY pvar33w10ld5_ckt_rf  LR LR 5
+TRACE PROPERTY pvar33w10ld5_ckt_rf  NF NF 0
+
+TRACE PROPERTY pvardio18_ckt_rf WR WR 5
+TRACE PROPERTY pvardio18_ckt_rf LR LR 5
+TRACE PROPERTY pvardio18_ckt_rf NF NF 0
+
+TRACE PROPERTY pvardio33_ckt_rf WR WR 5
+TRACE PROPERTY pvardio33_ckt_rf LR LR 5
+TRACE PROPERTY pvardio33_ckt_rf NF NF 0
+
+TRACE PROPERTY rndifsab_ckt_rf  L L 5
+TRACE PROPERTY rndifsab_ckt_rf  W W 5
+
+TRACE PROPERTY rpdifsab_ckt_rf  L L 5
+TRACE PROPERTY rpdifsab_ckt_rf  W W 5
+
+TRACE PROPERTY rnposab_ckt_rf  L L 5
+TRACE PROPERTY rnposab_ckt_rf  W W 5
+
+TRACE PROPERTY rpposab_ckt_rf  L L 5
+TRACE PROPERTY rpposab_ckt_rf  W W 5
+
+TRACE PROPERTY rhrpo_ckt_rf  L L 5
+TRACE PROPERTY rhrpo_ckt_rf  W W 5
+
+TRACE PROPERTY mim1_rf  LR LR 5
+TRACE PROPERTY mim1_rf  WR WR 5
+
+TRACE PROPERTY ind_rf  R R 5
+TRACE PROPERTY ind_rf  N N 0
+
+TRACE PROPERTY diff_ind_rf  R R 5
+TRACE PROPERTY diff_ind_rf  N N 0
+
+TRACE PROPERTY diff_ind_3t_rf  R R 5
+TRACE PROPERTY diff_ind_3t_rf  N N 0
+
+
+#IFDEF ERCCHECK TRUE
+//////////////////////////////////////////////////////////
+//* ERC Check                                           //
+//////////////////////////////////////////////////////////
+//*Report regions on nwell or pwell that connect to more than one node.
+LVS SOFTCHK nwell CONTACT
+LVS SOFTCHK pwell CONTACT
+
+//*Report nodes with a path to power but not ground
+ERC PATHCHK GROUND && !POWER NOFLOAT
+
+//*Report nodes with a path to ground but not power
+ERC PATHCHK POWER && !GROUND NOFLOAT
+
+//*Report nodes without a path to both power and ground
+ERC PATHCHK !POWER && !GROUND NOFLOAT
+ERC PATHCHK !LABELED NOFLOAT
+
+//*Select pwell pick-up layer ptd connect to power nets.
+ptd_to_power { @ Pwell pick-up layer ptd texted with power net.
+        NET ptap "?VDD?" "?VCC?" }
+
+//*Select nwell pick-up layer ntd connect to ground nets.
+ntd_to_ground { @ Nwell pick-up layer ntd texted with ground net.
+        NET ntap "?VSS?" "?GND?" }
+
+// NMOS S/D connect to both Power and Ground nets
+nsdtoground = NET nsd "?VSS?" "?GND?"
+T1nsd = ngate18 TOUCH nsdtoground
+nsdtopower = NET nsd "?VDD?" "?VCC?"
+T2nsd = ngate18 TOUCH nsdtopower
+mntopg {@ NMOS connect to both Power and Ground.
+        T1nsd AND T2nsd }
+
+// PMOS S/D connect to both Power and Ground Nets.
+psdtoground = NET psd "?VSS?" "?GND?"
+T1psd = pgate18 TOUCH psdtoground
+psdtopower  = NET psd "?VDD?" "?VCC?"
+T2psd = pgate18 TOUCH psdtopower
+mptopg {@ PMOS connect to both Power and Ground.
+        T1psd AND T2psd}
+
+ERC SELECT CHECK ptd_to_power ntd_to_ground mptopg mntopg
+#ENDIF
+
+//add by dxzhang
+//LVS BOX vs_dp_16x64 vs_dp_2kx8 vs_dp_512x8 vs_sp_2kx32_bw vs_sp_512x13 vs_sp_512x20
+//LVS BOX vs_sp_512x24 vs_sp_64x14 vs_sp_64x22 vs_sp_64x24
+//end
+
+//*END//

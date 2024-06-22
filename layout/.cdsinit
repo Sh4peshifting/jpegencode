@@ -1,0 +1,5 @@
+load( prependInstallPath( "samples/local/schBindKeys.il" ) )
+load( prependInstallPath( "samples/local/leBindKeys.il" ) )
+load("/opt/mentor/calibre/aoj_cal_2020.3_24.16/lib/calibre.skl")
+
+

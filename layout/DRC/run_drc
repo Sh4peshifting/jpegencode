@@ -1,0 +1,10 @@
+*drcRulesFile: /home/user_home/dxzhang/aes_core/layout/rule/smic18.drc
+*drcRunDir: /home/user_home/dxzhang/aes_core/layout/DRC
+*drcLayoutPaths: DFM_final.calibre.db
+*drcLayoutPrimary: DFM_final
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: DFM_final.drc.results
+*drcSummaryFile: DFM_final.drc.summary
+*cmnFDILayoutLibrary: design_lib_aes_ASIC
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: DFM_final.def

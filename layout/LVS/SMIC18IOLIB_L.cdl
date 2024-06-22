@@ -1,0 +1,1240 @@
+*****************************************************************************
+* CDL NETLIST:
+* CELL NAME: SMIC18IOLIB_L
+* NETLISTED ON: DEC 11 17:16:32 2003
+*****************************************************************************
+
+
+*****************************************************************************
+* GLOBAL NET DECLARATIONS
+*****************************************************************************
+*.GLOBAL VSSH:G VDDH:P VSSO:G VDD GND VDDO:P
+
+
+*****************************************************************************
+* PIN CONTROL STATEMENT
+*****************************************************************************
+*.PIN VSSH VDDH VSSO VDD GND VDDO
+
+
+*****************************************************************************
+* BIPOLAR DECLARATIONS
+*****************************************************************************
+
+
+*.BIPOLAR
+*.RESI = 1.000000
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.SCALE METER
+*.LDD
+
+*****************************************************************************
+* PARAMETER STATEMENT
+*****************************************************************************
+.PARAM
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT40OOD                                                         *
+* LAST TIME SAVED: MAY 25 11:12:11 2005                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT40OOD VDD1 VDD2 VDDH1 VDDH2 VSS1 VSS2 VSSH1 VSSH2
+*.NOPIN GND VSSH VDDH VSSO VDD VDDO
+D3 NET24 VSSH2 PDIO33 AREA=142.8P
+D4 VSSH2 NET23 PDIO33 AREA=142.8P
+D15 NET22 VSS2 PDIO33 AREA=142.8P
+D16 VSS2 NET25 PDIO33 AREA=142.8P
+D17 NET25 VSS1 PDIO33 AREA=142.8P
+D0 NET23 VSSH1 PDIO33 AREA=142.8P
+D18 VSS1 NET22 PDIO33 AREA=142.8P
+D1 VSSH1 NET24 PDIO33 AREA=142.8P
+.ENDS PLSPLIT40OOD
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT20OSS                                                         *
+* LAST TIME SAVED: MAY 25 09:31:50 2005                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT20OSS VDD VDDH1 VDDH2 VSS N0
+*.NOPIN GND VSSH VDDH VSSO VDD VDDO
+.ENDS PLSPLIT20OSS
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT40OSD                                                         *
+* LAST TIME SAVED: MAY 25 11:12:53 2005                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT40OSD VDD VDDH1 VDDH2 VSS1 VSS2 VSSH1 VSSH2
+*.NOPIN GND VSSH VDDH VSSO VDD VDDO
+D3 NET30 VSSH2 PDIO33 AREA=142.8P
+D4 VSSH2 NET27 PDIO33 AREA=142.8P
+D15 NET28 VSS2 PDIO33 AREA=142.8P
+D16 VSS2 NET22 PDIO33 AREA=142.8P
+D17 NET22 VSS1 PDIO33 AREA=142.8P
+D0 NET27 VSSH1 PDIO33 AREA=142.8P
+D18 VSS1 NET28 PDIO33 AREA=142.8P
+D1 VSSH1 NET30 PDIO33 AREA=142.8P
+.ENDS PLSPLIT40OSD
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT75OOD                                                         *
+* LAST TIME SAVED: MAY 25 11:13:23 2005                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT75OOD VDD1 VDD2 VDDH1 VDDH2 VSS1 VSS2 VSSH1 VSSH2
+*.NOPIN GND VSSH VDDH VSSO VDD VDDO
+D3 NET24 VSSH2 PDIO33 AREA=142.8P
+D4 VSSH2 NET23 PDIO33 AREA=142.8P
+D15 NET22 VSS2 PDIO33 AREA=142.8P
+D16 VSS2 NET25 PDIO33 AREA=142.8P
+D17 NET25 VSS1 PDIO33 AREA=142.8P
+D0 NET23 VSSH1 PDIO33 AREA=142.8P
+D18 VSS1 NET22 PDIO33 AREA=142.8P
+D1 VSSH1 NET24 PDIO33 AREA=142.8P
+.ENDS PLSPLIT75OOD
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT75OSS                                                         *
+* LAST TIME SAVED: MAY 25 09:31:50 2005                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT75OSS VDD VDDH1 VDDH2 VSS N0
+*.NOPIN GND VSSH VDDH VSSO VDD VDDO
+.ENDS PLSPLIT75OSS
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLSPLIT75OSD                                                          *
+* LAST TIME SAVED: OCT 28 09:49:34 2003                                       *
+*******************************************************************************
+.SUBCKT PLSPLIT75OSD VDD VDDH1 VDDH2 VSS1 VSS2 VSSH1 VSSH2
+*.NOPIN VSSH VDDH VSSO VDD GND VDDO
+D3 NET24 VSSH2 PDIO33 AREA=142.8P
+D4 VSSH2 NET23 PDIO33 AREA=142.8P
+D15 NET22 VSS2 PDIO33 AREA=142.8P
+D16 VSS2 NET25 PDIO33 AREA=142.8P
+D17 NET25 VSS1 PDIO33 AREA=142.8P
+D0 NET23 VSSH1 PDIO33 AREA=142.8P
+D18 VSS1 NET22 PDIO33 AREA=142.8P
+D1 VSSH1 NET24 PDIO33 AREA=142.8P
+.ENDS PLSPLIT75OSD
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLOSCR14M                                                            *
+* LAST TIME SAVED: DEC 10 11:18:07 2003                                       *
+*******************************************************************************
+.SUBCKT PLOSCR14M CK XTALOUT EI EO XTALIN
+*.NOPIN VSSH VDDH
+MP0 VDD EI NET222 VDD P18 W=11.54U L=0.18U
+MP3 VDD EO NET224 VDD P18 W=11.54U L=0.18U
+MN1 NET222 EI VSSO VSSO N18 W=4.6U L=0.18U
+MN5 NET224 EO VSSO VSSO N18 W=4.6U L=0.18U
+D1 VSSO XTALOUT NWDIO AREA=800P
+D2 VSSO XTALIN NWDIO AREA=800P
+R1 XTALOUT NET218 200 $[RNPOSAB]
+R0 XTALIN NET421 200 $[RNPOSAB]
+R3 VSSO NET270 1.89K $[RNPOSAB]
+R4 VDDO NET266 1.89K $[RPPOSAB]
+R5 VSSO NET264 1.89K $[RNPOSAB]
+R2 VDDO NET268 1.89K $[RPPOSAB]
+D0_0 VSSO EO NDIO18 AREA=0.36P
+D0_1 VSSO EI NDIO18 AREA=0.36P
+MP33 NET259 N43 NET263 VDDO P33 W=2U L=16U
+MP38 NET255 N43 NET259 VDDO P33 W=2U L=16U
+MP39 NET219 N43 NET255 VDDO P33 W=2U L=16U
+MP40 NET271 N43 NET219 VDDO P33 W=2U L=20U
+MP41 NET218 N43 NET271 VDDO P33 W=2U L=20U
+MP29 VDDO EO NET248 VDDO P33 W=0.96U L=0.34U
+MP30 NET249 NET360 NET251 VDDO P33 W=3.12U L=0.34U
+MP31 NET248 NET249 NET360 VDDO P33 W=0.96U L=0.34U
+MP32 NET251 NET224 VDDO VDDO P33 W=3.12U L=0.34U
+MP37 NET231 NET222 VDDO VDDO P33 W=3.12U L=0.34U
+MP36 NET236 NET237 NET356 VDDO P33 W=0.96U L=0.34U
+MP35 NET237 NET356 NET231 VDDO P33 W=3.12U L=0.34U
+MP34 VDDO EI NET236 VDDO P33 W=0.96U L=0.34U
+MP19 CK N23 VDD VDD P33 W=83.8U L=0.35U
+MP28 NET263 N43 NET267 VDDO P33 W=2U L=16U
+MP1 VDDO NET268 XTALOUT VDDO P33 W=30U L=0.30U M=22
+MP5 NET267 N43 NET421 VDDO P33 W=2U L=16U
+MP7 VDDO NET421 VDDO VDDO P33 W=10U L=10U M=18
+MP4 NET330 N43 NET218 VDDO P33 W=200U L=0.6U
+MP15 VDDO NET218 VDDO VDDO P33 W=10U L=10U M=18
+MP27 VDDO NET266 XTALIN VDDO P33 W=30U L=0.30U M=22
+MP24 N23 NET421 VDDO VDDO P33 W=31.32U L=0.45U
+MP21 N32 N48 VDDO VDDO P33 W=15.9U L=0.35U
+MP20 VDDO NET249 N43 VDDO P33 W=6.52U L=0.35U
+MP18 VDDO N43 NET441 VDDO P33 W=19U L=0.35U
+MP25 N23 N32 VDDO VDDO P33 W=31.32U L=0.45U
+MP8 VDDO NET421 NET330 VDDO P33 W=200U L=0.6U
+MP22 N48 NET237 VDDO VDDO P33 W=15.9U L=0.35U
+MN3 NET218 VSSO VSSO VSSO N33 W=20U L=0.35U
+MN25 VSSO NET224 NET249 VSSO N33 W=10.38U L=0.35U
+MN26 NET360 EO VSSO VSSO N33 W=3.2U L=0.35U
+MN29 NET356 EI VSSO VSSO N33 W=3.2U L=0.35U
+MN28 VSSO NET222 NET237 VSSO N33 W=10.38U L=0.35U
+MN21 VSSO N23 CK VSSO N33 W=20U L=0.35U
+MN13 NET218 NET441 NET346 VSSO N33 W=50U L=0.6U
+MN14 NET346 NET421 VSSO VSSO N33 W=50U L=0.6U
+MN33 NET598 NET441 NET218 VSSO N33 W=1U L=30U
+MN2 XTALOUT NET270 VSSO VSSO N33 W=30U L=0.4U M=18
+MN10 NET218 N43 VSSO VSSO N33 W=5U L=1U
+MN30 XTALIN NET264 VSSO VSSO N33 W=30U L=0.4U M=18
+MN35 NET419 NET441 NET598 VSSO N33 W=1U L=30U
+MN0 NET421 VSSO VSSO VSSO N33 W=20U L=0.35U
+MN31 NET439 NET441 NET419 VSSO N33 W=1U L=30U
+MN241 VSSO NET237 N48 VSSO N33 W=7.6U L=0.35U
+MN22 N43 NET249 VSSO VSSO N33 W=3.26U L=0.35U
+MN231 VSSO N48 N32 VSSO N33 W=7.6U L=0.35U
+MN18 NET369 NET421 N23 VSSO N33 W=8U L=0.45U M=2
+MN19 VSSO N32 NET369 VSSO N33 W=8U L=0.45U M=2
+MN11 NET421 NET441 NET439 VSSO N33 W=1U L=30U
+MN20 NET441 N43 VSSO VSSO N33 W=9U L=0.35U
+.ENDS PLOSCR14M
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLOSC14M                                                             *
+* LAST TIME SAVED: DEC 10 11:14:46 2003                                       *
+*******************************************************************************
+.SUBCKT PLOSC14M CK XTALOUT EI EO XTALIN
+*.NOPIN VSSH VDDH
+MN1 NET667 EI VSSO VSSO N18 W=4U L=0.18U
+MN5 NET665 EO VSSO VSSO N18 W=4U L=0.18U
+MP3 VDD EO NET665 VDD P18 W=10U L=0.18U
+MP2 VDD EI NET667 VDD P18 W=10U L=0.18U
+D1 VSSO XTALOUT NWDIO AREA=800P
+D2 VSSO XTALIN NWDIO AREA=800P
+R1 XTALOUT NET285 200 $[RNPOSAB]
+R0 XTALIN NET323 200 $[RNPOSAB]
+R4 VSSO NET232 1.89K $[RNPOSAB]
+R5 VDDO NET230 1.89K $[RPPOSAB]
+R3 VSSO NET234 1.89K $[RNPOSAB]
+R2 VDDO NET236 1.89K $[RPPOSAB]
+MP22 NET612 NET572 VDDO VDDO P33 W=12U L=0.35U
+MP18 VDDO NET615 NET599 VDDO P33 W=15U L=0.35U
+MP1 VDDO NET236 XTALOUT VDDO P33 W=30U L=0.30U M=22
+MP34 NET566 NET667 VDDO VDDO P33 W=3U L=0.34U
+MP28 NET572 NET655 NET566 VDDO P33 W=3U L=0.34U
+MP33 NET571 NET572 NET655 VDDO P33 W=0.9U L=0.34U
+MP27 VDDO EI NET571 VDDO P33 W=0.9U L=0.34U
+MP19 CK NET596 VDD VDD P33 W=80U L=0.35U
+MP29 VDDO EO NET535 VDDO P33 W=0.9U L=0.34U
+MP30 NET536 NET631 NET538 VDDO P33 W=3U L=0.34U
+MP7 VDDO NET599 NET285 VDDO P33 W=55U L=0.44U
+MP8 VDDO NET323 NET285 VDDO P33 W=55U L=0.44U
+MP31 NET535 NET536 NET631 VDDO P33 W=0.9U L=0.34U
+MP32 NET538 NET665 VDDO VDDO P33 W=3U L=0.34U
+MP0 VDDO NET230 XTALIN VDDO P33 W=30U L=0.30U M=22
+MP21 NET524 NET612 VDDO VDDO P33 W=12U L=0.35U
+MP25 NET596 NET524 VDDO VDDO P33 W=32U L=0.45U
+MP24 NET596 NET323 VDDO VDDO P33 W=32U L=0.45U
+MP20 VDDO NET536 NET615 VDDO P33 W=6U L=0.35U
+MN3 NET285 VSSO VSSO VSSO N33 W=20U L=0.35U
+MN231 VSSO NET612 NET524 VSSO N33 W=7U L=0.35U
+MN18 NET602 NET323 NET596 VSSO N33 W=8U L=0.45U M=2
+MN19 VSSO NET524 NET602 VSSO N33 W=8U L=0.45U M=2
+MN21 VSSO NET596 CK VSSO N33 W=20U L=0.35U
+MN0 NET323 VSSO VSSO VSSO N33 W=20U L=0.35U
+MN24 NET655 EI VSSO VSSO N33 W=3U L=0.35U
+MN25 VSSO NET665 NET536 VSSO N33 W=10U L=0.35U
+MN13 NET285 NET323 NET579 VSSO N33 W=35U L=0.44U
+MN14 NET579 NET599 VSSO VSSO N33 W=35U L=0.44U
+MN111 VSSO NET667 NET572 VSSO N33 W=10U L=0.35U
+MN22 NET615 NET536 VSSO VSSO N33 W=4U L=0.35U
+MN26 NET631 EO VSSO VSSO N33 W=3U L=0.35U
+MN2 XTALOUT NET234 VSSO VSSO N33 W=30U L=0.4U M=18
+MN20 NET599 NET615 VSSO VSSO N33 W=8U L=0.35U
+MN4 XTALIN NET232 VSSO VSSO N33 W=30U L=0.4U M=18
+MN241 VSSO NET572 NET612 VSSO N33 W=7U L=0.35U
+D0_0 VSSO EO NDIO18 AREA=0.36P
+D0_1 VSSO EI NDIO18 AREA=0.36P
+.ENDS PLOSC14M
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: LGROUND                                                              *
+* LAST TIME SAVED: DEC  2 15:18:36 2003                                       *
+*******************************************************************************
+.SUBCKT LGROUND VDDESD VSSESD VSSOUT
+*.NOPIN VSSH VDDH VSSO VDD GND VDDO
+D1 VSSOUT VSSESD PDIO33 AREA=662.6P
+D0 VSSESD VSSOUT NDIO33 AREA=662.6P
+MP47 VDDESD NET3 VSSOUT VDDESD P33 W=30U L=0.30U M=22
+R0 VDDESD NET3 1.89K $[RPPOSAB]
+.ENDS LGROUND
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVSSO                                                               *
+* LAST TIME SAVED: OCT 22 15:20:39 2003                                       *
+*******************************************************************************
+.SUBCKT PLVSSO VSSO
+*.NOPIN VSSH VDDH VDD GND
+XI3 VDDO VSSO VSSO LGROUND
+.ENDS PLVSSO
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVSSH                                                               *
+* LAST TIME SAVED: OCT 28 09:48:24 2003                                       *
+*******************************************************************************
+.SUBCKT PLVSSH VSSH
+*.NOPIN VSSO VDD GND VDDO
+XI0 VDDH VSSH VSSH LGROUND
+.ENDS PLVSSH
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVSSC                                                               *
+* LAST TIME SAVED: OCT 20 14:15:04 2003                                       *
+*******************************************************************************
+.SUBCKT PLVSSC GND
+*.NOPIN VSSO VDD VDDO
+XI4 VDDH VSSH GND LGROUND
+.ENDS PLVSSC
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: LPOWERH                                                              *
+* LAST TIME SAVED: DEC  2 15:14:11 2003                                       *
+*******************************************************************************
+.SUBCKT LPOWERH VDDESD VDDOUT VSSESD
+*.NOPIN VSSH VDDH VSSO VDD GND VDDO
+MP47 VDDESD VDDESD VDDOUT VDDESD P33 W=30U L=0.30U M=22
+R1 VSSESD NET33 1.89K $[RNPOSAB]
+MN43 VDDOUT NET33 VSSESD VSSESD N33 W=30U L=0.4U M=18
+.ENDS LPOWERH
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVDDO                                                               *
+* LAST TIME SAVED: NOV 17 15:17:44 2003                                       *
+*******************************************************************************
+.SUBCKT PLVDDO VDDO
+*.NOPIN VSSH VDDH VDD GND
+D0 VSSO VDDO NWDIO AREA=800P
+XI4 VDDO VDDO VSSO LPOWERH
+.ENDS PLVDDO
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVDDH                                                               *
+* LAST TIME SAVED: NOV 17 15:17:12 2003                                       *
+*******************************************************************************
+.SUBCKT PLVDDH VDDH
+*.NOPIN VSSO VDD GND VDDO
+D0 VSSH VDDH NWDIO AREA=800P
+XI1 VDDH VDDH VSSH LPOWERH
+.ENDS PLVDDH
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: LPOWER                                                               *
+* LAST TIME SAVED: DEC  2 15:13:13 2003                                       *
+*******************************************************************************
+.SUBCKT LPOWER VDDESD VDDOUT VSSESD
+*.NOPIN VSSH VDDH VSSO VDD GND VDDO
+MP47 VDDESD NET31 VDDOUT VDDESD P33 W=30U L=0.30U M=22
+R0 VDDESD NET31 1.89K $[RPPOSAB]
+R1 VSSESD NET33 1.89K $[RNPOSAB]
+MN43 VDDOUT NET33 VSSESD VSSESD N33 W=30U L=0.4U M=18
+.ENDS LPOWER
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLVDDC                                                               *
+* LAST TIME SAVED: NOV 17 15:16:40 2003                                       *
+*******************************************************************************
+.SUBCKT PLVDDC VDD
+*.NOPIN VSSO GND VDDO
+D0 VSSH VDD NWDIO AREA=800P
+XI2 VDDH VDD VSSH LPOWER
+.ENDS PLVDDC
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBIAR                                                               *
+* LAST TIME SAVED: DEC  2 15:20:27 2003                                       *
+*******************************************************************************
+.SUBCKT PLBIAR AI P
+*.NOPIN VSSO VDD VDDO
+D0 VSSH P NWDIO AREA=800P
+MP47 VDDH NET41 P VDDH P33 W=30U L=0.30U M=22
+MN13 AI GND GND GND N33 W=20U L=0.35U
+MN43 P NET39 VSSH VSSH N33 W=30U L=0.4U M=18
+R6 AI P 200 $[RNPOSAB]
+R0 VDDH NET41 1.89K $[RPPOSAB]
+R1 VSSH NET39 1.89K $[RNPOSAB]
+.ENDS PLBIAR
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBIA                                                                *
+* LAST TIME SAVED: DEC  2 15:19:57 2003                                       *
+*******************************************************************************
+.SUBCKT PLBIA P
+*.NOPIN VSSO VDD VDDO
+D0 VSSH P NWDIO AREA=800P
+MN0 P NET33 VSSH VSSH N33 W=30U L=0.4U M=18
+MN13 P GND GND GND N33 W=20U L=0.35U
+R2 VDDH NET35 1.89K $[RPPOSAB]
+R3 VSSH NET33 1.89K $[RNPOSAB]
+MP1 VDDH NET35 P VDDH P33 W=30U L=0.30U M=22
+.ENDS PLBIA
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B8DR_NEW                                                             *
+* LAST TIME SAVED: DEC  2 14:42:18 2003                                       *
+*******************************************************************************
+.SUBCKT B8DR_NEW WELLI P EVDD EVSS NDR PDR PESD WELLC
+*.NOPIN VSSO VDD GND VDDO
+MN1 NET21 EVSS VSSH VSSH N33 W=30U L=0.35U M=12
+MN42 P EVDD NET13 VSSH N33 W=30U L=0.35U M=4
+MN0 NET13 NDR VSSH VSSH N33 W=30U L=0.35U M=4
+MN2 P EVDD NET21 VSSH N33 W=30U L=0.35U M=12
+MP75 VDDH WELLC WELLI WELLI P33 W=60U L=0.30U
+MP47 VDDH PDR P WELLI P33 W=30U L=0.30U M=6
+MP46 VDDH PESD P WELLI P33 W=30U L=0.30U M=12
+.ENDS B8DR_NEW
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SS5S                                                               *
+* LAST TIME SAVED: NOV 19 09:54:53 2003                                       *
+*******************************************************************************
+.SUBCKT B2SS5S EVDD EVSS PDR PESD WELLC P GNDC PDI PENBO PENO PPD PUI WELLI
+*.NOPIN VSSO VDD GND VDDO
+R3 EVDD NET299 3K $[RPPOSAB]
+R0 EVSS NET204 3K $[RNPOSAB]
+R1 NET194 NET311 3K $[RPPOSAB]
+MN2 PDENB PDEN GNDC GNDC N33 W=1U L=0.35U
+MN3 PDEN PENBO NET231 GNDC N33 W=1.5U L=0.35U
+MN0 NET239 PENO GNDC GNDC N33 W=0.4U L=0.35U
+MN4 NET235 NET227 GNDC GNDC N33 W=1U L=0.35U
+MN5 NET231 NET235 GNDC GNDC N33 W=1U L=0.35U
+MN8 NET227 NET239 GNDC GNDC N33 W=0.4U L=0.35U
+MN16 NET204 VDDH VSSH VSSH N33 W=2U L=0.35U
+MN6 PDRV5S VDDH NET143 GNDC N33 W=2U L=0.35U M=2
+MN17 P PDENB PDRV5S GNDC N33 W=3U L=0.35U
+MN46 P VDDH NET135 GNDC N33 W=1.2U L=0.8U
+MN1 PESD VDDH NET194 GNDC N33 W=2U L=0.35U
+MN45 NET135 PDI GNDC GNDC N33 W=1.4U L=5.4U
+MN44 PUI VDDH NET138 GNDC N33 W=2U L=0.35U
+MN7 NET143 PDEN GNDC GNDC N33 W=2U L=0.35U M=2
+MN18 PPD VDDH PDR GNDC N33 W=8U L=0.35U
+MN28 PENBO VDDH WELLC GNDC N33 W=3.2U L=0.35U M=1
+MP2 VDDH PENO NET239 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET235 PDEN VDDH P33 W=4U L=0.34U
+MP4 VDDH NET227 NET235 VDDH P33 W=1U L=0.34U
+MP5 VDDH PENBO PDEN VDDH P33 W=4U L=0.34U
+MP6 VDDH PDEN PDENB VDDH P33 W=2U L=0.34U
+MP7 VDDH NET239 NET227 VDDH P33 W=0.6U L=0.34U
+MP15 NET194 PDRV5S PESD WELLI P33 W=4U L=0.34U
+MP17 PDR VDDH P WELLI P33 W=2U L=0.34U
+MP60 VDDH NET138 P WELLI P33 W=1.2U L=1.25U
+MP52 NET138 PDRV5S PUI WELLI P33 W=4U L=0.34U
+MP16 PDRV5S VDDH P WELLI P33 W=6U L=0.34U
+MP59 NET138 VDDH P WELLI P33 W=3.5U L=0.34U
+MP43 WELLC VDDH P WELLI P33 W=10U L=0.34U
+MP18 PDR PDRV5S PPD WELLI P33 W=16U L=0.34U
+MP1 VDDH VSSH NET299 VDDH P33 W=2U L=0.34U
+MP19 PESD VDDH P WELLI P33 W=2U L=0.34U
+MP42 WELLC PDRV5S PENBO WELLI P33 W=4U L=0.34U
+MP0 VDDH VSSH NET311 VDDH P33 W=2U L=0.34U
+.ENDS B2SS5S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: INVG                                                                 *
+* LAST TIME SAVED: DEC  4 11:17:57 2002                                       *
+*******************************************************************************
+.SUBCKT INVG Y A PL=0.18U PW=0.24U NL=0.18U NW=0.24U
+*.NOPIN VSSH VDDH VSSO VDDO
+MN0 Y A GND GND N18 W=NW L=NL
+MP0 VDD A Y VDD P18 W=PW L=PL
+.ENDS INVG
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SSPDR                                                              *
+* LAST TIME SAVED: NOV 26 11:02:11 2003                                       *
+*******************************************************************************
+.SUBCKT B2SSPDR ND PDO PENBO PENO PPD PUO A GNDC NEN PD PEN PU
+*.NOPIN VSSH VSSO VDDO
+XI92 NET217 PD INVG PW=2.4E-06 NW=8.4E-07
+XI5 NET546 A INVG PW=1.36E-05 NW=4.56E-06
+XI91 NET219 PU INVG PW=2.4E-06 NW=8.4E-07
+XI3 NET544 NEN INVG PW=3E-06 NW=9.6E-07
+XI4 NET540 PEN INVG PW=6E-06 NW=1.92E-06
+MP26 PUO NET251 VDDH VDDH P33 W=0.6U L=0.34U
+MP4 VDDH NET499 PENBO VDDH P33 W=8U L=0.34U
+MP5 VDDH NET499 NET584 VDDH P33 W=2U L=0.34U
+MP0 NET477 NET576 VDDH VDDH P33 W=1U L=0.34U
+MP22 VDDH PDO NET247 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET477 NET576 VDDH P33 W=1U L=0.34U
+MP23 VDDH PUO NET251 VDDH P33 W=0.6U L=0.34U
+MP13 NET273 NET604 VDDH VDDH P33 W=4.5U L=0.34U
+MP10 VDDH NET273 NET604 VDDH P33 W=4.5U L=0.34U
+MP16 VDDH NET477 NENB VDDH P33 W=4.4U L=0.34U
+MP57 VDDH NENB NET534 VDDH P33 W=16U L=0.34U
+MP28 VDDH PENO PPD VDDH P33 W=16U L=0.34U
+MP58 NET534 NET273 ND VDDH P33 W=16U L=0.34U
+MP29 VDDH NET273 PPD VDDH P33 W=16U L=0.34U
+MP19 PDO NET247 VDDH VDDH P33 W=0.6U L=0.34U
+MP31 VDDH PENBO PENO VDDH P33 W=4U L=0.34U
+MP8 NET499 NET584 VDDH VDDH P33 W=2U L=0.34U
+MN41 ND NENB GNDC GNDC N33 W=8U L=0.35U
+MN40 ND NET273 GNDC GNDC N33 W=8U L=0.35U
+MN7 NET604 A GNDC GNDC N33 W=22.5U L=0.35U
+MN6 GNDC NET546 NET273 GNDC N33 W=22.5U L=0.35U
+MN17 NET596 NET273 GNDC GNDC N33 W=8U L=0.35U M=2
+MN19 PENO PENBO GNDC GNDC N33 W=2U L=0.35U
+MN16 PPD PENO NET596 GNDC N33 W=8U L=0.35U M=2
+MN4 NET584 PEN GNDC GNDC N33 W=10U L=0.35U
+MN2 PENBO NET499 GNDC GNDC N33 W=4U L=0.35U
+MN0 NET576 NEN GNDC GNDC N33 W=5U L=0.35U
+MN1 GNDC NET544 NET477 GNDC N33 W=5U L=0.35U
+MN9 NENB NET477 GNDC GNDC N33 W=1.7U L=0.35U
+MN3 GNDC NET540 NET499 GNDC N33 W=10U L=0.35U
+MN12 NET247 PD GNDC GNDC N33 W=4U L=0.35U
+MN10 GNDC NET217 PDO GNDC N33 W=4U L=0.35U
+MN13 NET251 PU GNDC GNDC N33 W=4U L=0.35U
+MN15 GNDC NET219 PUO GNDC N33 W=4U L=0.35U
+.ENDS B2SSPDR
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: IBUF_S                                                               *
+* LAST TIME SAVED: NOV 25 17:29:19 2003                                       *
+*******************************************************************************
+.SUBCKT IBUF_S D P CONOF GNDC SONOF
+*.NOPIN VSSH VSSO VDDO
+D0 GND P NDIO33 AREA=30P
+MP17 VDD NET141 NET242 VDD P33 W=6U L=0.30U
+MP14 NET124 N95 N113 VDDH P33 W=15.6U L=0.34U
+MP13 N113 N95 NET141 VDDH P33 W=15.6U L=0.34U
+MP12 VDDH NETS NET124 VDDH P33 W=15.6U L=0.34U
+MP11 N113 NET141 GNDC VDDH P33 W=8U L=0.34U
+MP9 VDDH NET177 NET152 VDDH P33 W=9U L=0.34U
+MP7 NET152 N95 NET141 VDDH P33 W=9U L=0.34U
+MP6 VDDH NETSN NETS VDDH P33 W=2U L=0.34U
+MP3 VDDH NETS NETSN VDDH P33 W=2U L=0.34U
+MP2 VDDH NETC NET177 VDDH P33 W=2U L=0.34U
+MP0 VDDH NET177 NETC VDDH P33 W=2U L=0.34U
+MP15 VDDH NETSN NET188 VDDH P33 W=2U L=0.34U
+MP16 NET188 NETC NET141 VDDH P33 W=2U L=0.34U
+MN11 NET242 NET141 GND GND N33 W=3U L=0.35U
+MN10 N95 VDDH P GNDC N33 W=20U L=0.35U
+MN9 NET141 N95 NET201 GNDC N33 W=16U L=0.35U
+MN8 NET201 N95 NET205 GNDC N33 W=16U L=0.35U
+MN7 NET205 NETSN GNDC GNDC N33 W=16U L=0.35U
+MN6 VDDH NET141 NET201 GNDC N33 W=6U L=0.35U M=1
+MN5 GNDC CONOF NET177 GNDC N33 W=10U L=0.35U
+MN4 NET217 NETC GNDC GNDC N33 W=4.5U L=0.35U M=2
+MN3 NETC NET238 GNDC GNDC N33 W=10U L=0.35U
+MN2 NETSN NET236 GNDC GNDC N33 W=10U L=0.35U
+MN1 GNDC SONOF NETS GNDC N33 W=10U L=0.35U
+MN0 NET141 N95 NET217 GNDC N33 W=4.5U L=0.35U M=2
+XI9 NET236 SONOF INVG PW=5E-06 NW=1.6E-06
+XI8 NET238 CONOF INVG PW=5E-06 NW=1.6E-06
+XI7 NET240 NET242 INVG PW=7E-06 NW=3.5E-06
+XI5 D NET240 INVG PW=3.5E-05 NW=1.75E-05
+.ENDS IBUF_S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI8S                                                               *
+* LAST TIME SAVED: DEC  2 15:39:10 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI8S D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B8DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SS5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SSPDR
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI8S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SNPDR                                                              *
+* LAST TIME SAVED: NOV 26 11:01:46 2003                                       *
+*******************************************************************************
+.SUBCKT B2SNPDR ND PDO PENBO PENO PPD PUO A GNDC NEN PD PEN PU
+*.NOPIN VSSH VSSO VDDO
+XI92 NET217 PD INVG PW=2.4E-06 NW=8.4E-07
+XI5 NET546 A INVG PW=1.36E-05 NW=4.56E-06
+XI91 NET219 PU INVG PW=2.4E-06 NW=8.4E-07
+XI3 NET544 NEN INVG PW=3E-06 NW=9.6E-07
+XI4 NET540 PEN INVG PW=6E-06 NW=1.92E-06
+MP26 PUO NET251 VDDH VDDH P33 W=0.6U L=0.34U
+MP4 VDDH NET499 PENBO VDDH P33 W=8U L=0.34U
+MP5 VDDH NET499 NET584 VDDH P33 W=2U L=0.34U
+MP0 NET477 NET576 VDDH VDDH P33 W=1U L=0.34U
+MP22 VDDH PDO NET247 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET477 NET576 VDDH P33 W=1U L=0.34U
+MP23 VDDH PUO NET251 VDDH P33 W=0.6U L=0.34U
+MP13 NET273 NET604 VDDH VDDH P33 W=4.5U L=0.34U
+MP10 VDDH NET273 NET604 VDDH P33 W=4.5U L=0.34U
+MP16 VDDH NET477 NENB VDDH P33 W=4.4U L=0.34U
+MP57 VDDH NENB NET534 VDDH P33 W=24U L=0.34U
+MP28 VDDH PENO PPD VDDH P33 W=24U L=0.34U
+MP58 NET534 NET273 ND VDDH P33 W=24U L=0.34U
+MP29 VDDH NET273 PPD VDDH P33 W=24U L=0.34U
+MP19 PDO NET247 VDDH VDDH P33 W=0.6U L=0.34U
+MP31 VDDH PENBO PENO VDDH P33 W=4U L=0.34U
+MP8 NET499 NET584 VDDH VDDH P33 W=2U L=0.34U
+MN41 ND NENB GNDC GNDC N33 W=12.0U L=0.35U
+MN40 ND NET273 GNDC GNDC N33 W=12.0U L=0.35U
+MN7 NET604 A GNDC GNDC N33 W=22.5U L=0.35U
+MN6 GNDC NET546 NET273 GNDC N33 W=22.5U L=0.35U
+MN17 NET596 NET273 GNDC GNDC N33 W=12U L=0.35U M=2
+MN19 PENO PENBO GNDC GNDC N33 W=2U L=0.35U
+MN16 PPD PENO NET596 GNDC N33 W=12U L=0.35U M=2
+MN4 NET584 PEN GNDC GNDC N33 W=10U L=0.35U
+MN2 PENBO NET499 GNDC GNDC N33 W=4U L=0.35U
+MN0 NET576 NEN GNDC GNDC N33 W=5U L=0.35U
+MN1 GNDC NET544 NET477 GNDC N33 W=5U L=0.35U
+MN9 NENB NET477 GNDC GNDC N33 W=1.7U L=0.35U
+MN3 GNDC NET540 NET499 GNDC N33 W=10U L=0.35U
+MN12 NET247 PD GNDC GNDC N33 W=4U L=0.35U
+MN10 GNDC NET217 PDO GNDC N33 W=4U L=0.35U
+MN13 NET251 PU GNDC GNDC N33 W=4U L=0.35U
+MN15 GNDC NET219 PUO GNDC N33 W=4U L=0.35U
+.ENDS B2SNPDR
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SN5S                                                               *
+* LAST TIME SAVED: NOV 19 09:54:26 2003                                       *
+*******************************************************************************
+.SUBCKT B2SN5S EVDD EVSS PDR PESD WELLC P GNDC PDI PENBO PENO PPD PUI WELLI
+*.NOPIN VSSO VDD GND VDDO
+R3 EVDD NET299 3K $[RPPOSAB]
+R0 EVSS NET204 3K $[RNPOSAB]
+R1 NET194 NET311 3K $[RPPOSAB]
+MN2 PDENB PDEN GNDC GNDC N33 W=1U L=0.35U
+MN3 PDEN PENBO NET231 GNDC N33 W=1.5U L=0.35U
+MN0 NET239 PENO GNDC GNDC N33 W=0.4U L=0.35U
+MN4 NET235 NET227 GNDC GNDC N33 W=1U L=0.35U
+MN5 NET231 NET235 GNDC GNDC N33 W=1U L=0.35U
+MN8 NET227 NET239 GNDC GNDC N33 W=0.4U L=0.35U
+MN16 NET204 VDDH VSSH VSSH N33 W=2U L=0.35U
+MN6 PDRV5S VDDH NET143 GNDC N33 W=2U L=0.35U M=2
+MN17 P PDENB PDRV5S GNDC N33 W=3U L=0.35U
+MN46 P VDDH NET135 GNDC N33 W=1.2U L=0.8U
+MN1 PESD VDDH NET194 GNDC N33 W=2U L=0.35U
+MN45 NET135 PDI GNDC GNDC N33 W=1.4U L=5.4U
+MN44 PUI VDDH NET138 GNDC N33 W=2U L=0.35U
+MN7 NET143 PDEN GNDC GNDC N33 W=2U L=0.35U M=2
+MN18 PPD VDDH PDR GNDC N33 W=12U L=0.35U
+MN28 PENBO VDDH WELLC GNDC N33 W=3.2U L=0.35U M=1
+MP2 VDDH PENO NET239 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET235 PDEN VDDH P33 W=4U L=0.34U
+MP4 VDDH NET227 NET235 VDDH P33 W=1U L=0.34U
+MP5 VDDH PENBO PDEN VDDH P33 W=4U L=0.34U
+MP6 VDDH PDEN PDENB VDDH P33 W=2U L=0.34U
+MP7 VDDH NET239 NET227 VDDH P33 W=0.6U L=0.34U
+MP15 NET194 PDRV5S PESD WELLI P33 W=4U L=0.34U
+MP17 PDR VDDH P WELLI P33 W=2U L=0.34U
+MP60 VDDH NET138 P WELLI P33 W=1.2U L=1.25U
+MP52 NET138 PDRV5S PUI WELLI P33 W=4U L=0.34U
+MP16 PDRV5S VDDH P WELLI P33 W=6U L=0.34U
+MP59 NET138 VDDH P WELLI P33 W=3.5U L=0.34U
+MP43 WELLC VDDH P WELLI P33 W=10U L=0.34U
+MP18 PDR PDRV5S PPD WELLI P33 W=24U L=0.34U
+MP1 VDDH VSSH NET299 VDDH P33 W=2U L=0.34U
+MP19 PESD VDDH P WELLI P33 W=2U L=0.34U
+MP42 WELLC PDRV5S PENBO WELLI P33 W=4U L=0.34U
+MP0 VDDH VSSH NET311 VDDH P33 W=2U L=0.34U
+.ENDS B2SN5S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI8N                                                               *
+* LAST TIME SAVED: DEC  2 15:38:22 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI8N D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B8DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SNPDR
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SN5S
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI8N
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SF5S                                                               *
+* LAST TIME SAVED: NOV 19 09:51:08 2003                                       *
+*******************************************************************************
+.SUBCKT B2SF5S EVDD EVSS PDR PESD WELLC P GNDC PDI PENBO PENO PPD PUI WELLI
+*.NOPIN VSSO VDD GND VDDO
+R3 EVDD NET299 3K $[RPPOSAB]
+R0 EVSS NET204 3K $[RNPOSAB]
+R1 NET194 NET311 3K $[RPPOSAB]
+MN2 PDENB PDEN GNDC GNDC N33 W=1U L=0.35U
+MN3 PDEN PENBO NET178 GNDC N33 W=1.5U L=0.35U
+MN0 NET186 PENO GNDC GNDC N33 W=0.4U L=0.35U
+MN4 NET182 NET174 GNDC GNDC N33 W=1U L=0.35U
+MN5 NET178 NET182 GNDC GNDC N33 W=1U L=0.35U
+MN8 NET174 NET186 GNDC GNDC N33 W=0.4U L=0.35U
+MN16 NET204 VDDH VSSH VSSH N33 W=2U L=0.35U
+MN6 PDRV5S VDDH NET143 GNDC N33 W=2U L=0.35U M=2
+MN17 P PDENB PDRV5S GNDC N33 W=3U L=0.35U
+MN46 P VDDH NET135 GNDC N33 W=1.2U L=0.8U
+MN1 PESD VDDH NET194 GNDC N33 W=2U L=0.35U
+MN45 NET135 PDI GNDC GNDC N33 W=1.4U L=5.4U
+MN44 PUI VDDH NET138 GNDC N33 W=2U L=0.35U
+MN7 NET143 PDEN GNDC GNDC N33 W=2U L=0.35U M=2
+MN18 PPD VDDH PDR GNDC N33 W=12U L=0.35U
+MN28 PENBO VDDH WELLC GNDC N33 W=3.2U L=0.35U M=1
+MP2 VDDH PENO NET186 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET182 PDEN VDDH P33 W=4U L=0.34U
+MP4 VDDH NET174 NET182 VDDH P33 W=1U L=0.34U
+MP5 VDDH PENBO PDEN VDDH P33 W=4U L=0.34U
+MP6 VDDH PDEN PDENB VDDH P33 W=2U L=0.34U
+MP7 VDDH NET186 NET174 VDDH P33 W=0.6U L=0.34U
+MP15 NET194 PDRV5S PESD WELLI P33 W=4U L=0.34U
+MP17 PDR VDDH P WELLI P33 W=2U L=0.34U
+MP60 VDDH NET138 P WELLI P33 W=1.2U L=1.25U
+MP52 NET138 PDRV5S PUI WELLI P33 W=4U L=0.34U
+MP16 PDRV5S VDDH P WELLI P33 W=6U L=0.34U
+MP59 NET138 VDDH P WELLI P33 W=3.5U L=0.34U
+MP43 WELLC VDDH P WELLI P33 W=10U L=0.34U
+MP18 PDR PDRV5S PPD WELLI P33 W=24U L=0.34U
+MP1 VDDH VSSH NET299 VDDH P33 W=2U L=0.34U
+MP19 PESD VDDH P WELLI P33 W=2U L=0.34U
+MP42 WELLC PDRV5S PENBO WELLI P33 W=4U L=0.34U
+MP0 VDDH VSSH NET311 VDDH P33 W=2U L=0.34U
+.ENDS B2SF5S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2SFPDR                                                              *
+* LAST TIME SAVED: NOV 26 14:43:34 2003                                       *
+*******************************************************************************
+.SUBCKT B2SFPDR ND PDO PENBO PENO PPD PUO A GNDC NEN PD PEN PU
+*.NOPIN VSSH VSSO VDDO
+XI92 NET217 PD INVG PW=2.4E-06 NW=8.4E-07
+XI5 NET546 A INVG PW=1.36E-05 NW=4.56E-06
+XI91 NET219 PU INVG PW=2.4E-06 NW=8.4E-07
+XI3 NET544 NEN INVG PW=3E-06 NW=9.6E-07
+XI4 NET540 PEN INVG PW=6E-06 NW=1.92E-06
+MP26 PUO NET251 VDDH VDDH P33 W=0.6U L=0.34U
+MP4 VDDH NET499 PENBO VDDH P33 W=8U L=0.34U
+MP5 VDDH NET499 NET584 VDDH P33 W=2U L=0.34U
+MP0 NET477 NET576 VDDH VDDH P33 W=1U L=0.34U
+MP22 VDDH PDO NET247 VDDH P33 W=0.6U L=0.34U
+MP3 VDDH NET477 NET576 VDDH P33 W=1U L=0.34U
+MP23 VDDH PUO NET251 VDDH P33 W=0.6U L=0.34U
+MP13 NET273 NET604 VDDH VDDH P33 W=4.5U L=0.34U
+MP10 VDDH NET273 NET604 VDDH P33 W=4.5U L=0.34U
+MP16 VDDH NET477 NENB VDDH P33 W=4.4U L=0.34U
+MP57 VDDH NENB NET534 VDDH P33 W=27.76U L=0.34U
+MP28 VDDH PENO PPD VDDH P33 W=28U L=0.34U
+MP58 NET534 NET273 ND VDDH P33 W=27.76U L=0.34U
+MP29 VDDH NET273 PPD VDDH P33 W=28U L=0.34U
+MP19 PDO NET247 VDDH VDDH P33 W=0.6U L=0.34U
+MP31 VDDH PENBO PENO VDDH P33 W=4U L=0.34U
+MP8 NET499 NET584 VDDH VDDH P33 W=2U L=0.34U
+MN41 ND NENB GNDC GNDC N33 W=14U L=0.35U
+MN40 ND NET273 GNDC GNDC N33 W=14U L=0.35U
+MN7 NET604 A GNDC GNDC N33 W=22.5U L=0.35U
+MN6 GNDC NET546 NET273 GNDC N33 W=22.5U L=0.35U
+MN17 NET596 NET273 GNDC GNDC N33 W=13.88U L=0.35U M=2
+MN19 PENO PENBO GNDC GNDC N33 W=2U L=0.35U
+MN16 PPD PENO NET596 GNDC N33 W=13.88U L=0.35U M=2
+MN4 NET584 PEN GNDC GNDC N33 W=10U L=0.35U
+MN2 PENBO NET499 GNDC GNDC N33 W=4U L=0.35U
+MN0 NET576 NEN GNDC GNDC N33 W=5U L=0.35U
+MN1 GNDC NET544 NET477 GNDC N33 W=5U L=0.35U
+MN9 NENB NET477 GNDC GNDC N33 W=1.7U L=0.35U
+MN3 GNDC NET540 NET499 GNDC N33 W=10U L=0.35U
+MN12 NET247 PD GNDC GNDC N33 W=4U L=0.35U
+MN10 GNDC NET217 PDO GNDC N33 W=4U L=0.35U
+MN13 NET251 PU GNDC GNDC N33 W=4U L=0.35U
+MN15 GNDC NET219 PUO GNDC N33 W=4U L=0.35U
+.ENDS B2SFPDR
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI8F                                                               *
+* LAST TIME SAVED: DEC  2 15:37:44 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI8F D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B8DR_NEW
+D2 VSSH P NWDIO AREA=800P
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SF5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SFPDR
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI8F
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B4DR_NEW                                                             *
+* LAST TIME SAVED: DEC  2 14:42:45 2003                                       *
+*******************************************************************************
+.SUBCKT B4DR_NEW WELLI P EVDD EVSS NDR PDR PESD WELLC
+*.NOPIN VSSO VDD GND VDDO
+MN0 P EVDD NET21 VSSH N33 W=30U L=0.35U M=14
+MN42 P EVDD NET13 VSSH N33 W=30U L=0.35U M=2
+MN43 NET13 NDR VSSH VSSH N33 W=30U L=0.35U M=2
+MN1 NET21 EVSS VSSH VSSH N33 W=30U L=0.35U M=14
+MP75 VDDH WELLC WELLI WELLI P33 W=60U L=0.30U
+MP47 VDDH PDR P WELLI P33 W=30U L=0.30U M=3
+MP46 VDDH PESD P WELLI P33 W=30U L=0.30U M=15
+.ENDS B4DR_NEW
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI4S                                                               *
+* LAST TIME SAVED: DEC  2 15:37:31 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI4S D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B4DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SS5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SSPDR
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI4S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI4N                                                               *
+* LAST TIME SAVED: DEC  2 15:37:15 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI4N D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B4DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SNPDR
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SN5S
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI4N
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI4F                                                               *
+* LAST TIME SAVED: DEC  2 15:36:15 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI4F D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B4DR_NEW
+D2 VSSH P NWDIO AREA=800P
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SF5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SFPDR
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI4F
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B2DR_NEW                                                             *
+* LAST TIME SAVED: NOV 21 11:06:31 2003                                       *
+*******************************************************************************
+.SUBCKT B2DR_NEW WELLI P EVDD EVSS NDR PDR PESD WELLC
+*.NOPIN VSSO VDD GND VDDO
+MN64 NET21 EVSS VSSH VSSH N33 W=30U L=0.35U M=15
+MN42 P EVDD NET13 VSSH N33 W=30U L=0.35U
+MN43 NET13 NDR VSSH VSSH N33 W=30U L=0.35U
+MN65 P EVDD NET21 VSSH N33 W=30U L=0.35U M=15
+MP75 VDDH WELLC WELLI WELLI P33 W=60U L=0.30U
+MP47 VDDH PDR P WELLI P33 W=30U L=0.30U M=2
+MP46 VDDH PESD P WELLI P33 W=30U L=0.30U M=16
+.ENDS B2DR_NEW
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI2S                                                               *
+* LAST TIME SAVED: DEC  2 15:35:55 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI2S D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B2DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SS5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SSPDR
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI2S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI2N                                                               *
+* LAST TIME SAVED: DEC  2 15:35:35 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI2N D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B2DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SNPDR
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SN5S
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI2N
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI2F                                                               *
+* LAST TIME SAVED: DEC  2 14:45:25 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI2F D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B2DR_NEW
+D2 VSSH P NWDIO AREA=800P
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SF5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SFPDR
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI2F
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B24DR_NEW                                                            *
+* LAST TIME SAVED: DEC  2 14:44:30 2003                                       *
+*******************************************************************************
+.SUBCKT B24DR_NEW WELLI P EVDD EVSS NDR PDR PESD WELLC
+*.NOPIN VSSO VDD GND VDDO
+MN0 NET21 EVSS VSSH VSSH N33 W=30U L=0.35U M=6
+MN42 P EVDD NET13 VSSH N33 W=30U L=0.35U M=10
+MN43 NET13 NDR VSSH VSSH N33 W=30U L=0.35U M=10
+MN1 P EVDD NET21 VSSH N33 W=30U L=0.35U M=6
+MP75 VDDH WELLC WELLI WELLI P33 W=60U L=0.30U
+MP47 VDDH PDR P WELLI P33 W=30U L=0.30U M=12
+MP46 VDDH PESD P WELLI P33 W=30U L=0.30U M=6
+.ENDS B24DR_NEW
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI24S                                                              *
+* LAST TIME SAVED: DEC  2 15:41:42 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI24S D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B24DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SS5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SSPDR
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI24S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI24N                                                              *
+* LAST TIME SAVED: DEC  2 15:41:27 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI24N D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B24DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SNPDR
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SN5S
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI24N
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI24F                                                              *
+* LAST TIME SAVED: DEC  2 15:40:43 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI24F D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B24DR_NEW
+D2 VSSH P NWDIO AREA=800P
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SF5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SFPDR
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI24F
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: B16DR_NEW                                                            *
+* LAST TIME SAVED: DEC  2 14:40:06 2003                                       *
+*******************************************************************************
+.SUBCKT B16DR_NEW WELLI P EVDD EVSS NDR PDR PESD WELLC
+*.NOPIN VSSO VDD GND VDDO
+MN1 NET21 EVSS VSSH VSSH N33 W=30U L=0.35U M=8
+MN42 P EVDD NET13 VSSH N33 W=30U L=0.35U M=8
+MN0 NET13 NDR VSSH VSSH N33 W=30U L=0.35U M=8
+MN2 P EVDD NET21 VSSH N33 W=30U L=0.35U M=8
+MP75 VDDH WELLC WELLI WELLI P33 W=60U L=0.30U
+MP47 VDDH PDR P WELLI P33 W=30U L=0.30U M=11
+MP0 VDDH PESD P WELLI P33 W=30U L=0.30U M=7
+.ENDS B16DR_NEW
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI16S                                                              *
+* LAST TIME SAVED: DEC  3 10:49:15 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI16S D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B16DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SS5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SSPDR
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI16S
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI16N                                                              *
+* LAST TIME SAVED: DEC  2 15:40:13 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI16N D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B16DR_NEW
+D1 VSSH P NWDIO AREA=800P
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SNPDR
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SN5S
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI16N
+
+
+*******************************************************************************
+* SUB-CIRCUIT NETLIST:                                                        *
+*                                                                             *
+* BLOCK: PLBI16F                                                              *
+* LAST TIME SAVED: DEC  2 15:39:25 2003                                       *
+*******************************************************************************
+.SUBCKT PLBI16F D P A CONOF NEN PD PEN PU SONOF
+*.NOPIN VSSO VDDO
+XI1 NET70 P NET32 NET19 NET22 NET21 NET20 NET40 B16DR_NEW
+D2 VSSH P NWDIO AREA=800P
+XI3 D NET31 CONOF GND SONOF IBUF_S
+D0_0 GND A NDIO18 AREA=0.2P
+D0_1 GND PEN NDIO18 AREA=0.2P
+D0_2 GND NEN NDIO18 AREA=0.2P
+D0_3 GND PD NDIO18 AREA=0.2P
+D0_4 GND PU NDIO18 AREA=0.2P
+D0_5 GND SONOF NDIO18 AREA=0.2P
+D0_6 GND CONOF NDIO18 AREA=0.2P
+XI0 NET32 NET19 NET21 NET20 NET40 NET31 GND NET3 NET12 NET27 NET2 NET24 NET70
++B2SF5S
+XI2 NET22 NET3 NET12 NET27 NET2 NET24 A GND NEN PD PEN PU B2SFPDR
+R1 NET31 P 200 $[RNPOSAB]
+.ENDS PLBI16F
+
+
+*******************************************************************************

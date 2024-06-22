@@ -1,0 +1,7 @@
+INCLUDE $CDSHOME/share/cdssetup/cds.lib
+DEFINE SMIC18IOLIB_L_M6 SMIC18IOLIB_L_M6
+DEFINE SMIC18STDLIBM6 SMIC18STDLIBM6
+DEFINE mytools mytools
+DEFINE logo logo
+DEFINE avTech /opt/cadence/assura/tools/assura/etc/avtech/avTech
+DEFINE design_lib_jpeg_asic design_lib_jpeg_asic

@@ -1,0 +1,13 @@
+*drcRulesFile: /home/class/U65/Desktop/jpegencode/layout/rule/smic18.ant
+*drcRunDir: /home/class/U65/Desktop/jpegencode/layout/ANT
+*drcLayoutPaths: DFM_final.calibre.db
+*drcLayoutPrimary: DFM_final
+*drcLayoutLibrary: design_lib_jpeg_asic
+*drcLayoutView: layout
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: DFM_final.drc.results
+*drcSummaryFile: DFM_final.drc.summary
+*drcDFMDefaultsResultsFile: DFM_final.dfmDefaults.db
+*cmnFDILayoutLibrary: design_lib_jpeg_asic
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: DFM_final.def

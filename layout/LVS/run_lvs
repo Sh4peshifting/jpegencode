@@ -1,0 +1,16 @@
+*lvsRulesFile: /home/user_home/dxzhang/aes_core/layout/rule/smic18.lvs
+*lvsRunDir: /home/user_home/dxzhang/aes_core/layout/LVS
+*lvsLayoutPaths: DFM_final.calibre.db
+*lvsLayoutPrimary: DFM_final
+*lvsLayoutGetFromViewer: 1
+*lvsSourcePath: aes_ASIC.spi
+*lvsSourcePrimary: aes_ASIC
+*lvsSpiceFile: DFM_final.sp
+*lvsERCDatabase: DFM_final.erc.results
+*lvsERCSummaryFile: DFM_final.erc.summary
+*lvsReportFile: DFM_final.lvs.report
+*lvsMaskDBFile: DFM_final.maskdb
+*cmnShowOptions: 1
+*cmnFDILayoutLibrary: design_lib_aes_ASIC
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: DFM_final.def

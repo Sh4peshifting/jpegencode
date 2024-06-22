@@ -70,7 +70,7 @@ setToggleField "Auto Route" "Save After Phase" "detail" 1
 formOK "Auto Route"
 
 ;#dxzhang:20100823,route_spreadwires
-(tcl "route_spreadwires -setup_slack_threshold 0.1 -search_repair_loop 3")
+;(tcl "route_spreadwires -setup_slack_threshold 0.1 -search_repair_loop 3")
 
 
 geSaveAs

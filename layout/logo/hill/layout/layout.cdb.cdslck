@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      sang
+HostName                       EDA
+ProcessIdentifier              10504
+ProcessCreationTime_UTC        1283834592
+ProcessCreationTime_Readable   Tue Sep  7 12:43:12 2010 CST
+AppIdentifier                  /opt/cadence/ic5141/tools/dfII/bin/icfb.exe
+OSType                         lnx86
+ReasonForPlacingEditLock       XXsave write lock
+FilePathUsedToEditLock         /home/sang/orsoc/fudan/tape_out/layout/logo/hill/layout/layout.cdb
+TimeEditLocked                 Tue Sep  7 13:45:36 2010 CST

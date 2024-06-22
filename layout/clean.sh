@@ -1,0 +1,10 @@
+rm -rf *.log
+rm -rf PIPO.LOG*
+rm -rf pipo*
+rm -rf netlist
+rm -rf raw
+rm -rf si.env
+rm -rf inv*
+rm -rf ihnl
+rm -rf map
+rm -rf keys.*
