@@ -1,0 +1,68 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : jpeg_asic
+Version: P-2019.03
+Date   : Sat Jun 22 23:53:50 2024
+****************************************
+
+
+  Startpoint: PAD_dat_i[21]
+               (input port clocked by wb_clk)
+  Endpoint: jpeg_top_inst/u19/u14/u4/Y3_product_reg_18_
+               (rising edge-triggered flip-flop clocked by wb_clk)
+  Path Group: wb_clk
+  Path Type: max
+
+  Point                                                                            Incr       Path
+  -------------------------------------------------------------------------------------------------------
+  clock wb_clk (rise edge)                                                         0.00       0.00
+  clock network delay (propagated)                                                 0.00       0.00
+  input external delay                                                            10.00      10.00 r
+  PAD_dat_i[21] (in)                                                               4.74 &    14.74 r
+  U_dat_i_21/P (PLBI8F)                                                            0.00 &    14.74 r
+  U_dat_i_21/D (PLBI8F)                                                            1.03 &    15.76 r
+  jpeg_top_inst/u19/u14/u4/U_dat_i_21ASTzrInst32345/Z (BUFHD20X)                   0.16 &    15.92 r
+  jpeg_top_inst/u19/u14/u4/U_dat_i_21ASTzrInst32346/Z (BUFHD20X)                   0.21 &    16.13 r
+  jpeg_top_inst/u19/u14/u4/U_dat_i_21ASTzrInst32347/Z (BUFHD20X)                   0.22 &    16.35 r
+  jpeg_top_inst/u19/u14/u4/U_dat_i_21ASTttcInst30855/Z (BUFHD8X)                   0.18 &    16.53 r
+  jpeg_top_inst/u19/u14/u4/mult_90/U102/S (FAHHD2X)                                0.46 &    16.99 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U108/CO (FAHHD2X)                               0.31 &    17.30 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U66/CO (FAHHD2X)                                0.23 &    17.53 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U107/CO (FAHHD2X)                               0.22 &    17.74 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U103/CO (FAHHD2X)                               0.22 &    17.96 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U120/CO (FAHHD2X)                               0.21 &    18.17 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U76/CO (FAHHD4X)                                0.29 &    18.46 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U68/Z (NAND2HD4X)                               0.11 &    18.57 r
+  jpeg_top_inst/u19/u14/u4/mult_90/ASTtlrInst31475/Z (NAND3B1HD4X)                 0.13 &    18.69 f
+  jpeg_top_inst/u19/u14/u4/mult_90/ASTtlrInst31473/Z (NAND2HD4X)                   0.08 &    18.78 r
+  jpeg_top_inst/u19/u14/u4/mult_90/ASTtlrInst31472/Z (NAND3B1HD4X)                 0.10 &    18.88 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U85/Z (NAND2HD2X)                               0.08 &    18.96 r
+  jpeg_top_inst/u19/u14/u4/mult_90/U78/Z (NAND3B1HD2X)                             0.10 &    19.06 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U118/CO (FAHHD2X)                               0.22 &    19.29 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U117/CO (FAHHD2X)                               0.21 &    19.50 f
+  jpeg_top_inst/u19/u14/u4/mult_90/ASTtlrInst31441/Z (MUXI2HD4X)                   0.22 &    19.71 r
+  jpeg_top_inst/u19/u14/u4/mult_90/U90/Z (NAND2HD1X)                               0.09 &    19.81 f
+  jpeg_top_inst/u19/u14/u4/mult_90/U110/Z (NAND2HD2X)                              0.08 &    19.89 r
+  jpeg_top_inst/u19/u14/u4/ASTtlrInst31436/Z (NAND2HDLX)                           0.08 &    19.97 f
+  jpeg_top_inst/u19/u14/u4/ASTtlrInst31438/Z (NAND2HD1X)                           0.09 &    20.06 r
+  jpeg_top_inst/u19/u14/u4/Y3_product_reg_18_/RN (FFDCRHD1X)                       0.00 &    20.06 r
+  data arrival time                                                                          20.06
+
+  clock wb_clk (rise edge)                                                        20.00      20.00
+  clock network delay (propagated)                                                 1.67      21.67
+  clock reconvergence pessimism                                                    0.00      21.67
+  jpeg_top_inst/u19/u14/u4/Y3_product_reg_18_/CK (FFDCRHD1X)                                 21.67 r
+  library setup time                                                              -0.22      21.45
+  data required time                                                                         21.45
+  -------------------------------------------------------------------------------------------------------
+  data required time                                                                         21.45
+  data arrival time                                                                         -20.06
+  -------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                 1.39
+
+
+1

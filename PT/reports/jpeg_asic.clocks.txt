@@ -1,0 +1,17 @@
+****************************************
+Report : clock
+Design : jpeg_asic
+Version: P-2019.03
+Date   : Sat Jun 22 23:53:08 2024
+****************************************
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock             Period          Waveform            Attrs     Sources
+-----------------------------------------------------------------------
+wb_clk             20.00          {0 10}              p         {PAD_clk_i}
+
+1
